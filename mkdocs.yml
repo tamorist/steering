@@ -1,6 +1,6 @@
 site_name: Steering Within Limits
 site_description: Three proposals for a civilizational transition — Youth GCC, the Global Citizen Will Platform, and Planetary OS
-# site_url: https://<account>.github.io/<repository>/   # set when publishing
+site_url: https://tamorist.github.io/steering/
 docs_dir: docs
 site_dir: site
 copyright: Text CC BY 4.0 · Simulator code MIT · Working draft
