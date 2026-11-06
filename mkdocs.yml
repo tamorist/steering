@@ -1,0 +1,134 @@
+site_name: Steering Within Limits
+site_description: Three proposals for a civilizational transition — Youth GCC, the Global Citizen Will Platform, and Planetary OS
+# site_url: https://<account>.github.io/<repository>/   # set when publishing
+docs_dir: docs
+site_dir: site
+copyright: Text CC BY 4.0 · Simulator code MIT · Working draft
+
+theme:
+  name: material
+  custom_dir: overrides
+  language: en
+  font:
+    text: Noto Sans
+    code: IBM Plex Mono
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: indigo
+      accent: deep orange
+      toggle: {icon: material/weather-night, name: Dark mode}
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: indigo
+      accent: deep orange
+      toggle: {icon: material/weather-sunny, name: Light mode}
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.top
+    - navigation.footer
+    - search.suggest
+    - toc.follow
+
+extra_css:
+  - stylesheets/extra.css
+
+markdown_extensions:
+  - tables
+  - attr_list
+  - md_in_html
+  - admonition
+  - toc:
+      permalink: true
+
+plugins:
+  - search:
+      lang: [en, ja]
+  - glightbox:          # tap or click an image to see it full size
+      touchNavigation: true
+      loop: false
+      effect: zoom
+      width: 100%
+      height: auto
+      zoomable: true
+      draggable: true
+  - i18n:
+      docs_structure: suffix
+      reconfigure_material: true
+      languages:
+        - locale: en
+          default: true
+          name: English
+          build: true
+        - locale: ja
+          name: 日本語
+          build: true
+          site_name: 限界の内側で、舵を取る
+          nav_translations:
+            Home: ホーム
+            Getting Started: はじめに
+            Start Here: はじめての方へ
+            Why Now: なぜ今か
+            One-page overview: 1ページ概要
+            Package proposal: パッケージ提案書
+            Proposals: 3つの提案
+            "A — Youth GCC": "A：Youth GCC"
+            "B — Global Citizen Will Platform": "B：Global Citizen Will Platform"
+            "C — Planetary OS (summary)": "C：Planetary OS（要約）"
+            "C — Planetary OS (full)": "C：Planetary OS（本編）"
+            "C — FAQ": "C：よくある質問"
+            Series: 連載
+            "Index": "インデックス"
+            "1. Why effort has not changed the world": "1. なぜ頑張っても世界は変わらないのか"
+            "2. The big picture": "2. Planetary OS の全体像"
+            "3. SAS: a one-way cap": "3. 政治の先送りを止める SAS"
+            "4. A voice for future generations": "4. 将来世代の声"
+            "5. Not sacrifice, but gain": "5. 我慢ではなく得で動く"
+            "6. Scaling without a world government": "6. 世界政府なしで広がる"
+            "7. From petition to implementation": "7. 請願から実装へ"
+            "8. The first step": "8. 最初の一歩"
+            Background: 背景
+            "Why technology does not make life easier": "なぜ技術が進んでも楽にならないのか"
+            "The next layers of Planetary OS": "Planetary OS の次の層"
+            "Global Democratic Governance Charter": "世界市民ガバナンス憲章"
+            "Another world politics": "もう一つの世界政治をつくる"
+            Tools: ツール
+            Simulator: 還元シミュレーター
+            Slides: スライド
+            Join: 参加する
+            About: このサイトについて
+
+nav:
+  - Home: index.md
+  - Getting Started:
+      - Start Here: start.md
+      - One-page overview: overview.md
+      - Why Now: why-now.md
+  - Proposals:
+      - Package proposal: package.md
+      - "A — Youth GCC": proposals/a-youth-gcc.md
+      - "B — Global Citizen Will Platform": proposals/b-platform.md
+      - "C — Planetary OS (summary)": proposals/c-summary.md
+      - "C — Planetary OS (full)": proposals/c-full.md
+      - "C — FAQ": proposals/c-faq.md
+  - Series:
+      - "Index": series/part-0.md
+      - "1. Why effort has not changed the world": series/part-1.md
+      - "2. The big picture": series/part-2.md
+      - "3. SAS: a one-way cap": series/part-3.md
+      - "4. A voice for future generations": series/part-4.md
+      - "5. Not sacrifice, but gain": series/part-5.md
+      - "6. Scaling without a world government": series/part-6.md
+      - "7. From petition to implementation": series/part-7.md
+      - "8. The first step": series/part-8.md
+  - Background:
+      - "Why technology does not make life easier": essays/why-technology.md
+      - "The next layers of Planetary OS": essays/next-layers.md
+      - "Global Democratic Governance Charter": charter/charter.md
+      - "Another world politics": charter/another-world-politics.md
+  - Tools:
+      - Simulator: tools/simulator.md
+      - Slides: tools/slides.md
+  - Join: join.md
+  - About: about.md

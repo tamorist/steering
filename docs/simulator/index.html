@@ -1,0 +1,709 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- This file is the master copy. The claude.ai Artifact (claude.ai/artifact/J9pZQuiFhVgbMJSY5bwzy8) is an older version from before 2026-11-05 and is intentionally not updated; do not use it. -->
+<title>Citizen Dividend Simulator</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600&family=Noto+Sans+JP:wght@400;500;700&display=swap">
+<style>
+/* Layout: a civic "dividend statement" — controls on the left, the household's statement on the right, then two explanatory charts and the method. */
+:root {
+  --bg: #F4F6F3;
+  --panel: #FFFFFF;
+  --ink: #16212E;
+  --muted: #586473;
+  --line: #D9DFE4;
+  --soft: #EBEFEC;
+  --accent: #1F3A5F;
+  --accent-ink: #FFFFFF;
+  --cost: #D9622B;
+  --uni: #2E9E6B;
+  --suff: #3F6FD8;
+  --good: #1E7A46;
+  --good-bg: #E2F2E8;
+  --bad: #B4401C;
+  --bad-bg: #FBE7DE;
+  --font-body: "Public Sans", "Noto Sans JP", "Helvetica Neue", Arial, sans-serif;
+  --font-data: "IBM Plex Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
+  --radius: 10px;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #10161E; --panel: #172130; --ink: #E8EDF3; --muted: #9DA9B7; --line: #2B3747; --soft: #1D2938;
+    --accent: #9CBBE3; --accent-ink: #10161E;
+    --cost: #D05A26; --uni: #1E9466; --suff: #5B80E6;
+    --good: #6FD39A; --good-bg: #173527; --bad: #F08A63; --bad-bg: #3A2118;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #10161E; --panel: #172130; --ink: #E8EDF3; --muted: #9DA9B7; --line: #2B3747; --soft: #1D2938;
+  --accent: #9CBBE3; --accent-ink: #10161E;
+  --cost: #D05A26; --uni: #1E9466; --suff: #5B80E6;
+  --good: #6FD39A; --good-bg: #173527; --bad: #F08A63; --bad-bg: #3A2118;
+  color-scheme: dark;
+}
+* { box-sizing: border-box; }
+body { background: var(--bg); color: var(--ink); font-family: var(--font-body); font-size: 15px; line-height: 1.55; }
+.wrap { max-width: 1120px; margin: 0 auto; padding-inline: 20px; padding-block: 28px 56px; display: grid; gap: 28px; }
+header.top { display: flex; flex-wrap: wrap; gap: 16px; align-items: flex-end; justify-content: space-between; }
+.eyebrow { font-size: 12px; letter-spacing: .12em; text-transform: uppercase; color: var(--muted); font-weight: 600; }
+h1 { font-size: clamp(28px, 4vw, 40px); line-height: 1.1; margin: 6px 0 8px; font-weight: 800; letter-spacing: -.01em; text-wrap: balance; }
+h2 { font-size: 20px; margin: 0; font-weight: 700; text-wrap: balance; }
+h3 { font-size: 13px; margin: 0; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); font-weight: 700; }
+p { margin: 0; }
+.lede { max-width: 62ch; color: var(--muted); }
+.tools { display: flex; gap: 10px; flex-wrap: wrap; }
+.seg { display: inline-flex; border: 1px solid var(--line); border-radius: 999px; overflow: hidden; background: var(--panel); }
+.seg button { border: 0; background: transparent; color: var(--ink); padding: 7px 14px; font: 600 13px var(--font-body); cursor: pointer; }
+.seg button[aria-pressed="true"] { background: var(--accent); color: var(--accent-ink); }
+.seg button:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.notice { font-size: 13px; color: var(--muted); border-left: 3px solid var(--line); padding-left: 12px; max-width: 75ch; }
+
+.main { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.15fr); gap: 24px; align-items: start; }
+@media (max-width: 860px) { .main { grid-template-columns: 1fr; } }
+.panel { background: var(--panel); border: 1px solid var(--line); border-radius: var(--radius); padding: 20px; display: grid; gap: 18px; min-width: 0; }
+
+.field { display: grid; gap: 6px; }
+.field label, .field .lab { font-weight: 600; font-size: 14px; }
+.field .hint { font-size: 12.5px; color: var(--muted); }
+.row { display: flex; gap: 12px; align-items: center; flex-wrap: wrap; }
+.row > * { min-width: 0; }
+input[type="range"] { flex: 1 1 160px; accent-color: var(--accent); }
+.val { font-family: var(--font-data); font-variant-numeric: tabular-nums; font-size: 14px; min-width: 6.5ch; text-align: right; }
+select, input[type="number"] { font: 500 14px var(--font-body); color: var(--ink); background: var(--panel); border: 1px solid var(--line); border-radius: 8px; padding: 7px 9px; }
+input[type="number"] { width: 6.5em; font-family: var(--font-data); }
+.chips { display: flex; gap: 6px; flex-wrap: wrap; }
+.chips button { border: 1px solid var(--line); background: var(--soft); color: var(--ink); border-radius: 999px; padding: 4px 10px; font: 500 12.5px var(--font-body); cursor: pointer; }
+.chips button:hover { border-color: var(--accent); }
+.reset { border: 1px solid var(--line); background: transparent; color: var(--accent); border-radius: 999px; padding: 5px 12px; font: 600 13px var(--font-body); cursor: pointer; }
+.reset:hover { border-color: var(--accent); }
+.check { display: flex; gap: 10px; align-items: flex-start; }
+.check input { margin-top: 4px; accent-color: var(--accent); }
+details.adv summary { cursor: pointer; font-weight: 600; font-size: 14px; color: var(--muted); }
+details.adv[open] summary { margin-bottom: 12px; }
+fieldset.alloc { border: 1px solid var(--line); border-radius: 8px; padding: 14px; margin: 0; display: grid; gap: 14px; min-width: 0; }
+fieldset.alloc legend { font-weight: 700; font-size: 13px; color: var(--muted); padding: 0 6px; letter-spacing: .02em; }
+.two { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+
+/* statement */
+.statement { gap: 14px; }
+.st-head { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; flex-wrap: wrap; border-bottom: 1px dashed var(--line); padding-bottom: 10px; }
+.st-head .who { font-size: 13px; color: var(--muted); }
+.hero { display: flex; flex-wrap: wrap; align-items: baseline; gap: 10px 16px; }
+.hero .num { font-family: var(--font-data); font-variant-numeric: tabular-nums; font-size: clamp(34px, 5vw, 46px); font-weight: 600; letter-spacing: -.02em; }
+.hero .per { color: var(--muted); font-size: 14px; }
+.pill { display: inline-flex; align-items: center; gap: 6px; font-weight: 700; font-size: 13px; padding: 4px 10px; border-radius: 999px; }
+.pill.good { background: var(--good-bg); color: var(--good); }
+.pill.bad { background: var(--bad-bg); color: var(--bad); }
+table.lines { width: 100%; border-collapse: collapse; font-size: 14px; }
+table.lines td { padding: 9px 0; border-bottom: 1px solid var(--soft); vertical-align: top; }
+table.lines td.amt { text-align: right; font-family: var(--font-data); font-variant-numeric: tabular-nums; white-space: nowrap; padding-left: 12px; }
+table.lines td.mon { text-align: right; font-family: var(--font-data); font-variant-numeric: tabular-nums; color: var(--muted); white-space: nowrap; padding-left: 12px; width: 1%; }
+table.lines tr.total td { border-bottom: 0; border-top: 2px solid var(--ink); font-weight: 700; }
+.key { display: inline-block; width: 10px; height: 10px; border-radius: 2px; margin-right: 8px; vertical-align: 0; }
+.sub { display: block; font-size: 12.5px; color: var(--muted); }
+.bars { display: grid; gap: 8px; }
+.bars .bl { font-size: 12.5px; color: var(--muted); display: flex; justify-content: space-between; }
+.bars .track { display: flex; gap: 2px; height: 18px; }
+.bars .seg2 { height: 100%; border-radius: 0; }
+.bars .seg2:first-child { border-radius: 4px 0 0 4px; }
+.bars .seg2:last-child { border-radius: 0 4px 4px 0; }
+.bars .seg2:only-child { border-radius: 4px; }
+
+/* charts */
+.chart-card { display: grid; gap: 14px; }
+.chart-head { display: flex; flex-wrap: wrap; gap: 10px 24px; justify-content: space-between; align-items: flex-end; }
+.chart-head .stat { font-family: var(--font-data); font-size: 26px; font-weight: 600; font-variant-numeric: tabular-nums; }
+.legend { display: flex; flex-wrap: wrap; gap: 6px 16px; font-size: 13px; color: var(--muted); }
+.legend span { display: inline-flex; align-items: center; }
+.svgbox { position: relative; width: 100%; }
+.svgbox svg { width: 100%; height: auto; display: block; }
+.svgbox text { fill: var(--muted); font-family: var(--font-body); font-size: 11px; }
+.tip { position: absolute; pointer-events: none; background: var(--ink); color: var(--bg); font-size: 12.5px; padding: 8px 10px; border-radius: 8px; line-height: 1.45; max-width: 240px; transform: translate(-50%, calc(-100% - 10px)); white-space: nowrap; }
+.tip b { font-family: var(--font-data); font-weight: 600; }
+.ctrl-inline { display: flex; gap: 16px; flex-wrap: wrap; align-items: center; font-size: 13.5px; }
+.ctrl-inline .field { min-width: 220px; flex: 1 1 220px; }
+
+.grid2 { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 24px; }
+@media (max-width: 860px) { .grid2 { grid-template-columns: 1fr; } }
+
+.method { display: grid; gap: 12px; font-size: 14px; }
+.method ol { margin: 0; padding-left: 20px; display: grid; gap: 6px; }
+.method code { font-family: var(--font-data); font-size: 13px; background: var(--soft); padding: 1px 5px; border-radius: 4px; }
+.tablewrap { overflow-x: auto; }
+table.dist { border-collapse: collapse; font-size: 13px; min-width: 520px; width: 100%; }
+table.dist th, table.dist td { padding: 6px 8px; border-bottom: 1px solid var(--soft); text-align: right; font-family: var(--font-data); font-variant-numeric: tabular-nums; }
+table.dist th { font-family: var(--font-body); color: var(--muted); font-weight: 600; }
+table.dist th:first-child, table.dist td:first-child { text-align: left; }
+footer { font-size: 13px; color: var(--muted); display: grid; gap: 6px; }
+footer a { color: var(--accent); }
+@media (prefers-reduced-motion: no-preference) { .bars .seg2 { transition: width .25s ease; } }
+</style>
+</head>
+<body>
+<p style="margin:12px 16px;font:14px system-ui,sans-serif"><a href="../">← Steering Within Limits</a></p>
+
+<div class="wrap">
+  <header class="top">
+    <div>
+      <div class="eyebrow" data-i18n="eyebrow">Planetary OS · working prototype</div>
+      <h1 data-i18n="title">Citizen Dividend Simulator</h1>
+      <p class="lede" data-i18n="lede">An upstream cap on fossil fuels raises prices. Under Planetary OS, 90% of the auction revenue comes straight back to you, with a top-up from those who benefited most from the past. See what that means for your household.</p>
+    </div>
+    <div class="tools">
+      <div class="seg" role="group" aria-label="Language">
+        <button type="button" id="lang-en" aria-pressed="true">EN</button>
+        <button type="button" id="lang-ja" aria-pressed="false">日本語</button>
+      </div>
+      <div class="seg" role="group" aria-label="Currency">
+        <button type="button" id="cur-USD" aria-pressed="true">USD</button>
+        <button type="button" id="cur-EUR" aria-pressed="false">EUR</button>
+        <button type="button" id="cur-JPY" aria-pressed="false">JPY</button>
+      </div>
+    </div>
+  </header>
+
+  <p class="notice" data-i18n="notice">Every figure here is illustrative. The model is deliberately simple, and its ratios (90% returned, split 60/40, a 10% top-up) are examples from the proposal, not final values. Before any guarantee, the share of people who come out ahead is, as a rough calculation, from about 60% to the low 70s depending on the assumptions. On top of that, the standard design includes a majority-benefit rule: households just short of break-even receive a top-up so that at least 70% come out ahead. These are model estimates, not promises of what will happen in practice. Change the inputs to see for yourself.</p>
+
+  <section class="main">
+    <form class="panel" id="inputs" aria-labelledby="in-h" onsubmit="return false">
+      <div class="row" style="justify-content:space-between"><h2 id="in-h" data-i18n="inTitle">Your situation</h2><button type="button" class="reset" id="reset" data-i18n="reset">Reset to standard values</button></div>
+
+      <div class="field">
+        <label for="avg" data-i18n="avgLab">Average CO₂ footprint per person in your country</label>
+        <div class="row">
+          <select id="preset" aria-label="Country profile">
+            <option value="10" data-i18n="p10">High-income country (~10 t)</option>
+            <option value="8" data-i18n="p8">Japan / EU-like (~8 t)</option>
+            <option value="6" data-i18n="p6">Upper-middle income (~6 t)</option>
+            <option value="2" data-i18n="p2">Lower-middle income (~2 t)</option>
+            <option value="0.5" data-i18n="p05">Low income (~0.5 t)</option>
+          </select>
+          <input id="avg" type="number" min="0.1" max="30" step="0.1" value="10">
+          <span class="hint">t CO₂ / yr</span>
+        </div>
+      </div>
+
+      <div class="field">
+        <label for="price" data-i18n="priceLab">Allowance price (set by the auction)</label>
+        <div class="row"><input id="price" type="range" min="25" max="300" step="5" value="100"><span class="val" id="price-v"></span></div>
+        <div class="chips">
+          <button type="button" data-price="50" data-i18n="pc50">$50 · launch phase</button>
+          <button type="button" data-price="90" data-i18n="pc90">$90 · near recent EU prices</button>
+          <button type="button" data-price="100" data-i18n="pc100">$100 · IPCC benchmark</button>
+          <button type="button" data-price="200" data-i18n="pc200">$200 · estimated climate damage</button>
+        </div>
+        <span class="hint" data-i18n="priceHint">Under the cap, firms bid for a fixed number of allowances, and a tighter cap usually means a higher price. For reference: EU allowances have traded at roughly $80–100 in recent years; the IPCC found that measures costing up to $100 per tonne could halve global emissions by 2030; recent estimates of the damage caused by one tonne of CO₂ are around $200.</span>
+      </div>
+
+      <div class="two">
+        <div class="field">
+          <label for="adults" data-i18n="adultsLab">Adults</label>
+          <input id="adults" type="number" min="1" max="10" step="1" value="2">
+        </div>
+        <div class="field">
+          <label for="kids" data-i18n="kidsLab">Children</label>
+          <input id="kids" type="number" min="0" max="10" step="1" value="2">
+        </div>
+      </div>
+
+      <div class="field">
+        <label for="use" data-i18n="useLab">Your energy and material use per person, compared with the national average</label>
+        <div class="row"><input id="use" type="range" min="0.2" max="3" step="0.05" value="0.8"><span class="val" id="use-v"></span></div>
+        <div class="chips">
+          <button type="button" data-use="0.5" data-i18n="chipLow">Frugal · 0.5×</button>
+          <button type="button" data-use="0.8" data-i18n="chipMid">Typical · 0.8×</button>
+          <button type="button" data-use="1" data-i18n="chipAvg">Average · 1×</button>
+          <button type="button" data-use="2" data-i18n="chipHigh">Heavy · 2×</button>
+        </div>
+        <span class="hint" data-i18n="useHint">Most people sit below the average, because a few very heavy users pull it up. "Typical" is the median household.</span>
+      </div>
+
+      <div class="field">
+        <label for="red" data-i18n="redLab">How much you cut back compared with last year</label>
+        <div class="row"><input id="red" type="range" min="0" max="40" step="1" value="0"><span class="val" id="red-v"></span></div>
+      </div>
+
+      <label class="check" for="optin">
+        <input id="optin" type="checkbox" checked>
+        <span><b data-i18n="optLab">Take part in the sufficiency-linked dividend</b><span class="sub" data-i18n="optHint">It uses only coarse annual data (energy totals, vehicle type, building rating). If you opt out, you get the standard amount.</span></span>
+      </label>
+
+      <fieldset class="alloc">
+        <legend data-i18n="allocLeg">How the revenue is shared (examples you can change)</legend>
+        <div class="field">
+          <label for="hshare" data-i18n="hshareLab">Share of auction revenue returned to citizens</label>
+          <select id="hshare"><option value="80">80%</option><option value="90" selected>90%</option><option value="100">100%</option></select>
+          <span class="hint" data-i18n="hshareHint">The rest funds a Just Transition for workers. The proposal's example is 90%.</span>
+        </div>
+        <div class="field">
+          <label for="topup" data-i18n="topupLab">Launch-phase top-up from the PTE (as a share of auction revenue)</label>
+          <div class="row"><input id="topup" type="range" min="0" max="30" step="1" value="10"><span class="val" id="topup-v"></span></div>
+          <span class="hint" data-i18n="topupHint">Paid from BEI, which falls on large fortunes and corporate profits, and added to the universal dividend.</span>
+        </div>
+        <div class="field">
+          <label for="rule" data-i18n="ruleLab">Majority-benefit rule</label>
+          <select id="rule">
+            <option value="0" data-i18n="ruleNone">No guarantee (for comparison)</option>
+            <option value="60" data-i18n="rule60">At least 60% come out ahead</option>
+            <option value="70" data-i18n="rule70" selected>At least 70% come out ahead (standard)</option>
+            <option value="80" data-i18n="rule80">At least 80% come out ahead</option>
+          </select>
+          <span class="hint" id="rule-note"></span>
+        </div>
+      </fieldset>
+
+      <details class="adv">
+        <summary data-i18n="advSum">Advanced assumptions</summary>
+        <div class="field">
+          <label for="pass" data-i18n="passLab">Share of the carbon cost passed on to households</label>
+          <div class="row"><input id="pass" type="range" min="50" max="100" step="5" value="80"><span class="val" id="pass-v"></span></div>
+          <span class="hint" data-i18n="passHint">The standard assumption is 80%. Part of the cost is embodied in government spending, investment, and exports; household consumption accounts for a little over 60% of carbon footprints (Ivanova et al., 2016). 100% is the most cautious case, in which everything eventually reaches people through prices, wages, and taxes.</span>
+        </div>
+        <div class="field">
+          <label for="sigma" data-i18n="sigmaLab">How unequal energy use is in your country</label>
+          <div class="row"><input id="sigma" type="range" min="0.4" max="1.1" step="0.05" value="0.7"><span class="val" id="sigma-v"></span></div>
+          <span class="hint" data-i18n="sigmaHint">Spread of a log-normal distribution. Higher means a small group uses a much larger share.</span>
+        </div>
+      </details>
+    </form>
+
+    <section class="panel statement" aria-labelledby="st-h" aria-live="polite">
+      <div class="st-head">
+        <h2 id="st-h" data-i18n="stTitle">Your household's dividend statement</h2>
+        <span class="who" id="who"></span>
+      </div>
+      <div class="hero">
+        <span class="num" id="net"></span>
+        <span class="per" data-i18n="perYear">net per year</span>
+        <span class="pill" id="pill"></span>
+      </div>
+      <table class="lines">
+        <tbody>
+          <tr><td><span class="key" style="background:var(--cost)"></span><span data-i18n="lCost">Higher prices you pay</span><span class="sub" id="cost-sub"></span></td><td class="amt" id="cost"></td><td class="mon" id="cost-m"></td></tr>
+          <tr><td><span class="key" style="background:var(--uni)"></span><span data-i18n="lUni">Universal dividend</span><span class="sub" data-i18n="lUniSub">Same amount for every person</span></td><td class="amt" id="uni"></td><td class="mon" id="uni-m"></td></tr>
+          <tr><td><span class="key" style="background:var(--uni);opacity:.55"></span><span data-i18n="lTop">Launch-phase top-up (PTE)</span><span class="sub" data-i18n="lTopSub">From those who benefited most from the past</span></td><td class="amt" id="top"></td><td class="mon" id="top-m"></td></tr>
+          <tr id="guar-row"><td><span class="key" style="background:var(--uni);opacity:.35"></span><span data-i18n="lGuar">Majority-benefit top-up (PTE)</span><span class="sub" data-i18n="lGuarSub">For households just short of break-even, fixed by past use</span></td><td class="amt" id="guar"></td><td class="mon" id="guar-m"></td></tr>
+          <tr><td><span class="key" style="background:var(--suff)"></span><span data-i18n="lSuff">Sufficiency-linked dividend</span><span class="sub" id="suff-sub"></span></td><td class="amt" id="suff"></td><td class="mon" id="suff-m"></td></tr>
+          <tr class="total"><td data-i18n="lNet">Net</td><td class="amt" id="net2"></td><td class="mon" id="net-m"></td></tr>
+        </tbody>
+      </table>
+      <p class="sub" id="trust"></p>
+      <div class="bars" aria-hidden="true">
+        <div class="bl"><span data-i18n="bPay">You pay</span><span id="b-pay"></span></div>
+        <div class="track" id="bar-pay"></div>
+        <div class="bl"><span data-i18n="bGet">You receive</span><span id="b-get"></span></div>
+        <div class="track" id="bar-get"></div>
+      </div>
+      <p class="sub" id="restNote"></p>
+    </section>
+  </section>
+
+  <section class="grid2">
+    <div class="panel chart-card" aria-labelledby="d-h">
+      <div class="chart-head">
+        <div>
+          <h3 data-i18n="dEyebrow">Across the whole country</h3>
+          <h2 id="d-h" data-i18n="dTitle">Who comes out ahead?</h2>
+        </div>
+        <div><div class="stat" id="share"></div><div class="sub" data-i18n="dStatLab">of people are net positive</div></div>
+      </div>
+      <div class="legend">
+        <span><span class="key" style="background:var(--cost)"></span><span data-i18n="legCost">Higher prices, per person</span></span>
+        <span><span class="key" style="background:var(--uni)"></span><span data-i18n="legRecv">Dividend received, per person</span></span>
+      </div>
+      <div class="svgbox" id="dist"></div>
+      <p class="sub" data-i18n="dNote">Twenty equal groups of people, from lowest to highest use. The dividend line slopes down slightly because the sufficiency-linked part pays light users more.</p>
+    </div>
+
+    <div class="panel chart-card" aria-labelledby="t-h">
+      <div class="chart-head">
+        <div>
+          <h3 data-i18n="tEyebrow">Over the next 30 years</h3>
+          <h2 id="t-h" data-i18n="tTitle">Citizen Dividend per person</h2>
+        </div>
+        <div><div class="stat" id="t-stat"></div><div class="sub" data-i18n="tStatLab">in year 10</div></div>
+      </div>
+      <div class="ctrl-inline">
+        <div class="field">
+          <label for="rate" data-i18n="rateLab">Cap falls each year by</label>
+          <select id="rate">
+            <option value="3">3%</option><option value="5">5%</option><option value="7">7%</option><option value="8" selected>8%</option><option value="10">10%</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="growth" data-i18n="growthLab">Allowance price rises each year by</label>
+          <div class="row"><input id="growth" type="range" min="0" max="15" step="1" value="6"><span class="val" id="growth-v"></span></div>
+        </div>
+      </div>
+      <div class="legend"><span><span class="key" style="background:var(--uni)"></span><span data-i18n="tLeg">Citizen Dividend (share returned + top-up), per person per year</span></span></div>
+      <div class="svgbox" id="time"></div>
+      <p class="sub" data-i18n="tNote">Revenue is price × emissions. As the cap tightens, emissions fall faster than the price rises, so the dividend eventually shrinks. That is the system working. The Planetary Transition Endowment (PTE), funded separately by BEI, provides the lasting base.</p>
+    </div>
+  </section>
+
+  <section class="panel method" aria-labelledby="m-h">
+    <h2 id="m-h" data-i18n="mTitle">How the numbers are calculated</h2>
+    <ol>
+      <li data-i18n="m1">Auction revenue per person = allowance price × average footprint per person (all fossil CO₂ is assumed to be covered by the cap).</li>
+      <li data-i18n="m2">Your extra costs = price × your footprint × share passed on to households. Only these direct costs are counted; indirect effects through wages, pensions, and the wider economy are not modeled.</li>
+      <li data-i18n="m3">Universal dividend = 60% of the share returned to citizens (54% of revenue at the 90% default), plus the launch-phase top-up from the PTE.</li>
+      <li data-i18n="m4">Sufficiency-linked dividend = 40% of the share returned (36% of revenue at the default), shared by a score: 75% weight on low use (2 − your use ratio, capped at 0–2) and 25% on cutting back (1 + cut ÷ 20%, capped at 0–2). Scores are scaled so the pool is paid out exactly.</li>
+      <li data-i18n="m5">Children receive the same dividends as adults. Half of each child's dividend is paid to the parents now, to cover the higher prices the household pays for the child; the other half is saved in the child's Future Trust account. Under the majority-benefit rule (standard: at least 70%), households just short of break-even receive an extra top-up from the PTE equal to their shortfall, starting with the smallest shortfalls, until the chosen share comes out ahead. The amount is fixed by each household's use before cutting back, so cutting back still pays. The PTE's total top-up is capped at 40% of revenue.</li>
+      <li data-i18n="m6">Use across the population follows a log-normal distribution with mean 1×. Under a cap, spending the dividend cannot raise total emissions; it only raises the allowance price.</li>
+    </ol>
+    <details class="adv">
+      <summary data-i18n="tableSum">Show the country-wide table</summary>
+      <div class="tablewrap"><table class="dist" id="dist-table"></table></div>
+    </details>
+  </section>
+
+  <footer>
+    <p data-i18n="foot1">Prototype for Proposal C: Planetary OS. Part of the series "Rewriting the Planet's OS".</p>
+    <p data-i18n="foot2">This is a thinking tool, not a forecast. Feedback on the model is welcome.</p>
+  </footer>
+</div>
+
+<script>
+(function () {
+  "use strict";
+  const $ = (id) => document.getElementById(id);
+
+  const I18N = {
+    ja: {
+      eyebrow: "Planetary OS · 試作版", title: "還元シミュレーター",
+      lede: "化石燃料の上流に上限をかけると、物の値段が上がります。Planetary OS では、競売収入の90％があなたに直接還ってきます。さらに、過去に最も恩恵を受けてきた側からの上乗せもあります。それがあなたの家計にとって何を意味するかを確かめてください。",
+      notice: "ここに出る数字はすべて一例です。モデルは意図して単純にしてあり、比率（90％を還元、6割と4割に分ける、1割の上乗せ）は提案書の一例で、確定した値ではありません。上乗せの前の計算上の目安では、手取りがプラスになるのは前提によって6割前後から7割台前半です。そのうえで、標準の設計では「多数派保証ルール」により、少なくとも7割の人がプラスになるよう、損益の境目にいる世帯に上乗せします。これは計算上の想定で、現実にそのとおりになるとは限りません。入力を変えて確かめてください。",
+      inTitle: "あなたの状況", reset: "初期値に戻す", pc50: "50ドル · 立ち上げ期", pc90: "90ドル · EU市場の近年の水準", pc100: "100ドル · IPCCの目安", pc200: "200ドル · 気候被害の推計額", avgLab: "あなたの国の、一人あたりの平均CO₂排出量",
+      p10: "高所得国（約10トン）", p8: "日本・EU並み（約8トン）", p6: "上位中所得国（約6トン）", p2: "下位中所得国（約2トン）", p05: "低所得国（約0.5トン）",
+      priceLab: "排出枠の価格（競売で決まる）", priceHint: "上限のもとで、企業が決まった数の排出枠を競り合います。上限が厳しいほど、価格は上がりやすくなります。参考：EUの排出枠は近年、1トン約80〜100ドルで取引されてきました。IPCCは、1トン100ドル以下の対策で2030年までに世界の排出を半分にできるとしています。CO₂1トンが引き起こす被害の最近の推計は、約200ドルです。",
+      adultsLab: "大人", kidsLab: "子ども",
+      useLab: "一人あたりのエネルギーとモノの使用量（国の平均と比べて）",
+      chipLow: "質素 · 0.5倍", chipMid: "典型的 · 0.8倍", chipAvg: "平均 · 1倍", chipHigh: "多い · 2倍",
+      useHint: "ごく一部の人が平均を押し上げるので、多くの人は平均より少なく使っています。「典型的」は中央の世帯です。",
+      redLab: "去年と比べて減らした割合",
+      optLab: "縮小に連動する還元に参加する", optHint: "使うのは年1回の粗いデータ（エネルギーの合計、車の種類、建物の性能）だけです。参加しない場合は標準の額を受け取ります。",
+      advSum: "詳しい前提", passLab: "炭素のコストのうち、家計に転嫁される割合", passHint: "標準の前提は80％です。コストの一部は、政府の支出、設備投資、輸出に含まれます。研究では、家計の消費がカーボンフットプリントの6割余りを占めるとされています（Ivanova ほか、2016年）。100％は、値段・賃金・税を通じて、最終的にすべてが人々に及ぶと見る、最も慎重な想定です。", allocLeg: "収入の分け方（変えられる一例）", hshareLab: "競売収入のうち市民に還す割合", hshareHint: "残りは働く人の公正な移行に充てます。提案書の一例は90％です。", topupLab: "立ち上げ期のPTEからの上乗せ（競売収入に対する割合）", topupHint: "大きな資産と企業の利益が負担するBEIから出し、一律の還元に上乗せします。", ruleLab: "多数派保証ルール", ruleNone: "保証なし（比べるため）", rule60: "少なくとも6割が得をする", rule70: "少なくとも7割が得をする（標準）", rule80: "少なくとも8割が得をする", lTop: "立ち上げ期の上乗せ（PTE）", lTopSub: "過去に最も恩恵を受けた側から", lGuar: "多数派保証の上乗せ（PTE）", lGuarSub: "損益の境目にいる世帯に。以前の使用量で決まる",
+      sigmaLab: "あなたの国でのエネルギー使用量のばらつき", sigmaHint: "対数正規分布の広がりです。値が大きいほど、少数の人が大きな割合を使っています。",
+      stTitle: "あなたの家計の還元明細", perYear: "年間の差し引き",
+      lCost: "値上がりで払う分", lUni: "一律の還元", lUniSub: "一人あたり同じ額", lSuff: "縮小に連動する還元", lNet: "差し引き",
+      bPay: "払う額", bGet: "受け取る額",
+      restNote: (r) => `競売収入の残り${r}％は、働く人の公正な移行に充てられます。企業・地域への縮小報酬は、PTEから出します。`, ruleNote: (s0, cost, lift, cap) => cap ? `保証の前は${s0}％。PTEが出せる上限（収入の40％）に届くため、この水準までは保証できません。` : (lift > 0 ? `保証の前は${s0}％。境目にいる${lift}％の人に上乗せし、その費用は収入の${cost}％です。` : `保証の前に、すでに${s0}％の人がプラスで、上乗せは不要です。`), ruleOff: "保証の水準は、市民会議を含む民主的な手続きで見直せます。標準の設計は「少なくとも7割」です。ここでは、保証がない場合と比べられます。",
+      dEyebrow: "国全体で見ると", dTitle: "誰が得をするのか", dStatLab: "の人が、手取りがプラス",
+      legCost: "値上がりの負担（一人あたり）", legRecv: "受け取る還元（一人あたり）",
+      dNote: "使用量の少ない順に、人々を20の同じ大きさのグループに分けています。縮小に連動する部分が少なく使う人に多く払うので、還元の線はわずかに右下がりになります。",
+      tEyebrow: "これから30年", tTitle: "一人あたりの市民への還元", tStatLab: "（10年目）",
+      rateLab: "上限の年あたりの引き下げ", growthLab: "排出枠の価格の年あたりの上昇",
+      tLeg: "市民への還元（還元の割合＋上乗せ）、一人あたり・年",
+      tNote: "収入は「価格 × 排出量」です。上限が厳しくなると、排出は価格の上昇より速く減るので、還元はいずれ小さくなります。それは仕組みが働いている証拠です。長く続く土台は、BEIで別に積み立てるPTE（Planetary Transition Endowment）が担います。",
+      mTitle: "数字の計算方法",
+      m1: "一人あたりの競売収入 ＝ 排出枠の価格 × 一人あたりの平均排出量（化石燃料由来のCO₂はすべて上限の対象と仮定）",
+      m2: "あなたの負担の増加 ＝ 価格 × あなたの排出量 × 家計に転嫁される割合。計算しているのは、この直接の負担だけです。賃金や年金、経済全体を通じた間接の影響は含みません。",
+      m3: "一律の還元 ＝ 市民に還す分の6割（初期値の90％なら収入の54％）＋ 立ち上げ期のPTEからの上乗せ",
+      m4: "縮小に連動する還元 ＝ 市民に還す分の4割（初期値なら収入の36％）を点数で分配。使用量の少なさに75％（2 − 使用比率、0〜2の範囲）、減らした量に25％（1 + 削減率 ÷ 20％、0〜2の範囲）の重み。原資がちょうど配り切られるように点数を調整します。",
+      m5: "子どもも大人と同じ額を受け取ります。子どもの分の半分は、子どもの分の値上がりを補うために今、親に支払い、残りの半分を子ども本人の将来信託口座に積み立てます。多数派保証ルール（標準は少なくとも7割）では、損益の境目にいて少しだけマイナスになる世帯に、その不足分をPTEから上乗せします。不足の小さい世帯から順に、選んだ割合の人がプラスになるまでです。額は、減らす前の使用量で決まるので、その後に減らせば、そのぶん得が増えます。PTEからの上乗せは、合計で収入の40％までです。",
+      m6: "人々の使用量は、平均1倍の対数正規分布に従うと仮定しています。上限があるので、還元を使っても排出の総量は増えません。排出枠の価格が上がるだけです。",
+      tableSum: "国全体の表を見る",
+      foot1: "提案C：Planetary OS の試作版。連載「地球のOSを書き換える」の一部です。",
+      foot2: "これは予測ではなく、考えるための道具です。モデルへのご意見を歓迎します。",
+      pillGood: "✓ 手取りがプラス", pillBad: "! 負担のほうが大きい",
+      who: (a, k) => `大人${a}人・子ども${k}人`,
+      costSub: (t) => `世帯の排出量 約${t}トン/年`,
+      suffSub: (s, opt) => opt ? `あなたの点数：平均の${s}倍` : "参加しない：標準の額",
+      trust: (v, now) => `うち子どもの分 ${v} は、将来信託口座に積み立てられます。今使える差し引きは ${now} です。`,
+      tblHead: ["グループ", "使用量（平均比）", "負担/人", "還元/人", "差し引き/人"],
+      grp: (i) => `${i}`,
+      tipDist: (r, c, d) => `使用量 平均の<b>${r}</b>倍<br>負担 <b>${c}</b> ・ 還元 <b>${d}</b>`,
+      tipTime: (y, v) => `${y}年目<br>還元 <b>${v}</b> / 人・年`,
+      yr: "年", x10: "使用量：少ない → 多い"
+    },
+    en: {
+      restNote: (r) => `The remaining ${r}% of auction revenue funds a Just Transition for workers. Sufficiency rewards for firms and regions are paid by the PTE.`,
+      ruleNote: (s0, cost, lift, cap) => cap ? `Before the guarantee: ${s0}%. The PTE ceiling (40% of revenue) is reached, so this level cannot be fully guaranteed.` : (lift > 0 ? `Before the guarantee: ${s0}%. A top-up goes to the ${lift}% of people just short of break-even, costing ${cost}% of revenue.` : `Before the guarantee, ${s0}% already come out ahead; no top-up is needed.`),
+      ruleOff: "The guarantee level can be revisited through democratic processes, including citizens' assemblies. The standard design is \"at least 70%\". Here you can compare with no guarantee.",
+      pillGood: "✓ Net positive", pillBad: "! Net cost",
+      who: (a, k) => `${a} adult${a === 1 ? "" : "s"}, ${k} child${k === 1 ? "" : "ren"}`,
+      costSub: (t) => `Household footprint about ${t} t/yr`,
+      suffSub: (s, opt) => opt ? `Your score: ${s}× the average` : "Opted out: standard amount",
+      trust: (v, now) => `Of this, ${v} for the children goes into Future Trust accounts. The net available now is ${now}.`,
+      tblHead: ["Group", "Use (× average)", "Pays / person", "Receives / person", "Net / person"],
+      grp: (i) => `${i}`,
+      tipDist: (r, c, d) => `Use <b>${r}×</b> average<br>Pays <b>${c}</b> · Receives <b>${d}</b>`,
+      tipTime: (y, v) => `Year ${y}<br>Dividend <b>${v}</b> per person`,
+      yr: "Year", x10: "Use: lowest → highest"
+    }
+  };
+  const EN_TEXT = {};
+  document.querySelectorAll("[data-i18n]").forEach((el) => { EN_TEXT[el.dataset.i18n] = el.textContent; });
+
+  const CUR = { USD: { rate: 1, sym: "$", dec: 0 }, EUR: { rate: 0.92, sym: "€", dec: 0 }, JPY: { rate: 150, sym: "¥", dec: 0 } };
+  const state = { lang: "en", cur: "USD" };
+  try { const s = JSON.parse(localStorage.getItem("cds-prefs") || "{}"); if (s.lang) state.lang = s.lang; if (s.cur) state.cur = s.cur; } catch (e) { /* storage unavailable */ } { const q = new URLSearchParams(location.search).get("lang"); if (q === "ja") { state.lang = "ja"; state.cur = "JPY"; } else if (q === "en") { state.lang = "en"; } }
+
+  const t = (k) => (state.lang === "ja" ? I18N.ja : I18N.en)[k];
+  function money(usd, signed) {
+    const c = CUR[state.cur];
+    const v = usd * c.rate;
+    const abs = Math.abs(v);
+    let s;
+    if (state.cur === "JPY" && state.lang === "ja" && abs >= 10000) s = (abs / 10000).toLocaleString("ja-JP", { maximumFractionDigits: abs >= 100000 ? 0 : 1 }) + "万円";
+    else s = c.sym + Math.round(abs).toLocaleString("en-US");
+    const sign = signed ? (v > 0.5 ? "+" : v < -0.5 ? "−" : "") : (v < -0.5 ? "−" : "");
+    return sign + s;
+  }
+
+  // ---- maths ----
+  function invNorm(p) { // Acklam
+    const a = [-3.969683028665376e+01, 2.209460984245205e+02, -2.759285104469687e+02, 1.383577518672690e+02, -3.066479806614716e+01, 2.506628277459239e+00];
+    const b = [-5.447609879822406e+01, 1.615858368580409e+02, -1.556989798598866e+02, 6.680131188771972e+01, -1.328068155922803e+01];
+    const c = [-7.784894002430293e-03, -3.223964580411365e-01, -2.400758277161838e+00, -2.549671010013320e+00, 4.374664141464968e+00, 2.938163982698783e+00];
+    const d = [7.784695709041462e-03, 3.224671290700398e-01, 2.445134137142996e+00, 3.754408661907416e+00];
+    const pl = 0.02425;
+    let q, r;
+    if (p < pl) { q = Math.sqrt(-2 * Math.log(p)); return (((((c[0] * q + c[1]) * q + c[2]) * q + c[3]) * q + c[4]) * q + c[5]) / ((((d[0] * q + d[1]) * q + d[2]) * q + d[3]) * q + 1); }
+    if (p > 1 - pl) { q = Math.sqrt(-2 * Math.log(1 - p)); return -(((((c[0] * q + c[1]) * q + c[2]) * q + c[3]) * q + c[4]) * q + c[5]) / ((((d[0] * q + d[1]) * q + d[2]) * q + d[3]) * q + 1); }
+    q = p - 0.5; r = q * q;
+    return (((((a[0] * r + a[1]) * r + a[2]) * r + a[3]) * r + a[4]) * r + a[5]) * q / (((((b[0] * r + b[1]) * r + b[2]) * r + b[3]) * r + b[4]) * r + 1);
+  }
+  const clamp = (x, lo, hi) => Math.max(lo, Math.min(hi, x));
+  const TRUST_SHARE = 0.5;  // share of each child's dividend saved in the Future Trust; the rest is paid to the parents now
+  const GUAR_CEIL = 0.4;   // the PTE may add at most this share of revenue in total (launch top-up + guarantee)
+  const levelScore = (r) => clamp(2 - r, 0, 2);
+  const cutScore = (cutPct) => clamp(1 + cutPct / 20, 0, 2);
+  const score = (r, cutPct) => 0.75 * levelScore(r) + 0.25 * cutScore(cutPct);
+  const quantile = (sigma, p) => Math.exp(-sigma * sigma / 2 + sigma * invNorm(p));
+
+  // Majority-benefit guarantee: households just short of break-even (measured at a fixed baseline use)
+  // get the gap made up, starting with the smallest gaps, until the chosen share comes out ahead.
+  // Because the payment is fixed by the baseline, cutting back later still raises the household's net.
+  function model(inp) {
+    const R = inp.price * inp.avg;            // revenue per person, USD/yr
+    const T = inp.topup * R;                    // launch-phase top-up per person (universal)
+    const U = 0.6 * inp.hshare * R;            // universal (before top-up)
+    const pool = 0.4 * inp.hshare * R;          // sufficiency-linked pool per person
+    const N = 2000;
+    let ew = 0;
+    const qs = [];
+    for (let i = 0; i < N; i++) { const r = quantile(inp.sigma, (i + 0.5) / N); qs.push(r); ew += score(r, 0); }
+    ew /= N;
+    const recvAt = (r, cut, opt) => U + T + (opt ? pool * score(r, cut) / ew : pool);
+    const costAt = (r) => inp.price * inp.avg * r * inp.pass;
+    const gapAt = (r) => costAt(r) - recvAt(r, 0, true);
+    const gaps = qs.map(gapAt);
+    const ahead0 = gaps.filter((g) => g <= 0).length;
+    let gmax = 0, guarSum = 0, lifted = 0, capped = false;
+    if (inp.rule > 0) {
+      const room = Math.max(0, GUAR_CEIL * R - T) * N;          // what the PTE can add, in total
+      const pos = gaps.filter((g) => g > 0).sort((a, b) => a - b);
+      const want = Math.max(0, Math.ceil(inp.rule * N) - ahead0);
+      for (let k = 0; k < Math.min(want, pos.length); k++) {
+        if (guarSum + pos[k] > room) { capped = true; break; }
+        guarSum += pos[k]; gmax = pos[k]; lifted++;
+      }
+    }
+    const guarAt = (r) => { const g = gapAt(r); return g > 0 && g <= gmax ? g : 0; };
+    const share = (ahead0 + lifted) / N;
+    const guarShare = R > 0 ? guarSum / N / R : 0;              // guarantee cost as a share of revenue
+    const groups = [];
+    for (let i = 0; i < 20; i++) { const r = quantile(inp.sigma, (i + 0.5) / 20); groups.push({ r, cost: costAt(r), recv: recvAt(r, 0, true) + guarAt(r) }); }
+    const persons = inp.adults + inp.kids;
+    const base = inp.use / Math.max(0.05, 1 - inp.cut / 100);    // use before cutting back
+    const youScore = inp.optin ? score(inp.use, inp.cut) / ew : 1;
+    const perPerson = U + T + (inp.optin ? pool * youScore : pool) + guarAt(base);
+    const hh = {
+      cost: costAt(inp.use) * persons,
+      uni: U * persons,
+      top: T * persons,
+      guar: guarAt(base) * persons,
+      suff: (inp.optin ? pool * youScore : pool) * persons,
+      trust: perPerson * inp.kids * TRUST_SHARE,
+      footprint: inp.avg * inp.use * persons,
+      youScore
+    };
+    hh.net = hh.uni + hh.top + hh.guar + hh.suff - hh.cost;
+    const series = [];
+    for (let y = 0; y <= 30; y++) series.push({ y, v: (inp.hshare + inp.topup + guarShare) * inp.price * Math.pow(1 + inp.growth, y) * inp.avg * Math.pow(1 - inp.rate, y) });
+    return { R, groups, share, share0: ahead0 / N, guarShare, liftedShare: lifted / N, capped, hh, series };
+  }
+
+  // ---- reading inputs ----
+  function num(id, lo, hi, dflt) { const v = parseFloat($(id).value); return isFinite(v) ? clamp(v, lo, hi) : dflt; }
+  function read() {
+    return {
+      avg: num("avg", 0.1, 30, 10), price: num("price", 0, 1000, 100),
+      adults: Math.round(num("adults", 1, 10, 2)), kids: Math.round(num("kids", 0, 10, 0)),
+      use: num("use", 0.05, 5, 1), cut: num("red", 0, 100, 0), optin: $("optin").checked,
+      pass: num("pass", 0, 100, 100) / 100, sigma: num("sigma", 0.2, 1.5, 0.7),
+      rate: parseFloat($("rate").value) / 100, growth: num("growth", 0, 30, 6) / 100,
+      hshare: parseFloat($("hshare").value) / 100, topup: num("topup", 0, 40, 10) / 100, rule: parseFloat($("rule").value) / 100
+    };
+  }
+
+  // ---- charts ----
+  const NS = "http://www.w3.org/2000/svg";
+  function el(tag, attrs, parent) { const e = document.createElementNS(NS, tag); for (const k in attrs) e.setAttribute(k, attrs[k]); if (parent) parent.appendChild(e); return e; }
+  function niceMax(v) { if (v <= 0) return 1; const p = Math.pow(10, Math.floor(Math.log10(v))); for (const m of [1, 1.5, 2, 2.5, 3, 4, 5, 6, 8, 10]) if (m * p >= v) return m * p; return 10 * p; }
+  function tipFor(box) { let tip = box.querySelector(".tip"); if (!tip) { tip = document.createElement("div"); tip.className = "tip"; tip.hidden = true; box.appendChild(tip); } return tip; }
+
+  function drawDist(m) {
+    const box = $("dist"); box.querySelectorAll("svg").forEach((s) => s.remove());
+    const W = 520, H = 280, L = 54, Rm = 12, T = 14, B = 34;
+    const svg = el("svg", { viewBox: `0 0 ${W} ${H}`, role: "img", "aria-label": "Cost and dividend per person across twenty groups" });
+    box.prepend(svg);
+    const maxV = niceMax(Math.max(...m.groups.map((g) => Math.max(g.cost, g.recv))) * 1.05);
+    const y = (v) => T + (H - T - B) * (1 - v / maxV);
+    const n = m.groups.length, slot = (W - L - Rm) / n, bw = slot - 4;
+    for (let k = 0; k <= 4; k++) {
+      const v = maxV * k / 4, yy = y(v);
+      el("line", { x1: L, x2: W - Rm, y1: yy, y2: yy, stroke: "var(--line)", "stroke-width": k === 0 ? 1.2 : 0.8 }, svg);
+      const tx = el("text", { x: L - 8, y: yy + 4, "text-anchor": "end" }, svg); tx.textContent = money(v);
+    }
+    const lab = el("text", { x: L + (W - L - Rm) / 2, y: H - 8, "text-anchor": "middle" }, svg); lab.textContent = t("x10");
+    const tip = tipFor(box);
+    m.groups.forEach((g, i) => {
+      const x = L + i * slot + 2, h = Math.max(1, y(0) - y(g.cost));
+      const r = 4, top = y(g.cost);
+      el("path", { d: `M${x},${y(0)} V${top + r} Q${x},${top} ${x + r},${top} H${x + bw - r} Q${x + bw},${top} ${x + bw},${top + r} V${y(0)} Z`, fill: "var(--cost)", "fill-opacity": g.cost > g.recv ? 1 : 0.55 }, svg);
+      const hit = el("rect", { x: L + i * slot, y: T, width: slot, height: H - T - B, fill: "transparent" }, svg);
+      const show = () => {
+        tip.innerHTML = t("tipDist")(g.r.toFixed(2), money(g.cost), money(g.recv));
+        tip.style.left = ((x + bw / 2) / W * 100) + "%"; tip.style.top = (Math.min(top, y(g.recv)) / H * 100) + "%"; tip.hidden = false;
+      };
+      hit.addEventListener("mouseenter", show); hit.addEventListener("focus", show);
+      hit.addEventListener("mouseleave", () => { tip.hidden = true; });
+      void h;
+    });
+    const pts = m.groups.map((g, i) => `${L + i * slot + slot / 2},${y(g.recv)}`).join(" ");
+    el("polyline", { points: pts, fill: "none", stroke: "var(--panel)", "stroke-width": 5, "stroke-linejoin": "round" }, svg);
+    el("polyline", { points: pts, fill: "none", stroke: "var(--uni)", "stroke-width": 2.5, "stroke-linejoin": "round" }, svg);
+    // "you" marker
+    const inp = read();
+    let gi = 0; for (let i = 0; i < n; i++) if (m.groups[i].r <= inp.use) gi = i;
+    const ux = L + gi * slot + slot / 2;
+    el("line", { x1: ux, x2: ux, y1: T, y2: H - B, stroke: "var(--ink)", "stroke-dasharray": "3 3", "stroke-width": 1 }, svg);
+    const yt = el("text", { x: ux + (gi > n - 4 ? -4 : 4), y: T + 10, "text-anchor": gi > n - 4 ? "end" : "start", style: "fill:var(--ink);font-weight:600" }, svg);
+    yt.textContent = state.lang === "ja" ? "あなた" : "You";
+  }
+
+  function drawTime(m) {
+    const box = $("time"); box.querySelectorAll("svg").forEach((s) => s.remove());
+    const W = 520, H = 260, L = 54, Rm = 16, T = 16, B = 30;
+    const svg = el("svg", { viewBox: `0 0 ${W} ${H}`, role: "img", "aria-label": "Citizen Dividend per person over 30 years" });
+    box.prepend(svg);
+    const maxV = niceMax(Math.max(...m.series.map((s) => s.v)) * 1.08);
+    const x = (yr) => L + (W - L - Rm) * yr / 30, y = (v) => T + (H - T - B) * (1 - v / maxV);
+    for (let k = 0; k <= 4; k++) {
+      const v = maxV * k / 4, yy = y(v);
+      el("line", { x1: L, x2: W - Rm, y1: yy, y2: yy, stroke: "var(--line)", "stroke-width": k === 0 ? 1.2 : 0.8 }, svg);
+      const tx = el("text", { x: L - 8, y: yy + 4, "text-anchor": "end" }, svg); tx.textContent = money(v);
+    }
+    for (const yr of [0, 10, 20, 30]) { const tx = el("text", { x: x(yr), y: H - 10, "text-anchor": "middle" }, svg); tx.textContent = state.lang === "ja" ? `${yr}年` : `Yr ${yr}`; }
+    const pts = m.series.map((s) => `${x(s.y)},${y(s.v)}`);
+    el("path", { d: `M${x(0)},${y(0)} L${pts.join(" L")} L${x(30)},${y(0)} Z`, fill: "var(--uni)", "fill-opacity": 0.12 }, svg);
+    el("polyline", { points: pts.join(" "), fill: "none", stroke: "var(--uni)", "stroke-width": 2.5, "stroke-linejoin": "round" }, svg);
+    const end = m.series[30];
+    el("circle", { cx: x(30), cy: y(end.v), r: 4.5, fill: "var(--uni)", stroke: "var(--panel)", "stroke-width": 2 }, svg);
+    const cross = el("line", { y1: T, y2: H - B, stroke: "var(--muted)", "stroke-width": 1, visibility: "hidden" }, svg);
+    const dot = el("circle", { r: 5, fill: "var(--uni)", stroke: "var(--panel)", "stroke-width": 2, visibility: "hidden" }, svg);
+    const tip = tipFor(box);
+    const hit = el("rect", { x: L, y: T, width: W - L - Rm, height: H - T - B, fill: "transparent" }, svg);
+    const move = (ev) => {
+      const rect = svg.getBoundingClientRect();
+      const px = (ev.clientX - rect.left) / rect.width * W;
+      const yr = clamp(Math.round((px - L) / (W - L - Rm) * 30), 0, 30);
+      const s = m.series[yr];
+      cross.setAttribute("x1", x(yr)); cross.setAttribute("x2", x(yr)); cross.setAttribute("visibility", "visible");
+      dot.setAttribute("cx", x(yr)); dot.setAttribute("cy", y(s.v)); dot.setAttribute("visibility", "visible");
+      tip.innerHTML = t("tipTime")(yr, money(s.v)); tip.style.left = (x(yr) / W * 100) + "%"; tip.style.top = (y(s.v) / H * 100) + "%"; tip.hidden = false;
+    };
+    hit.addEventListener("mousemove", move);
+    hit.addEventListener("mouseleave", () => { tip.hidden = true; cross.setAttribute("visibility", "hidden"); dot.setAttribute("visibility", "hidden"); });
+  }
+
+  function drawTable(m) {
+    const tb = $("dist-table"); const h = t("tblHead");
+    let html = "<thead><tr>" + h.map((x) => `<th scope="col">${x}</th>`).join("") + "</tr></thead><tbody>";
+    m.groups.forEach((g, i) => { html += `<tr><td>${i + 1}</td><td>${g.r.toFixed(2)}×</td><td>${money(g.cost)}</td><td>${money(g.recv)}</td><td>${money(g.recv - g.cost, true)}</td></tr>`; });
+    tb.innerHTML = html + "</tbody>";
+  }
+
+  function seg(container, parts, total) {
+    container.innerHTML = "";
+    parts.forEach((p) => { if (p.v <= 0) return; const d = document.createElement("div"); d.className = "seg2"; d.style.background = p.c; d.style.width = (p.v / total * 100) + "%"; container.appendChild(d); });
+  }
+
+  function render() {
+    const inp = read();
+    const m = model(inp);
+    $("price-v").textContent = money(inp.price) + "/t";
+    $("use-v").textContent = inp.use.toFixed(2) + "×";
+    $("red-v").textContent = inp.cut.toFixed(0) + "%";
+    $("pass-v").textContent = Math.round(inp.pass * 100) + "%";
+    $("sigma-v").textContent = inp.sigma.toFixed(2);
+    $("growth-v").textContent = Math.round(inp.growth * 100) + "%";
+    const hh = m.hh;
+    $("who").textContent = t("who")(inp.adults, inp.kids);
+    $("net").textContent = money(hh.net, true);
+    $("net2").textContent = money(hh.net, true);
+    $("net-m").textContent = money(hh.net / 12, true) + (state.lang === "ja" ? "/月" : "/mo");
+    $("cost").textContent = "−" + money(hh.cost); $("cost-m").textContent = "−" + money(hh.cost / 12) + (state.lang === "ja" ? "/月" : "/mo");
+    $("uni").textContent = "+" + money(hh.uni); $("uni-m").textContent = "+" + money(hh.uni / 12) + (state.lang === "ja" ? "/月" : "/mo");
+    $("top").textContent = "+" + money(hh.top); $("top-m").textContent = "+" + money(hh.top / 12) + (state.lang === "ja" ? "/月" : "/mo");
+    $("topup-v").textContent = Math.round(inp.topup * 100) + "%";
+    $("restNote").textContent = t("restNote")(Math.round((1 - inp.hshare) * 100));
+    $("rule-note").textContent = inp.rule > 0 ? t("ruleNote")(Math.round(m.share0 * 100), (m.guarShare * 100).toFixed(1), Math.round(m.liftedShare * 100), m.capped) : t("ruleOff");
+    $("guar").textContent = "+" + money(hh.guar); $("guar-m").textContent = "+" + money(hh.guar / 12) + (state.lang === "ja" ? "/月" : "/mo");
+    $("guar-row").hidden = !(inp.rule > 0);
+    $("suff").textContent = "+" + money(hh.suff); $("suff-m").textContent = "+" + money(hh.suff / 12) + (state.lang === "ja" ? "/月" : "/mo");
+    $("cost-sub").textContent = t("costSub")(hh.footprint.toFixed(1));
+    $("suff-sub").textContent = t("suffSub")(hh.youScore.toFixed(2), inp.optin);
+    $("trust").textContent = inp.kids > 0 ? t("trust")(money(hh.trust), money(hh.net - hh.trust, true)) : "";
+    const pill = $("pill"); const good = hh.net >= 0;
+    pill.className = "pill " + (good ? "good" : "bad"); pill.textContent = t(good ? "pillGood" : "pillBad");
+    const top = Math.max(hh.cost, hh.uni + hh.top + hh.guar + hh.suff, 1);
+    seg($("bar-pay"), [{ v: hh.cost, c: "var(--cost)" }, { v: top - hh.cost, c: "transparent" }], top);
+    const got = hh.uni + hh.top + hh.guar + hh.suff;
+    seg($("bar-get"), [{ v: hh.uni + hh.top + hh.guar, c: "var(--uni)" }, { v: hh.suff, c: "var(--suff)" }, { v: top - got, c: "transparent" }], top);
+    $("b-pay").textContent = money(hh.cost); $("b-get").textContent = money(got);
+    $("share").textContent = Math.round(m.share * 100) + "%";
+    $("t-stat").textContent = money(m.series[10].v);
+    drawDist(m); drawTime(m); drawTable(m);
+  }
+
+  function applyLang() {
+    document.documentElement.lang = state.lang;
+    document.querySelectorAll("[data-i18n]").forEach((e) => {
+      const k = e.dataset.i18n; const v = state.lang === "ja" ? I18N.ja[k] : EN_TEXT[k];
+      if (typeof v === "string") e.textContent = v;
+    });
+    $("lang-en").setAttribute("aria-pressed", String(state.lang === "en"));
+    $("lang-ja").setAttribute("aria-pressed", String(state.lang === "ja"));
+    for (const c of Object.keys(CUR)) $("cur-" + c).setAttribute("aria-pressed", String(state.cur === c));
+    render();
+  }
+  function save() { try { localStorage.setItem("cds-prefs", JSON.stringify({ lang: state.lang, cur: state.cur })); } catch (e) { /* ignore */ } }
+
+  $("lang-en").addEventListener("click", () => { state.lang = "en"; save(); applyLang(); });
+  $("lang-ja").addEventListener("click", () => { state.lang = "ja"; if (state.cur === "USD") state.cur = "JPY"; save(); applyLang(); });
+  for (const c of Object.keys(CUR)) $("cur-" + c).addEventListener("click", () => { state.cur = c; save(); applyLang(); });
+  const DEFAULTS = { preset: "10", avg: "10", price: "100", adults: "2", kids: "2", use: "0.8", red: "0", pass: "80", sigma: "0.7", rate: "8", growth: "6", hshare: "90", topup: "10", rule: "70", optin: true };
+  $("reset").addEventListener("click", () => {
+    for (const k in DEFAULTS) { if (k === "optin") $("optin").checked = DEFAULTS.optin; else $(k).value = DEFAULTS[k]; }
+    render();
+  });
+  document.querySelectorAll("[data-price]").forEach((b) => b.addEventListener("click", () => { $("price").value = b.dataset.price; render(); }));
+  $("preset").addEventListener("change", () => { $("avg").value = $("preset").value; render(); });
+  document.querySelectorAll("[data-use]").forEach((b) => b.addEventListener("click", () => { $("use").value = b.dataset.use; render(); }));
+  ["avg", "price", "adults", "kids", "use", "red", "optin", "pass", "sigma", "rate", "growth", "hshare", "topup", "rule"].forEach((id) => { $(id).addEventListener("input", render); $(id).addEventListener("change", render); });
+  window.addEventListener("resize", () => { document.querySelectorAll(".tip").forEach((x) => { x.hidden = true; }); });
+  applyLang();
+})();
+</script>
+
+<script data-goatcounter="https://steering.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
+</body>
+</html>

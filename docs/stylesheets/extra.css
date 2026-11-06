@@ -1,0 +1,18 @@
+:root { --sw-navy: #1F2A37; --sw-orange: #E0662C; }
+.md-typeset .hero { padding: 2.5rem 0 1.5rem; }
+.md-typeset .hero h1 { font-size: 2.6rem; font-weight: 800; margin: .2rem 0 .6rem; color: var(--md-default-fg-color); }
+.md-typeset .hero .kicker { text-transform: uppercase; letter-spacing: .08em; font-weight: 700; color: var(--sw-orange); margin: 0; }
+.md-typeset .hero .lead { font-size: 1.15rem; max-width: 46rem; }
+.md-typeset .hero .md-button, .md-typeset .cta .md-button { margin: .3rem .4rem .3rem 0; }
+.md-typeset .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr)); gap: 1rem; margin: 1rem 0 1.5rem; }
+.md-typeset .card { border: 1px solid var(--md-default-fg-color--lightest); border-top: 4px solid var(--sw-orange); border-radius: 8px; padding: .4rem 1rem 1rem; }
+.md-typeset .card h3 { margin-top: .2rem; }
+.md-typeset .card .tag { font-weight: 700; color: var(--sw-orange); margin: .6rem 0 0; font-size: .8rem; letter-spacing: .05em; }
+.md-typeset .note { color: var(--md-default-fg-color--light); font-size: .8rem; margin-top: 2rem; }
+.md-typeset img { border-radius: 6px; }
+.md-typeset figure { margin: 1.2rem auto; }
+.md-typeset figcaption { font-size: .8rem; color: var(--md-default-fg-color--light); max-width: 40rem; }
+.md-typeset iframe.sim { width: 100%; height: 85vh; min-height: 640px; border: 1px solid var(--md-default-fg-color--lightest); border-radius: 8px; }
+.md-typeset table:not([class]) { font-size: .75rem; }
+@media (max-width: 600px) { .md-typeset .hero h1 { font-size: 2rem; } }
+.md-typeset .hero ~ p > img, .md-typeset > p > img { max-width: 900px; width: 100%; display: block; margin: 1rem auto; }

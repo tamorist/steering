@@ -1,0 +1,44 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Steering Within Limits — slides</title><style>
+*{box-sizing:border-box}html,body{margin:0;height:100%;background:#16212E;font-family:"Helvetica Neue",Helvetica,Arial,"Hiragino Kaku Gothic ProN","Noto Sans JP",sans-serif;color:#1F2A37}
+.deck{position:relative;width:100vw;height:100vh;overflow:hidden}
+.slide{position:absolute;inset:0;margin:auto;width:min(100vw,177.78vh);height:min(56.25vw,100vh);background:#fff;padding:5% 6%;display:none;flex-direction:column;justify-content:center}
+.slide.on{display:flex}
+.slide.dark{background:linear-gradient(135deg,#16212E,#1F3A5F);color:#fff}
+.k{color:#E0662C;font-weight:800;letter-spacing:.08em;text-transform:uppercase;font-size:clamp(12px,1.6vw,22px);margin:0 0 .6em}
+h1{font-size:clamp(28px,5.2vw,76px);margin:0 0 .3em;line-height:1.1}
+h2{font-size:clamp(22px,3.4vw,50px);margin:0 0 .5em;line-height:1.15}
+p,li{font-size:clamp(14px,1.9vw,28px);line-height:1.45;margin:.25em 0}
+ul{margin:.3em 0 0;padding-left:1.1em}
+.dark p,.dark li{color:#C9D6E6}
+img{max-width:100%;max-height:62%;object-fit:contain;align-self:center;margin-top:.6em}
+.cols{display:grid;grid-template-columns:repeat(3,1fr);gap:2.5%;margin-top:.6em}
+.col{border-top:6px solid #E0662C;background:#F4F6F8;border-radius:10px;padding:4% 6%}
+.col b{display:block;font-size:clamp(16px,2.2vw,32px);margin-bottom:.3em}
+.col p{font-size:clamp(12px,1.5vw,22px)}
+.big{font-size:clamp(22px,3.6vw,54px);font-weight:800;color:#fff}
+.bar{position:fixed;left:0;bottom:0;height:4px;background:#E0662C;transition:width .2s}
+.num{position:fixed;right:14px;bottom:10px;color:#9DB8D9;font-size:13px}
+.hint{position:fixed;left:14px;bottom:10px;color:#9DB8D9;font-size:13px}
+a{color:#E0662C}
+</style></head><body><div class="deck">
+<section class="slide dark"><p class="k">Package proposal · working draft</p><h1>Steering Within Limits</h1><p>Three proposals for a civilizational transition: Youth GCC, the Global Citizen Will Platform, and Planetary OS</p></section>
+<section class="slide"><p class="k">Why now</p><h2>In 50 years, the world changed more than our rules did</h2><img src="../assets/fig/en/W-3.png" alt=""></section>
+<section class="slide"><p class="k">The diagnosis</p><h2>Not a shortage, but a runaway</h2><ul><li>Efficiency gains are swallowed by overcompetition</li><li>Benefits flow into asset prices, while daily life gets harder</li><li>Everyone acting rationally produces a collective failure, like a theater audience all standing on tiptoe</li></ul></section>
+<section class="slide"><p class="k">The diagnosis</p><h2>Wealth and emissions are concentrated in the same hands</h2><img src="../assets/fig/en/2-B.png" alt=""></section>
+<section class="slide"><p class="k">The transition</p><h2>From a civilization that grew without steering, to one that steers within limits</h2><ul><li>Planetary limits defined strictly, as guardrails</li><li>Freedom for life and business within them</li><li>Continual correction by data and pre-agreed rules</li><li>Goals set democratically, including for future generations</li></ul></section>
+<section class="slide"><p class="k">Three gaps, three proposals</p><h2>Who, how, and what</h2><div class="cols"><div class="col"><b>A · Youth GCC</b><p>A youth-led global citizens' congress. A World Citizens' Assembly selected by lot, a World Policy Institute, a World Policy Laboratory</p></div><div class="col"><b>B · Platform</b><p>A federation of existing movements that makes support visible and connects it to decisions</p></div><div class="col"><b>C · Planetary OS</b><p>Operating rules under which reducing pays</p></div></div></section>
+<section class="slide"><p class="k">A · Youth GCC</p><h2>A second political circuit, beside states</h2><ul><li>World citizens raise problems; experts design at least three options; citizens deliberate and choose</li><li>Policies are tested before they are scaled, and failures are published</li><li>It begins with a duty to respond, not a power to compel: states publish why they adopt or reject</li><li>Legitimacy is earned, not declared</li></ul></section>
+<section class="slide"><p class="k">B · Global Citizen Will Platform</p><h2>Federation, not competition</h2><ul><li>Existing movements keep their names and campaigns, and join as Co-Initiators</li><li>Support for concrete proposals is made visible against planetary indicators</li><li>Four channels to decisions: multilateral, legal, electoral, markets</li><li>Influence through legitimacy and numbers, not coercion</li></ul></section>
+<section class="slide"><p class="k">C · Planetary OS</p><h2>Four modules, two money flows</h2><img src="../assets/fig/en/2-2.png" alt=""></section>
+<section class="slide"><p class="k">C · Planetary OS</p><h2>Reducing pays: at least 70% of people come out ahead</h2><img src="../assets/fig/en/5-2.png" alt=""></section>
+<section class="slide"><p class="k">C · Planetary OS</p><h2>Scaling through a club worth joining</h2><img src="../assets/fig/en/6-4.png" alt=""></section>
+<section class="slide dark"><p class="k">One question for politics</p><p class="big">"Here is a working design. Will you connect to it?"</p><p>Stage 1: the first edition of the Planetary OS Standard · a public dividend simulator · the launch of Youth GCC</p><p>Join as a Co-Initiator · Read more: the package proposal and the series</p></section>
+</div><div class="bar"></div><div class="num"></div><div class="hint">← → to move · F for full screen</div><script>
+const s=[...document.querySelectorAll('.slide')];let i=0;const bar=document.querySelector('.bar'),num=document.querySelector('.num');
+function go(n){i=Math.max(0,Math.min(s.length-1,n));s.forEach((e,k)=>e.classList.toggle('on',k===i));bar.style.width=((i+1)/s.length*100)+'%';num.textContent=(i+1)+' / '+s.length;history.replaceState(null,'','#'+(i+1))}
+document.addEventListener('keydown',e=>{if(['ArrowRight','PageDown',' '].includes(e.key))go(i+1);if(['ArrowLeft','PageUp'].includes(e.key))go(i-1);if(e.key==='Home')go(0);if(e.key==='End')go(s.length-1);if(e.key==='f'||e.key==='F'){document.fullscreenElement?document.exitFullscreen():document.documentElement.requestFullscreen()}});
+document.addEventListener('click',e=>{if(e.target.closest('a'))return;go(e.clientX>innerWidth/3?i+1:i-1)});
+go((parseInt(location.hash.slice(1))||1)-1);
+</script><script data-goatcounter="https://steering.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
+</body></html>
