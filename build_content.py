@@ -258,6 +258,7 @@ def info_value(key, lang):
         "substack_url": c.get("substack", ""), "note_url": c.get("note", ""), "x_url": c.get("x", ""),
         "profile_url": c.get("x") or c.get("substack", ""),
         "interest_form_url": f.get("interest_form", ""),
+        "contact_form_url": f.get("contact_form", ""),
         "license_holder": l.get("holder") or p.get("author_en", ""), "license_year": l.get("year", ""),
     }
     if key == "analytics_note":
@@ -283,12 +284,21 @@ def resolve_vars(text, lang, mode):
             for label, k in (("Substack", "substack_url"), ("note", "note_url"), ("X", "x_url")):
                 u = info_value(k, lang)
                 if u: parts.append(f"[{label}]({u})" if mode == "site" else u)
+            u = info_value("contact_form_url", lang)
+            if u:
+                label = "お問い合わせフォーム" if lang == "ja" else "Contact form"
+                parts.append(f"[{label}]({u})" if mode == "site" else f"{label}：{u}" if lang == "ja" else f"{label}: {u}")
             return " · ".join(parts) if parts else PENDING[lang]
         if key == "interest_form":
             u = info_value("interest_form_url", lang)
             label = "関心表明フォーム（約2分）" if lang == "ja" else "Co-Initiator interest form (about 2 minutes)"
             if not u: return label + " " + PENDING[lang]
             return f"[{label}]({u})" if mode == "site" else f"{label}: {u}"
+        if key == "contact_form":
+            u = info_value("contact_form_url", lang)
+            label = "お問い合わせフォーム" if lang == "ja" else "contact form"
+            if not u: return label + " " + PENDING[lang]
+            return f"[{label}]({u})" if mode == "site" else f"{label}（{u}）" if lang == "ja" else f"{label} ({u})"
         v = info_value(key, lang)
         return v if (v or key == "analytics_note") else PENDING[lang]
     return VAR.sub(sub, text)
@@ -343,7 +353,8 @@ def write_report():
     for key, uses in sorted(var_uses.items()):
         empty = (key == "contact" and not any(info_value(k, "en") for k in ("author", "email", "substack_url", "note_url", "x_url"))) or \
                 (key == "interest_form" and not info_value("interest_form_url", "en")) or \
-                (key not in ("contact", "interest_form") and not info_value(key, "en"))
+                (key == "contact_form" and not info_value("contact_form_url", "en")) or \
+                (key not in ("contact", "interest_form", "contact_form") and not info_value(key, "en"))
         if key == "contact" and not info_value("author", "en"): empty = True
         if empty:
             missing_vars.append(key)

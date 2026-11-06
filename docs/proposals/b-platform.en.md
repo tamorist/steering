@@ -155,4 +155,4 @@ Each phase proceeds when the previous one meets published criteria, such as the 
 - Proposal C: Planetary OS (Executive Summary, Full Proposal, FAQ) [→](c-summary.md)
 - Citizen Dividend Simulator [→](../tools/simulator.md)
 
-**Contact:** Tatsuya Mori · [Substack](https://ttmori.substack.com) · [note](https://note.com/ttmori) · [X](https://x.com/ttmori)
+**Contact:** Tatsuya Mori · [Substack](https://ttmori.substack.com) · [note](https://note.com/ttmori) · [X](https://x.com/ttmori) · [Contact form](https://docs.google.com/forms/d/e/1FAIpQLSexBpD4BcRWIV--FuhMC9BxbP4I9fXl6pi9nxQPmX2bjivjqw/viewform)

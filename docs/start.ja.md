@@ -280,4 +280,4 @@ Youth GCC には、強制する力はありません。その代わりに、政�
 - 提案C：Planetary OS（要約）[→](proposals/c-summary.md)
 - 連載「地球のOSを書き換える」[→](series/part-0.md)
 
-**連絡先**：森　達哉 · [Substack](https://ttmori.substack.com) · [note](https://note.com/ttmori) · [X](https://x.com/ttmori)
+**連絡先**：森　達哉 · [Substack](https://ttmori.substack.com) · [note](https://note.com/ttmori) · [X](https://x.com/ttmori) · [お問い合わせフォーム](https://docs.google.com/forms/d/e/1FAIpQLSexBpD4BcRWIV--FuhMC9BxbP4I9fXl6pi9nxQPmX2bjivjqw/viewform)

@@ -359,4 +359,4 @@ Planetary OS が扱うのは、最も急を要する層です。炭素予算の�
 | C：Planetary OS | 要約版[→](proposals/c-summary.md)、本編[→](proposals/c-full.md)、FAQ[→](proposals/c-faq.md)、連載「地球のOSを書き換える」（全8回）[→](series/part-0.md)、還元シミュレーター[→](tools/simulator.md) |
 | 背景 | 記事「なぜ今なのか」[→](why-now.md)、背景論考1「なぜ技術が進んでも、暮らしは楽にならないのか」[→](essays/why-technology.md)、背景論考2「Planetary OS の次の層」[→](essays/next-layers.md)、BEIの政策白書[↗](https://ttmori.substack.com/p/policy-white-paper-proposal-a-new?r=5dzcae) |
 
-**連絡先**：森　達哉 · [Substack](https://ttmori.substack.com) · [note](https://note.com/ttmori) · [X](https://x.com/ttmori)
+**連絡先**：森　達哉 · [Substack](https://ttmori.substack.com) · [note](https://note.com/ttmori) · [X](https://x.com/ttmori) · [お問い合わせフォーム](https://docs.google.com/forms/d/e/1FAIpQLSexBpD4BcRWIV--FuhMC9BxbP4I9fXl6pi9nxQPmX2bjivjqw/viewform)

@@ -356,4 +356,4 @@ All three proposals follow the same principles:
 | C — Planetary OS | Executive Summary [→](proposals/c-summary.md); Full Proposal [→](proposals/c-full.md); FAQ [→](proposals/c-faq.md); series *Rewriting the Planet's OS* (8 parts) [→](series/part-0.md); Citizen Dividend Simulator [→](tools/simulator.md) |
 | Background | Essay: *Why Now?* [→](why-now.md); Background essay 1: *Why Doesn't Technology Make Life Easier?* [→](essays/why-technology.md); Background essay 2: *The Next Layers of Planetary OS* [→](essays/next-layers.md); BEI policy white paper [↗](https://ttmori.substack.com/p/policy-white-paper-proposal-a-new?r=5dzcae) |
 
-**Contact:** Tatsuya Mori · [Substack](https://ttmori.substack.com) · [note](https://note.com/ttmori) · [X](https://x.com/ttmori)
+**Contact:** Tatsuya Mori · [Substack](https://ttmori.substack.com) · [note](https://note.com/ttmori) · [X](https://x.com/ttmori) · [Contact form](https://docs.google.com/forms/d/e/1FAIpQLSexBpD4BcRWIV--FuhMC9BxbP4I9fXl6pi9nxQPmX2bjivjqw/viewform)

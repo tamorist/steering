@@ -28,7 +28,7 @@ Source for the website of the package proposal *Steering Within Limits* (Youth G
 ## 基本情報（連絡先など）の管理
 
 - 名前、メール、フォームの URL など、あとから書き込んだり変えたりする情報は `../info.toml` に書きます。
-- 文書の中では `{{contact}}`（名前・メール・Substack・note をまとめた連絡先）、`{{interest_form}}`（関心表明フォームへのリンク）、`{{author}}`、`{{role}}`、`{{profile_url}}` などのキーで書きます。
+- 文書の中では `{{contact}}`（名前・メール・Substack・note をまとめた連絡先）、`{{interest_form}}`（関心表明フォームへのリンク）、`{{contact_form}}`（お問い合わせフォームへのリンク）、`{{author}}`、`{{role}}`、`{{profile_url}}` などのキーで書きます。
 - 空の項目は、サイトと書き出しで「（準備中）」「(to be added)」と表示します。
 - `LICENSE.md` は `LICENSE.template.md` から作られます（著作権者の表記は `info.toml` の `[license]`）。
 

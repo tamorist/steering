@@ -652,4 +652,4 @@ A bilingual glossary (Japanese/English) is used to keep the two language version
 - BEI policy white paper [↗](https://ttmori.substack.com/p/policy-white-paper-proposal-a-new?r=5dzcae)
 - Related concepts: Designed Model Economy [↗](https://ttmori.substack.com/p/proposal-for-introducing-a-designed) / Global Shrinkage Evaluation System (S.I.R.) [↗](https://ttmori.substack.com/p/proposal-for-the-establishment-of) / Dual Value Economy [↗](https://ttmori.substack.com/p/dual-value-economy-concept-book)
 
-**Contact:** Tatsuya Mori · [Substack](https://ttmori.substack.com) · [note](https://note.com/ttmori) · [X](https://x.com/ttmori)
+**Contact:** Tatsuya Mori · [Substack](https://ttmori.substack.com) · [note](https://note.com/ttmori) · [X](https://x.com/ttmori) · [Contact form](https://docs.google.com/forms/d/e/1FAIpQLSexBpD4BcRWIV--FuhMC9BxbP4I9fXl6pi9nxQPmX2bjivjqw/viewform)

@@ -57,6 +57,8 @@
 
 👉 **[関心表明フォーム（約2分）](https://docs.google.com/forms/d/e/1FAIpQLScCmX2dZX4gfB960NVSK0JtmW8coE2QK1GNJLey65U00YoHog/viewform?usp=publish-editor)**
 
+関心表明フォームは、参加や協力を希望する方のためのものです。質問、誤りの指摘、そのほかのご連絡は、[お問い合わせフォーム](https://docs.google.com/forms/d/e/1FAIpQLSexBpD4BcRWIV--FuhMC9BxbP4I9fXl6pi9nxQPmX2bjivjqw/viewform)からお願いします。
+
 ### その後の流れ
 
 1. **個別のお返事**：私たちから直接お返事します。
@@ -74,4 +76,4 @@
 - **提案C：Planetary OS**：要約版、本編、FAQ[→](proposals/c-summary.md)・連載「地球のOSを書き換える」[→](series/part-0.md)
 - **試してみる**：還元シミュレーター[→](tools/simulator.md)
 
-**連絡先**：森　達哉 · [Substack](https://ttmori.substack.com) · [note](https://note.com/ttmori) · [X](https://x.com/ttmori)
+**連絡先**：森　達哉 · [Substack](https://ttmori.substack.com) · [note](https://note.com/ttmori) · [X](https://x.com/ttmori) · [お問い合わせフォーム](https://docs.google.com/forms/d/e/1FAIpQLSexBpD4BcRWIV--FuhMC9BxbP4I9fXl6pi9nxQPmX2bjivjqw/viewform)

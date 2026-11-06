@@ -57,6 +57,8 @@ It takes about **two minutes**: fill in the short interest form.
 
 👉 **[Co-Initiator interest form (about 2 minutes)](https://docs.google.com/forms/d/e/1FAIpQLScCmX2dZX4gfB960NVSK0JtmW8coE2QK1GNJLey65U00YoHog/viewform?usp=publish-editor)**
 
+The interest form is for joining or collaborating. For questions, corrections, or anything else, please use the [contact form](https://docs.google.com/forms/d/e/1FAIpQLSexBpD4BcRWIV--FuhMC9BxbP4I9fXl6pi9nxQPmX2bjivjqw/viewform).
+
 ### What happens next
 
 1. **A personal reply.** We will write back to you directly.
@@ -74,4 +76,4 @@ It takes about **two minutes**: fill in the short interest form.
 - **Proposal C — Planetary OS:** Executive Summary, Full Proposal, FAQ [→](proposals/c-summary.md) · series *Rewriting the Planet's OS* [→](series/part-0.md)
 - **Try it:** Citizen Dividend Simulator [→](tools/simulator.md)
 
-**Contact:** Tatsuya Mori · [Substack](https://ttmori.substack.com) · [note](https://note.com/ttmori) · [X](https://x.com/ttmori)
+**Contact:** Tatsuya Mori · [Substack](https://ttmori.substack.com) · [note](https://note.com/ttmori) · [X](https://x.com/ttmori) · [Contact form](https://docs.google.com/forms/d/e/1FAIpQLSexBpD4BcRWIV--FuhMC9BxbP4I9fXl6pi9nxQPmX2bjivjqw/viewform)
