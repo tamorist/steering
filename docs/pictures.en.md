@@ -50,7 +50,11 @@ Loosening the rules takes two keys at once: scientific justification, and the ap
   <figcaption>Who and how: from citizens' will to decisions</figcaption>
 </figure>
 
-The two have different jobs.
+Problems like climate cross every border. Yet no one speaks for the whole planet and for future generations. Governments answer to today's voters within their borders. The UN and other international bodies depend on coordination and agreement among their member states. The young and the unborn, who have the most at stake, have almost no voice.
+
+So the package builds a second route alongside coordination between states: one that gathers the will of the world's citizens, brings it together, and expresses it from the citizens' standpoint. It complements states and the UN rather than replacing them. It has no power to compel; it asks for answers in public.
+
+This route has two parts, with different jobs.
 
 - **The Youth GCC is the place to think.** A small group of citizens, chosen by lot from all generations, deliberates in depth with experts' options in front of them and drafts proposals. Young people set the agenda, and the body answers for what it proposes.
 - **The Global Citizen Will Platform is the channel to deliver.** Anyone can take part, and existing movements join up while keeping their own names. It turns many people's support into something visible and carries it to governments, courts, elections, and markets with one question: "Will you connect to this system?"
