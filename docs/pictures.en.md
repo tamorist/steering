@@ -50,7 +50,12 @@ Loosening the rules takes two keys at once: scientific justification, and the ap
   <figcaption>Who and how: from citizens' will to decisions</figcaption>
 </figure>
 
-The Youth GCC carries the blueprint. The Global Citizen Will Platform makes support visible and brings it to governments, courts, elections, and markets with one question: "Will you connect to this system?"
+The two have different jobs.
+
+- **The Youth GCC is the place to think.** A small group of citizens, chosen by lot from all generations, deliberates in depth with experts' options in front of them and drafts proposals. Young people set the agenda, and the body answers for what it proposes.
+- **The Global Citizen Will Platform is the channel to deliver.** Anyone can take part, and existing movements join up while keeping their own names. It turns many people's support into something visible and carries it to governments, courts, elections, and markets with one question: "Will you connect to this system?"
+
+The two feed each other: the Youth GCC's proposals become the questions the platform gathers support on, and the voices and ideas gathered on the platform flow back into the Youth GCC's deliberation.
 
 ## 6. How it spreads: a club worth joining
 
