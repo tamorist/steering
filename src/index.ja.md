@@ -11,7 +11,7 @@ hide:
 
 <p class="lead">文明の転換に向けた3つの提案：<strong>Youth GCC</strong>、<strong>Global Citizen Will Platform</strong>、<strong>Planetary OS</strong></p>
 
-[はじめての方へ：5枚の絵で見る](pictures.md){ .md-button .md-button--primary }
+[はじめての方へ：6枚の絵で見る](pictures.md){ .md-button .md-button--primary }
 [全体をひと続きで読む](start.md){ .md-button }
 [1ページ概要を読む](overview.md){ .md-button }
 [還元シミュレーターを試す](tools/simulator.md){ .md-button }
@@ -22,7 +22,7 @@ hide:
 
 | 時間や関心 | 読むもの |
 |---|---|
-| 5分ほど、絵で | [絵で見る提案](pictures.md)：提案の中心を5枚のイラストで |
+| 6分ほど、絵で | [絵で見る提案](pictures.md)：提案の中心を6枚のイラストで |
 | 7分ほど | [1ページ概要](overview.md)：問題、3つの提案、その組み合わせ方 |
 | 20分ほど | [なぜ今か](why-now.md)：文明がいま「舵を取る」段階にある理由 |
 | 45分ほど | [はじめての方へ](start.md)：提案の全体を、理由とともにひと続きで |
