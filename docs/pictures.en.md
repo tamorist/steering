@@ -14,7 +14,7 @@ All names, ratios, and figures are illustrative.
   <figcaption>Today: a game where cutting back costs you</figcaption>
 </figure>
 
-Households, companies, and countries each have good reasons not to cut back on their own. So decades of effort have gone into a game that cannot be won. The problem is not the people. It is the rules.
+Households worry about prices, companies about rivals, and countries about losing industry and the next election. Each has a good reason, and whoever cuts back alone loses. So decades of effort have gone into a game that cannot be won. The problem is not the people but the rules.
 
 ## 2. New rules: the less you use, the better off you are
 
@@ -23,7 +23,7 @@ Households, companies, and countries each have good reasons not to cut back on t
   <figcaption>New rules: the less you use, the better off you are</figcaption>
 </figure>
 
-Planetary OS caps fossil fuels where they enter the economy, and the cap only tightens. The revenue from auctioning the allowances goes back to people: 90% to citizens as a Citizen Dividend, and 10% to a Just Transition for workers and regions. The less you use, the more you keep.
+Planetary OS caps fossil fuels where they enter the economy and tightens the cap every year. Of the revenue from auctioning the allowances, 90% goes back to citizens as a Citizen Dividend and 10% to a Just Transition for workers and regions. The less you use, the more you keep.
 
 ## 3. Sharing the past too: the Endowment (PTE)
 
@@ -32,7 +32,7 @@ Planetary OS caps fossil fuels where they enter the economy, and the cap only ti
   <figcaption>Sharing the past too: the Endowment (PTE)</figcaption>
 </figure>
 
-Pricing only today's emissions (the flow) puts the whole burden on today's households and workers, while those who built wealth on past emissions (the stock) pay almost nothing. So Planetary OS adds a thin, broad levy on the largest fortunes and corporate profits (BEI). It goes into a lasting fund, the Planetary Transition Endowment (PTE): on the order of USD 1 trillion a year in one estimate. The fund cuts the cost of clean energy in developing countries, invests in alternatives, restores ecosystems, and tops up the Citizen Dividend. Only when the stock shares the load with the flow is the burden in balance.
+Pricing only today's emissions (the flow) puts the burden on today's households alone. So the large fortunes and corporate profits built on past emissions (the stock) also pay a thin, broad levy (BEI). It goes into a lasting fund, the PTE, on the order of USD 1 trillion a year in one estimate. The fund pays for clean energy in developing countries, ecosystem restoration, and top-ups to the dividend.
 
 ## 4. Protecting the rules: two keys
 
@@ -41,7 +41,7 @@ Pricing only today's emissions (the flow) puts the whole burden on today's house
   <figcaption>Protecting the rules: two keys</figcaption>
 </figure>
 
-Loosening the rules takes two keys at once: scientific justification, and the approval of three-quarters of a citizens' assembly chosen by lot. Because the dividend comes from the cap, citizens also have a reason to defend it.
+Loosening the rules takes two keys at once: scientific justification, and the approval of three-quarters of a citizens' assembly chosen by lot. Neither experts nor politicians can do it alone. Because the dividend comes from the cap, citizens also have a reason to defend it.
 
 ## 5. Who and how: from citizens' will to decisions
 
@@ -50,16 +50,7 @@ Loosening the rules takes two keys at once: scientific justification, and the ap
   <figcaption>Who and how: from citizens' will to decisions</figcaption>
 </figure>
 
-Problems like climate cross every border. Yet no one speaks for the whole planet and for future generations. Governments answer to today's voters within their borders. The UN and other international bodies depend on coordination and agreement among their member states. The young and the unborn, who have the most at stake, have almost no voice.
-
-So the package builds a second route alongside coordination between states: one that gathers the will of the world's citizens, brings it together, and expresses it from the citizens' standpoint. It complements states and the UN rather than replacing them. It has no power to compel; it asks for answers in public.
-
-This route has two parts, with different jobs.
-
-- **The Youth GCC is the place to think.** A small group of citizens, chosen by lot from all generations, deliberates in depth with experts' options in front of them and drafts proposals. Young people set the agenda, and the body answers for what it proposes.
-- **The Global Citizen Will Platform is the channel to deliver.** Anyone can take part, and existing movements join up while keeping their own names. It turns many people's support into something visible and carries it to governments, courts, elections, and markets with one question: "Will you connect to this system?"
-
-The two feed each other: the Youth GCC's proposals become the questions the platform gathers support on, and the voices and ideas gathered on the platform flow back into the Youth GCC's deliberation.
+The problems cross borders, yet no one speaks for the whole planet and for future generations. So the package builds a citizens' route alongside coordination between states, complementing states and the UN rather than replacing them. The Youth GCC is the place to think, where citizens chosen by lot deliberate and draft proposals. The Platform is the channel to deliver: anyone can join, and it carries their support to decision-makers with one question, "Will you connect to this system?"
 
 ## 6. How it spreads: a club worth joining
 
@@ -68,7 +59,7 @@ The two feed each other: the Youth GCC's proposals become the questions the plat
   <figcaption>How it spreads: a club worth joining</figcaption>
 </figure>
 
-It starts with a club of willing countries and cities, with no world government. Joining pays. Staying out means a carbon border adjustment on imports. The target rises as the club grows.
+There is no world government. It starts with a club of willing countries and cities. Joining pays, with dividends for residents and more secure energy. Staying out means a carbon border adjustment on imports. The bigger the club, the higher its target.
 
 ## What you can do
 
