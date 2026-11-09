@@ -71,6 +71,7 @@ plugins:
             Start Here: はじめての方へ
             Why Now: なぜ今か
             One-page overview: 1ページ概要
+            In pictures: 絵で見る提案
             Package proposal: パッケージ提案書
             Proposals: 3つの提案
             "A — Youth GCC": "A：Youth GCC"
@@ -102,6 +103,7 @@ plugins:
 nav:
   - Home: index.md
   - Getting Started:
+      - In pictures: pictures.md
       - Start Here: start.md
       - One-page overview: overview.md
       - Why Now: why-now.md

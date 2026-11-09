@@ -11,7 +11,8 @@ hide:
 
 <p class="lead">Three proposals for a civilizational transition: <strong>Youth GCC</strong>, the <strong>Global Citizen Will Platform</strong>, and <strong>Planetary OS</strong>.</p>
 
-[New here? Read the whole idea in one go](start.md){ .md-button .md-button--primary }
+[New here? See the proposal in five pictures](pictures.md){ .md-button .md-button--primary }
+[Read the whole idea in one go](start.md){ .md-button }
 [Read the one-page overview](overview.md){ .md-button }
 [Try the dividend simulator](tools/simulator.md){ .md-button }
 [See the slides](tools/slides.md){ .md-button }
@@ -21,6 +22,7 @@ hide:
 
 | If you have… | Read |
 |---|---|
+| 5 minutes, in pictures | [The proposal in pictures](pictures.md): the core of the idea in five illustrations |
 | 3 minutes | [One-page overview](overview.md): the problem, the three proposals, and how they fit |
 | 10 minutes | [Why now?](why-now.md): why civilization must now learn to steer |
 | 15 minutes | [Start here](start.md): the whole idea in one read, with the reasoning behind it |

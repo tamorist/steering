@@ -25,6 +25,7 @@ PAGES = {
     "start": (f"{PKG}/Plain_Guide_EN.md", f"{PKG}/やさしい解説_JP.md"),
     "why-now": (f"{PKG}/Why_Now_Article_EN.md", f"{PKG}/なぜ今か_記事_JP.md"),
     "overview": (f"{PKG}/One_Page_Overview_EN.md", f"{PKG}/1ページ概要_JP.md"),
+    "pictures": (f"{PKG}/In_Pictures_EN.md", f"{PKG}/絵で見る提案_JP.md"),
     "package": (f"{PKG}/Package_Proposal_EN.md", f"{PKG}/パッケージ提案_JP.md"),
     "proposals/a-youth-gcc": (f"{YGC}/Proposal_A_EN.md", f"{YGC}/提案A_JP.md"),
     "proposals/b-platform": (f"{GCW}/Proposal_B_EN.md", f"{GCW}/提案B_JP.md"),
@@ -45,6 +46,7 @@ for n in range(0, 9):
 FIG_EN = os.path.join(ROOT, OS_, "series_EN", "figures")
 FIG_JA = os.path.join(ROOT, OS_, "note連載", "図")
 FIG_W = os.path.join(ROOT, PKG, "図")
+FIG_I = os.path.join(ROOT, PKG, "イラスト")   # illustrations for general readers (I-1 …)
 
 # Lines that are editing notes, not content
 DROP = [
@@ -65,7 +67,7 @@ def variant(text, target):
 
 def copy_fig(path, lang):
     base = unicodedata.normalize("NFC", os.path.basename(path))
-    key = re.match(r"^(?:Fig|図)([0-9W]+-[0-9A-Z]+)", base).group(1)
+    key = re.match(r"^(?:Fig|図)?([0-9WI]+-[0-9A-Z]+)", base).group(1)
     name = f"{key}.png"   # ASCII names avoid NFC/NFD mismatches on macOS
     dst = os.path.join(DOCS, "assets", "fig", lang, name)
     os.makedirs(os.path.dirname(dst), exist_ok=True)
@@ -75,6 +77,12 @@ def copy_fig(path, lang):
 
 def find_fig(folder, prefix):
     hits = sorted(glob.glob(os.path.join(folder, prefix + "_*.png")))
+    return hits[0] if hits else None
+
+
+def find_illust(key, lang):
+    """I-1 … : English files end in _EN, Japanese files do not."""
+    hits = [h for h in sorted(glob.glob(os.path.join(FIG_I, key + "_*.png"))) if h.endswith("_EN.png") == (lang == "en")]
     return hits[0] if hits else None
 
 
@@ -104,14 +112,17 @@ def transform(text, lang, src_path, depth):
                 continue
             skip_quote = False
         # English placeholders
-        m = re.match(r"^>?\s*\*\*\[Figure ([0-9W]+-[0-9A-Z]+)(?::\s*([^\]]*))?\]\*\*\s*(.*)$", line)
+        m = re.match(r"^>?\s*\*\*\[Figure ([0-9WI]+-[0-9A-Z]+)(?::\s*([^\]]*))?\]\*\*\s*(.*)$", line)
         m2 = re.match(r"^\*\*\[Figure: ([^\]]*)\]\*\*$", line)
         if m or m2:
             if m2:
                 key, cap = "2-B", m2.group(1)
             else:
                 key, cap = m.group(1), (m.group(2) or m.group(3) or f"Figure {m.group(1)}").strip()
-            f = find_fig(FIG_W, f"FigW-{key[2:]}") if key.startswith("W") else find_fig(FIG_EN, f"Fig{key}")
+            if key.startswith("I"):
+                f = find_illust(key, "en")
+            else:
+                f = find_fig(FIG_W, f"FigW-{key[2:]}") if key.startswith("W") else find_fig(FIG_EN, f"Fig{key}")
             if f:
                 out.append(img(up, copy_fig(f, "en"), cap))
                 skip_quote = line.startswith(">")
@@ -120,7 +131,9 @@ def transform(text, lang, src_path, depth):
         j = re.match(r"^>?\s*\*\*［図([^：］]*)(?:：([^］]*))?］(.*?)\*\*\s*(.*)$", line)
         if j:
             label, extra, tail = j.group(1), (j.group(2) or ""), (j.group(3) or j.group(4))
-            if label.startswith("W"):
+            if label.startswith("I"):
+                f = find_illust(label, "ja")
+            elif label.startswith("W"):
                 f = find_fig(FIG_W, f"図{label}")
             elif label == "":
                 f = find_fig(FIG_JA, "図2-B")
