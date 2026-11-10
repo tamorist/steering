@@ -113,9 +113,9 @@ The top 10% hold about three-quarters of the world's wealth and produce about ha
 
 ### Circulate it, and the system works; block it, and it breaks
 
-Think of a board game like Monopoly. Once one player holds all the money and property, the game is over. Even the winner can no longer play. A game continues only while money keeps moving.
+Think of money as the blood of an economy. Blood keeps a body alive by circulating through it. If it pools in one place and stops flowing, the body fails, however much blood that one place holds. Money works the same way: it supports a society only as long as it keeps circulating.
 
-An economy is the same. Today, the steady concentration of wealth is causing three blockages at once.
+Today, the steady concentration of wealth is causing three blockages at once.
 
 <figure markdown="span">
   ![A blocked economy and a circulating economy](../assets/fig/en/2-C.png)
