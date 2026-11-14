@@ -257,8 +257,3 @@ Each stage proceeds when the previous one meets published criteria.
 - Earlier proposals: *Global Citizens' Congress* proposal [↗](https://ttmori.substack.com/p/proposal-global-citizens-congress); *Global Citizens' Assembly* series [↗](https://ttmori.substack.com/p/a-proposal-for-a-global-citizens?r=5dzcae)
 
 **Contact:** Tatsuya Mori · [Substack](https://ttmori.substack.com) · [note](https://note.com/ttmori) · [X](https://x.com/ttmori) · [Contact form](https://docs.google.com/forms/d/e/1FAIpQLSexBpD4BcRWIV--FuhMC9BxbP4I9fXl6pi9nxQPmX2bjivjqw/viewform)
-
-
----
-
-This document is also published on: [note (Japanese)](https://note.com/ttmori/n/nd868e82b4336)

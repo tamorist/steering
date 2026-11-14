@@ -653,8 +653,3 @@ Planetary OS は、すでに確立した考え方を意図して土台にして�
 - 関連する構想：Designed Model Economy[↗](https://ttmori.substack.com/p/proposal-for-introducing-a-designed)／Global Shrinkage Evaluation System（S.I.R.）[↗](https://ttmori.substack.com/p/proposal-for-the-establishment-of)／Dual Value Economy[↗](https://ttmori.substack.com/p/dual-value-economy-concept-book)
 
 **連絡先**：森　達哉 · [Substack](https://ttmori.substack.com) · [note](https://note.com/ttmori) · [X](https://x.com/ttmori) · [お問い合わせフォーム](https://docs.google.com/forms/d/e/1FAIpQLSexBpD4BcRWIV--FuhMC9BxbP4I9fXl6pi9nxQPmX2bjivjqw/viewform)
-
-
----
-
-この文書は、次の場所でも公開しています： [note（日本語）](https://note.com/ttmori/n/n9114cc3d1929)

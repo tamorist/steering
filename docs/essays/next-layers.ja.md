@@ -134,8 +134,3 @@ Planetary OS は、その最初の一歩です。これらの層は、その道�
 - パッケージ提案書「限界の内側で、舵を取る」7章[→](../package.md)
 - 提案C：Planetary OS[→](../proposals/c-summary.md)
 - BEIの政策白書[↗](https://ttmori.substack.com/p/policy-white-paper-proposal-a-new?r=5dzcae)
-
-
----
-
-この文書は、次の場所でも公開しています： [note（日本語）](https://note.com/ttmori/n/n7970e8657d6d)

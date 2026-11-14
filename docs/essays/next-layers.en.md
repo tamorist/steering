@@ -134,8 +134,3 @@ Planetary OS is the first step. These layers show where the path could lead.
 - Package Proposal: *Steering Within Limits*, chapter 7 [→](../package.md)
 - Proposal C: Planetary OS [→](../proposals/c-summary.md)
 - BEI policy white paper [↗](https://ttmori.substack.com/p/policy-white-paper-proposal-a-new?r=5dzcae)
-
-
----
-
-This document is also published on: [note (Japanese)](https://note.com/ttmori/n/n7970e8657d6d)

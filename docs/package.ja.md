@@ -360,8 +360,3 @@ Planetary OS が扱うのは、最も急を要する層です。炭素予算の�
 | 背景 | 記事「なぜ今なのか」[→](why-now.md)、背景論考1「なぜ技術が進んでも、暮らしは楽にならないのか」[→](essays/why-technology.md)、背景論考2「Planetary OS の次の層」[→](essays/next-layers.md)、BEIの政策白書[↗](https://ttmori.substack.com/p/policy-white-paper-proposal-a-new?r=5dzcae) |
 
 **連絡先**：森　達哉 · [Substack](https://ttmori.substack.com) · [note](https://note.com/ttmori) · [X](https://x.com/ttmori) · [お問い合わせフォーム](https://docs.google.com/forms/d/e/1FAIpQLSexBpD4BcRWIV--FuhMC9BxbP4I9fXl6pi9nxQPmX2bjivjqw/viewform)
-
-
----
-
-この文書は、次の場所でも公開しています： [note（日本語）](https://note.com/ttmori/n/n8ed940d46fbb)

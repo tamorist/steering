@@ -335,8 +335,3 @@ Some objections point to problems that remain open. We list them here rather tha
 These are the questions Stage 1 is designed to work on. If you have expertise in any of them, we would like to hear from you.
 
 **Contact:** Tatsuya Mori · [Substack](https://ttmori.substack.com) · [note](https://note.com/ttmori) · [X](https://x.com/ttmori) · [Contact form](https://docs.google.com/forms/d/e/1FAIpQLSexBpD4BcRWIV--FuhMC9BxbP4I9fXl6pi9nxQPmX2bjivjqw/viewform)
-
-
----
-
-This document is also published on: [note (Japanese)](https://note.com/ttmori/n/na05147e565a0)
