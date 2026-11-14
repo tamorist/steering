@@ -1,6 +1,7 @@
 # Global Democratic Governance Charter
 ### A political circuit for world citizens, beside states rather than above them
 
+
 **Second edition** (working draft, October 2026)
 
 
