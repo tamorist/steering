@@ -3,7 +3,7 @@
 
 
 !!! info "About this page"
-    The core of the proposal in six pictures, for anyone new to it (about 6 minutes). For the reasoning behind each picture, read Start Here [→](start.md) (about 45 minutes). For the essentials in text, read the one-page overview [→](overview.md).
+    The core of the proposal in six pictures, for anyone new to it (about 6 minutes). For the reasoning behind each picture, read Start Here [→](start.md) (about 15 minutes). For the essentials in text, read the one-page overview [→](overview.md).
 
 All names, ratios, and figures are illustrative.
 
