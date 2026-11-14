@@ -105,10 +105,10 @@ nav:
   - Getting Started:
       - In pictures: pictures.md
       - Start Here: start.md
-      - One-page overview: overview.md
       - Why Now: why-now.md
   - Proposals:
       - Package proposal: package.md
+      - One-page overview: overview.md
       - "A — Youth GCC": proposals/a-youth-gcc.md
       - "B — Global Citizen Will Platform": proposals/b-platform.md
       - "C — Planetary OS (summary)": proposals/c-summary.md

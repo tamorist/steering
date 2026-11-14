@@ -11,11 +11,9 @@ hide:
 
 <p class="lead">Three proposals for a civilizational transition: <strong>Youth GCC</strong>, the <strong>Global Citizen Will Platform</strong>, and <strong>Planetary OS</strong>.</p>
 
-[New here? See the proposal in six pictures](pictures.md){ .md-button .md-button--primary }
+[See it in six pictures (about 6 minutes)](pictures.md){ .md-button .md-button--primary }
 [Read the whole idea in one go](start.md){ .md-button }
-[Read the one-page overview](overview.md){ .md-button }
 [Try the dividend simulator](tools/simulator.md){ .md-button }
-[See the slides](tools/slides.md){ .md-button }
 </div>
 
 ## Where to start

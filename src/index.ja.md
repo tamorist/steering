@@ -11,11 +11,9 @@ hide:
 
 <p class="lead">文明の転換に向けた3つの提案：<strong>Youth GCC</strong>、<strong>Global Citizen Will Platform</strong>、<strong>Planetary OS</strong></p>
 
-[はじめての方へ：6枚の絵で見る](pictures.md){ .md-button .md-button--primary }
+[6枚の絵で見る（約6分）](pictures.md){ .md-button .md-button--primary }
 [全体をひと続きで読む](start.md){ .md-button }
-[1ページ概要を読む](overview.md){ .md-button }
 [還元シミュレーターを試す](tools/simulator.md){ .md-button }
-[スライドを見る](tools/slides.md){ .md-button }
 </div>
 
 ## どこから読むか
