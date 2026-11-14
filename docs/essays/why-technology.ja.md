@@ -107,3 +107,8 @@
 - 背景論考2「Planetary OS の次の層」[→](next-layers.md)
 - パッケージ提案書「限界の内側で、舵を取る」[→](../package.md)
 - 提案C：Planetary OS[→](../proposals/c-summary.md)
+
+
+---
+
+この文書は、次の場所でも公開しています： [note（日本語）](https://note.com/ttmori/n/ne8ac0945d45a)

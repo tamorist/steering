@@ -324,3 +324,8 @@ The fruitless argument over whether to "sacrifice for the environment" can end. 
 But none of this can be completed inside a single country. If one country imposes a strict cap alone, industry will simply move elsewhere.
 
 Part 6 asks **how this system can spread across countries without a world government**: combining reasons to join with costs for staying out, to solve the "reducing alone means losing" dilemma between nations.
+
+
+---
+
+This document is also published on: [note (Japanese)](https://note.com/ttmori/n/n84695650a13b)

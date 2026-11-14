@@ -198,3 +198,8 @@ We have now seen the "control" and "decision-making" sides of Planetary OS.
 But even the best-designed system won't happen without broad public support. And that is exactly where environmental policy has kept stumbling: it has been experienced as sacrifice and as a burden.
 
 Part 5 turns to the engine of the whole design: **the Citizen Dividend**. In Part 3 we saw why a society where reducing pays is necessary. Can it actually be built? What would we measure, how do we keep it fair, and how much money are we talking about?
+
+
+---
+
+This document is also published on: [note (Japanese)](https://note.com/ttmori/n/n0127d9ee04c9)

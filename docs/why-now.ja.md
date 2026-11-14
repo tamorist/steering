@@ -140,3 +140,8 @@
 - パッケージ提案書「限界の内側で、舵を取る」[→](package.md)
 - 連載「地球のOSを書き換える」（全8回）[→](series/part-0.md)
 - 還元シミュレーター[→](tools/simulator.md)
+
+
+---
+
+この文書は、次の場所でも公開しています： [note（日本語）](https://note.com/ttmori/n/n093d06d64e79)

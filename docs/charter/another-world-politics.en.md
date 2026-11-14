@@ -1,6 +1,7 @@
 # Building Another World Politics
 ### Why is there no institution that makes policy for the world as a whole?
 
+
 **Background essay** — Second edition (working draft, October 2026)
 
 

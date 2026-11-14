@@ -107,3 +107,8 @@ The first step is to see the rules clearly. The second is to rewrite them, start
 - Background essay 2: *The Next Layers of Planetary OS* [→](next-layers.md)
 - Package Proposal: *Steering Within Limits* [→](../package.md)
 - Proposal C: Planetary OS [→](../proposals/c-summary.md)
+
+
+---
+
+This document is also published on: [note (Japanese)](https://note.com/ttmori/n/ne8ac0945d45a)

@@ -234,3 +234,8 @@ The first edition of that blueprint is here. It isn't perfect. That is exactly w
 The people at the helm won't be anyone special. They will be each of us who picks up this blueprint.
 
 Thank you for reading to the end.
+
+
+---
+
+This document is also published on: [note (Japanese)](https://note.com/ttmori/n/n04fd16dd82df)

@@ -156,3 +156,8 @@ Each phase proceeds when the previous one meets published criteria, such as the 
 - Citizen Dividend Simulator [→](../tools/simulator.md)
 
 **Contact:** Tatsuya Mori · [Substack](https://ttmori.substack.com) · [note](https://note.com/ttmori) · [X](https://x.com/ttmori) · [Contact form](https://docs.google.com/forms/d/e/1FAIpQLSexBpD4BcRWIV--FuhMC9BxbP4I9fXl6pi9nxQPmX2bjivjqw/viewform)
+
+
+---
+
+This document is also published on: [note (Japanese)](https://note.com/ttmori/n/n6eb386190e7e)

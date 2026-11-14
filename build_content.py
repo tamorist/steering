@@ -260,7 +260,9 @@ VAR = re.compile(r"\{\{([a-z_]+)\}\}")
 PENDING = {"en": "(to be added)", "ja": "（準備中）"}
 EXPORT_ONLY = [("Global Citizen Will Platform/Short_Pitch_EN.md", "en"), ("Global Citizen Will Platform/打診用ショートピッチ_JP.md", "ja"),
                # Background essay 3: published only on note/Substack, not on the site (decided 2026-11-12)
-               ("既存ルート破綻/Essay3_The_Missing_Institution_EN.md", "en"), ("既存ルート破綻/論考3_足りないのは決めるための器_JP.md", "ja")]
+               ("既存ルート破綻/Essay3_The_Missing_Institution_EN.md", "en"), ("既存ルート破綻/論考3_足りないのは決めるための器_JP.md", "ja"),
+               # Top (index) article for note/Substack (2026-11-13)
+               ("パッケージ提案/Article_Index_EN.md", "en"), ("パッケージ提案/記事一覧_JP.md", "ja")]
 
 
 def info_value(key, lang):

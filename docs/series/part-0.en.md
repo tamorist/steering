@@ -92,3 +92,8 @@ How can one idea grow into a movement that engages the world? Part 8 introduces 
 - **Japanese series:** 「地球のOSを書き換える」 [→](../../ja/series/part-0/)
 
 Comments and objections are very welcome. This blueprint is a working draft, meant to be rewritten through review by many people.
+
+
+---
+
+This document is also published on: [note (Japanese)](https://note.com/ttmori/n/n00c49a800c31)

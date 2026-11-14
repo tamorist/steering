@@ -371,3 +371,8 @@ Not waiting for a world government to issue orders, but **changing the incentive
 With that, the blueprint of Planetary OS is complete. But who will actually bring it into the world, and how?
 
 Part 7 looks back at why climate campaigns have kept losing, and proposes **shifting the movement's energy from petition to implementation.**
+
+
+---
+
+This document is also published on: [note (Japanese)](https://note.com/ttmori/n/n687934699ad7)

@@ -140,3 +140,8 @@ The question we want to put to politics is not "please do something." It is: **"
 - Package Proposal: *Steering Within Limits* [→](package.md)
 - Series: *Rewriting the Planet's OS* (8 parts) [→](series/part-0.md)
 - Citizen Dividend Simulator [→](tools/simulator.md)
+
+
+---
+
+This document is also published on: [note (Japanese)](https://note.com/ttmori/n/n093d06d64e79)

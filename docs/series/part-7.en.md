@@ -229,3 +229,8 @@ To sum up:
 So who takes the first step, and how?
 
 In the final part, we'll look at **the blueprint and the youth-led body that will carry it**, and map out how one person's idea can grow into a movement that engages the world.
+
+
+---
+
+This document is also published on: [note (Japanese)](https://note.com/ttmori/n/n036203038185)
