@@ -65,6 +65,7 @@ plugins:
           name: 日本語
           build: true
           site_name: 限界の内側で、舵を取る
+          site_description: 文明の転換に向けた3つの提案：Youth GCC、Global Citizen Will Platform、Planetary OS
           nav_translations:
             Home: ホーム
             Getting Started: はじめに
@@ -90,6 +91,7 @@ plugins:
             "7. From petition to implementation": "7. 請願から実装へ"
             "8. The first step": "8. 最初の一歩"
             Background: 背景
+            "Why can't humanity stop the slide?": "なぜ人類は、破局を止められないのか"
             "Why technology does not make life easier": "なぜ技術が進んでも楽にならないのか"
             "The next layers of Planetary OS": "Planetary OS の次の層"
             "Global Democratic Governance Charter": "世界市民ガバナンス憲章"
@@ -125,6 +127,7 @@ nav:
       - "7. From petition to implementation": series/part-7.md
       - "8. The first step": series/part-8.md
   - Background:
+      - "Why can't humanity stop the slide?": essays/missing-institution.md
       - "Why technology does not make life easier": essays/why-technology.md
       - "The next layers of Planetary OS": essays/next-layers.md
       - "Global Democratic Governance Charter": charter/charter.md

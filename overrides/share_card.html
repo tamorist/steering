@@ -1,0 +1,27 @@
+{#- Share card for X, Facebook, LINE, etc. The images are in src/assets/og/ (made by the cover-image script). -#}
+{%- set og_lang = "ja" if config.theme.language == "ja" else "en" -%}
+{%- set og_base = "https://tamorist.github.io/steering/" -%}
+{%- if page and (page.is_homepage or page.url in ["", "ja/"]) -%}
+  {%- set og_title = config.site_name -%}
+{%- elif page and page.title -%}
+  {%- set og_title = page.title ~ " | " ~ config.site_name -%}
+{%- else -%}
+  {%- set og_title = config.site_name -%}
+{%- endif -%}
+{%- set og_desc = (page.meta.description if page and page.meta and page.meta.description) or config.site_description -%}
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="{{ config.site_name }}">
+<meta property="og:title" content="{{ og_title }}">
+<meta property="og:description" content="{{ og_desc }}">
+{%- if page and page.canonical_url %}
+<meta property="og:url" content="{{ page.canonical_url }}">
+{%- endif %}
+<meta property="og:image" content="{{ og_base }}assets/og/og_{{ og_lang }}.png">
+<meta property="og:image:width" content="1280">
+<meta property="og:image:height" content="670">
+<meta property="og:image:alt" content="{{ config.site_name }}{{ "：" if og_lang == "ja" else ": " }}{{ config.site_description }}">
+<meta property="og:locale" content="{{ 'ja_JP' if og_lang == 'ja' else 'en_US' }}">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{{ og_title }}">
+<meta name="twitter:description" content="{{ og_desc }}">
+<meta name="twitter:image" content="{{ og_base }}assets/og/og_{{ og_lang }}.png">

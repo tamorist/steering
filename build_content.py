@@ -34,6 +34,7 @@ PAGES = {
     "proposals/c-faq": (f"{OS_}/提案書/Proposal_C_FAQ_EN.md", f"{OS_}/提案書/提案C_FAQ_JP.md"),
     "essays/why-technology": (f"{ESS}/Essay1_Why_Technology_Does_Not_Make_Life_Easier_EN.md", f"{ESS}/論考1_なぜ技術が進んでも暮らしは楽にならないのか_JP.md"),
     "essays/next-layers": (f"{ESS}/Essay2_The_Next_Layers_of_Planetary_OS_EN.md", f"{ESS}/論考2_PlanetaryOSの次の層_JP.md"),
+    "essays/missing-institution": ("既存ルート破綻/Essay3_The_Missing_Institution_EN.md", "既存ルート破綻/論考3_足りないのは決めるための器_JP.md"),
     "charter/charter": (f"{GOV}/Charter_EN.md", f"{GOV}/憲章_JP.md"),
     "charter/another-world-politics": (f"{GOV}/Another_World_Politics_EN.md", f"{GOV}/もう一つの世界政治_JP.md"),
     "join": (f"{GCW}/Co-Initiator_Page_EN.md", f"{GCW}/共同発起人の募集ページ_JP.md"),
@@ -47,6 +48,7 @@ FIG_EN = os.path.join(ROOT, OS_, "series_EN", "figures")
 FIG_JA = os.path.join(ROOT, OS_, "note連載", "図")
 FIG_W = os.path.join(ROOT, PKG, "図")
 FIG_I = os.path.join(ROOT, PKG, "イラスト")   # illustrations for general readers (I-1 …)
+FIG_E = os.path.join(ROOT, "既存ルート破綻", "イラスト")   # illustrations for Essay 3 (E-1 …)
 
 # Lines that are editing notes, not content
 DROP = [
@@ -67,7 +69,7 @@ def variant(text, target):
 
 def copy_fig(path, lang):
     base = unicodedata.normalize("NFC", os.path.basename(path))
-    key = re.match(r"^(?:Fig|図)?([0-9WI]+-[0-9A-Z]+)", base).group(1)
+    key = re.match(r"^(?:Fig|図)?([0-9WIE]+-[0-9A-Z]+)", base).group(1)
     name = f"{key}.png"   # ASCII names avoid NFC/NFD mismatches on macOS
     dst = os.path.join(DOCS, "assets", "fig", lang, name)
     os.makedirs(os.path.dirname(dst), exist_ok=True)
@@ -81,8 +83,9 @@ def find_fig(folder, prefix):
 
 
 def find_illust(key, lang):
-    """I-1 … : English files end in _EN, Japanese files do not."""
-    hits = [h for h in sorted(glob.glob(os.path.join(FIG_I, key + "_*.png"))) if h.endswith("_EN.png") == (lang == "en")]
+    """I-1 … (and E-1 … for Essay 3): English files end in _EN, Japanese files do not."""
+    folder = FIG_E if key.startswith("E") else FIG_I
+    hits = [h for h in sorted(glob.glob(os.path.join(folder, key + "_*.png"))) if h.endswith("_EN.png") == (lang == "en")]
     return hits[0] if hits else None
 
 
@@ -112,14 +115,14 @@ def transform(text, lang, src_path, depth):
                 continue
             skip_quote = False
         # English placeholders
-        m = re.match(r"^>?\s*\*\*\[Figure ([0-9WI]+-[0-9A-Z]+)(?::\s*([^\]]*))?\]\*\*\s*(.*)$", line)
+        m = re.match(r"^>?\s*\*\*\[Figure ([0-9WIE]+-[0-9A-Z]+)(?::\s*([^\]]*))?\]\*\*\s*(.*)$", line)
         m2 = re.match(r"^\*\*\[Figure: ([^\]]*)\]\*\*$", line)
         if m or m2:
             if m2:
                 key, cap = "2-B", m2.group(1)
             else:
                 key, cap = m.group(1), (m.group(2) or m.group(3) or f"Figure {m.group(1)}").strip()
-            if key.startswith("I"):
+            if key.startswith(("I", "E")):
                 f = find_illust(key, "en")
             else:
                 f = find_fig(FIG_W, f"FigW-{key[2:]}") if key.startswith("W") else find_fig(FIG_EN, f"Fig{key}")
@@ -131,7 +134,7 @@ def transform(text, lang, src_path, depth):
         j = re.match(r"^>?\s*\*\*［図([^：］]*)(?:：([^］]*))?］(.*?)\*\*\s*(.*)$", line)
         if j:
             label, extra, tail = j.group(1), (j.group(2) or ""), (j.group(3) or j.group(4))
-            if label.startswith("I"):
+            if label.startswith(("I", "E")):
                 f = find_illust(label, "ja")
             elif label.startswith("W"):
                 f = find_fig(FIG_W, f"図{label}")
@@ -182,6 +185,12 @@ def entry(lid):
     e = LINKS.get(lid)
     if not e or lid == "site":
         raise SystemExit(f"links.toml has no entry '{lid}'")
+    # note_published = false / substack_published = false: the URL is registered but the article is still a draft,
+    # so treat it as not published (it is kept as note_draft / substack_draft for the report)
+    e = dict(e)
+    for k in ("note", "substack"):
+        if e.get(k) and e.get(f"{k}_published") is False:
+            e[f"{k}_draft"], e[k] = e[k], ""
     return e
 
 
@@ -212,8 +221,10 @@ def resolve_site(text, lang, slug):
 
 
 def also_published(slug, lang):
-    for lid, e in LINKS.items():
-        if lid != "site" and e.get("site") == slug:
+    for lid in LINKS:
+        if lid == "site": continue
+        e = entry(lid)
+        if e.get("site") == slug:
             items = []
             if e.get("note"):
                 items.append(("note（日本語）" if lang == "ja" else "note (Japanese)", e["note"]))
@@ -233,9 +244,11 @@ def resolve_export(text, lang):
         order = ["note", "substack", "url"] if tl == "ja" else ["substack", "note", "url"]
         url = next((e.get(k) for k in order if e.get(k)), "") or site_url_abs(e, tl)
         if not url:
-            return "（準備中）" if lang == "ja" else "(coming soon)"
+            return "（📝執筆中）" if lang == "ja" else "(📝 in progress)"
         prev = m.string[m.start() - 1] if m.start() else " "
-        return url if prev in " 　：:（(" else " " + url
+        nxt = m.string[m.end()] if m.end() < len(m.string) else "\n"
+        # keep a space on both sides, so that note/Substack do not pull the next word into the link
+        return ("" if prev in " 　：:（(\n" else " ") + url + ("" if nxt in " 　\n）)" else " ")
     return TOKEN.sub(sub, text)
 
 
@@ -259,8 +272,6 @@ INFO = tomllib.load(open(os.path.join(ROOT, "info.toml"), "rb"))
 VAR = re.compile(r"\{\{([a-z_]+)\}\}")
 PENDING = {"en": "(to be added)", "ja": "（準備中）"}
 EXPORT_ONLY = [("Global Citizen Will Platform/Short_Pitch_EN.md", "en"), ("Global Citizen Will Platform/打診用ショートピッチ_JP.md", "ja"),
-               # Background essay 3: published only on note/Substack, not on the site (decided 2026-11-12)
-               ("既存ルート破綻/Essay3_The_Missing_Institution_EN.md", "en"), ("既存ルート破綻/論考3_足りないのは決めるための器_JP.md", "ja"),
                # Top (index) article for note/Substack (2026-11-13)
                ("パッケージ提案/Article_Index_EN.md", "en"), ("パッケージ提案/記事一覧_JP.md", "ja")]
 
@@ -338,7 +349,9 @@ def write_analytics():
     od = os.path.join(HERE, "overrides")
     os.makedirs(od, exist_ok=True)
     open(os.path.join(od, "main.html"), "w", encoding="utf-8").write(
-        '{% extends "base.html" %}\n{% block analytics %}\n' + snip + '\n{% endblock %}\n')
+        '{% extends "base.html" %}\n{% block analytics %}\n' + snip + '\n{% endblock %}\n'
+        # share card (image and text shown when a page is shared on X etc.); kept in overrides/share_card.html
+        '{% block extrahead %}\n{% include "share_card.html" %}\n{% endblock %}\n')
     if snip:  # standalone pages (simulator, slides) do not use the theme, so add the snippet there too
         for p in glob.glob(os.path.join(DOCS, "simulator", "*.html")) + glob.glob(os.path.join(DOCS, "slides", "*.html")):
             t = open(p, encoding="utf-8").read()
@@ -380,20 +393,23 @@ def write_report():
     out += ["", "※ `{{contact}}` は、名前（author）が空のときもここに出します。", "", "### リンク（links.toml）：公開先の URL がまだないもの", "",
             "| ID | 文書 | サイト | note | Substack | 使われている箇所の数 |", "|---|---|---|---|---|---|"]
     for lid, uses in sorted(link_uses.items()):
-        e = LINKS[lid]
+        e = entry(lid)
         if not (e.get("note") or e.get("substack") or e.get("url")):
             out.append(f"| `{lid}` | {e['title_ja']} | {'○' if e.get('site') else '—（サイトにもない）'} | 未 | 未 | {len(uses)} |")
     # 2. link map
     out += ["", "## 2. リンクの反映先", "",
             "各 ID が、サイト・note 用・Substack 用の書き出しで、どこにつながるか。", "",
             "| ID | 文書 | サイト | note 用（日本語） | Substack 用（英語） | 使われている箇所 |", "|---|---|---|---|---|---|"]
-    for lid, e in LINKS.items():
+    for lid in LINKS:
         if lid == "site": continue
+        e = entry(lid)
         uses = link_uses.get(lid, [])
         site = f"`/{e['site']}/`" if e.get("site") else ("外部 ↗" if (e.get("substack") or e.get("note") or e.get("url")) else "（リンクなし）")
-        note = next((e.get(k) for k in ("note", "substack", "url") if e.get(k)), "") or site_url_abs(e, "ja") or "（準備中）"
-        sub = next((e.get(k) for k in ("substack", "note", "url") if e.get(k)), "") or site_url_abs(e, "en") or "(coming soon)"
+        note = next((e.get(k) for k in ("note", "substack", "url") if e.get(k)), "") or site_url_abs(e, "ja") or "（📝執筆中）"
+        sub = next((e.get(k) for k in ("substack", "note", "url") if e.get(k)), "") or site_url_abs(e, "en") or "(📝 in progress)"
         where = "<br>".join(uses) if uses else "（未使用）"
+        if e.get("note_draft"): note += "<br>（note は下書き：" + e["note_draft"] + "）"
+        if e.get("substack_draft"): sub += "<br>（Substack は下書き：" + e["substack_draft"] + "）"
         out.append(f"| `{lid}` | {e['title_ja']} | {site} | {note} | {sub} | {where} |")
     # 3. info map
     out += ["", "## 3. 基本情報の反映先", "", "| キー | 今の値（英語／日本語） | 使われている箇所 |", "|---|---|---|"]

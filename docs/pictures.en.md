@@ -2,10 +2,13 @@
 ### Steering Within Limits, in six pictures
 
 
+
 !!! info "About this page"
     The core of the proposal in six pictures, for anyone new to it (about 6 minutes). For the reasoning behind each picture, read Start Here [→](start.md) (about 15 minutes). For the essentials in text, read the one-page overview [→](overview.md).
 
-All names, ratios, and figures are illustrative.
+Decades of effort, goodwill, and new technology have not turned global emissions downward. *Steering Within Limits* is a package of three proposals that starts from one diagnosis: the problem is not that people are not trying hard enough, but that the rules of the economy and of politics make reducing a losing move. Its aim is to rewrite those rules so that reducing pays, without waiting for a world government.
+
+The six pictures below walk through that idea in order: the game we are in today, the new rules, sharing the burden of the past, protecting the rules, who carries them and how, and how they spread. All names, ratios, and figures are illustrative.
 
 ## 1. Today: a game where cutting back costs you
 

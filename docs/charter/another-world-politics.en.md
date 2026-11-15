@@ -58,7 +58,7 @@ Inter-state negotiation does not disappear. **World policy-making simply stops d
 
 ## 5. What any such institution needs
 
-Before describing any particular design, it helps to ask what *any* institution would need in order not to fail in the same ways. Each failure, turned around, gives a necessary condition.
+Before describing any particular design, it helps to ask what *any* institution would need in order not to fail in the same ways. Each failure, turned around, gives a necessary condition. (The essay *Why Can't Humanity Stop the Slide Toward Catastrophe?* [→](../essays/missing-institution.md) traces these failures in more detail, including how they also feed inequality and the weakening of democracy.)
 
 | Failure seen today | Necessary condition |
 |---|---|
@@ -145,6 +145,7 @@ The *Global Democratic Governance Charter* [→](charter.md) turns it into a con
 **Read more**
 
 - Global Democratic Governance Charter [→](charter.md)
+- Essay: *Why Can't Humanity Stop the Slide Toward Catastrophe?* [→](../essays/missing-institution.md)
 - Proposal A: Youth GCC [→](../proposals/a-youth-gcc.md)
 - Essay: *Why Now?* [→](../why-now.md)
 
