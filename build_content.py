@@ -241,6 +241,7 @@ def also_published(slug, lang):
 # draft goes to its note/Substack URL anyway, followed by a "being written" mark that is removed once it is published.
 DRAFT_MARK_DOCS = {"記事一覧_JP.md", "Article_Index_EN.md"}
 DRAFT_MARK = {"ja": "（📝執筆中です）", "en": "(📝 being written)"}
+PLANNED_MARK = {"ja": "（note投稿予定）", "en": "(Substack post planned)"}
 
 
 def resolve_export(text, lang, mark_drafts=False):
@@ -252,14 +253,20 @@ def resolve_export(text, lang, mark_drafts=False):
         if mark_drafts and draft:
             prev = m.string[m.start() - 1] if m.start() else " "
             return ("" if prev in " 　：:（(\n" else " ") + draft + " " + DRAFT_MARK[lang]
-        order = ["note", "substack", "url"] if tl == "ja" else ["substack", "note", "url"]
-        url = next((e.get(k) for k in order if e.get(k)), "") or site_url_abs(e, tl)
+        # own platform first, then the site page in the reader's language; the other language's platform only
+        # when there is no site page (an English reader should not land on a Japanese note article, and vice versa)
+        own, other = ("note", "substack") if tl == "ja" else ("substack", "note")
+        url = e.get(own) or e.get("url") or site_url_abs(e, tl) or e.get(other)
         if not url:
             return "（📝執筆中）" if lang == "ja" else "(📝 in progress)"
         prev = m.string[m.start() - 1] if m.start() else " "
         nxt = m.string[m.end()] if m.end() < len(m.string) else "\n"
+        # in the index: an article already out on the other platform but not yet on this one links to the site page
+        # for now, marked "planned"; registering its note/Substack URL in links.toml swaps the link and drops the mark
+        planned = mark_drafts and not e.get(own) and e.get(other) and url == site_url_abs(e, tl)
+        tail = (" " + PLANNED_MARK[lang]) if planned else ""
         # keep a space on both sides, so that note/Substack do not pull the next word into the link
-        return ("" if prev in " 　：:（(\n" else " ") + url + ("" if nxt in " 　\n）)" else " ")
+        return ("" if prev in " 　：:（(\n" else " ") + url + tail + ("" if nxt in " 　\n）)" else " ")
     return TOKEN.sub(sub, text)
 
 
