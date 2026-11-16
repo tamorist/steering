@@ -244,3 +244,8 @@ Youth GCC は、その最初の試みです。小さく始め、今始めます�
 - パッケージ提案書「限界の内側で、舵を取る」[→](../package.md)
 
 **連絡先**：森　達哉 · [Substack](https://ttmori.substack.com) · [note](https://note.com/ttmori) · [X](https://x.com/ttmori) · [お問い合わせフォーム](https://docs.google.com/forms/d/e/1FAIpQLSexBpD4BcRWIV--FuhMC9BxbP4I9fXl6pi9nxQPmX2bjivjqw/viewform)
+
+
+---
+
+この文書は、次の場所でも公開しています： [note（日本語）](https://note.com/ttmori/n/n2dd8b9dc3fbc)

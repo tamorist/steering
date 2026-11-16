@@ -69,6 +69,16 @@ Holding warming to 1.5°C without overshoot is now very likely out of reach. Kee
 The path is not imposed on everyone from day one. At the club stage, the reduction rate rises with the club's size, starting at about 3% a year and moving toward the budget-derived rate as the club grows (§5.5). And "8% a year" describes the volume of fossil fuels, not the size of human well-being. Under the cap, the sufficiency rewards and the Just Transition turn part of the reduction into a gain rather than a loss. It will still be a deep transformation. The proposal does not hide that; it designs so that the transformation does not land on the people least able to bear it.
 *See: §3.1, §5.5 / Parts 3, 6*
 
+### A6. Can a cap on a few thousand upstream points really reach the whole economy? What does it miss?
+
+Fossil carbon is almost all released as CO₂ when it is burned, so limiting the fuel that enters the economy limits those emissions without measuring millions of chimneys and exhaust pipes. In the United States, an upstream design has been estimated to reach about 80% of all emissions through a few thousand taxpayers. The EU's ETS2 uses the same approach, placing the obligation on fuel suppliers. Three details matter:
+
+- **Counted once.** Fuel is counted where it first enters a member's economy, and exports are not counted there, so nothing is counted twice.
+- **Carbon that is not emitted.** Feedstock carbon kept out of the air, and CO₂ that is captured and permanently stored, earn back allowances once verified. This is an accounting correction, not an offset.
+- **Outside the cap.** Fossil CO₂ is roughly two-thirds to 70% of global emissions. Methane leaking at extraction sites and large industrial process emissions can be covered at the same kind of points. Livestock methane, deforestation, nitrous oxide, and fluorinated gases cannot; the points and other measures address them.
+
+*See: §4.2, §4.3, §13 / Part 3*
+
 ---
 
 ## B. Households and fairness
@@ -178,6 +188,8 @@ The PTE limits that risk in six ways:
 ### D1. Won't industry simply move to countries without a cap (carbon leakage)?
 
 Imports from outside the club face the same carbon cost at the border, so relocating to avoid the cap gains nothing in the club market. A non-member faces a simple choice: collect that revenue at home and return it to its own citizens, or pay it at someone else's border. Exports are harder. The main answer is to grow the club quickly so that it becomes the primary market. Export rebates require careful review under trade rules.
+
+A related risk is on the supply side. If the club buys less fossil fuel, world prices may fall and non-members may burn more; owners outside the club may also hurry to sell before caps tighten further. The answers are the same: a club that grows quickly, border costs that make fossil-intensive goods unattractive in the club market, and a clear, early timetable that lets investors plan for a smaller fossil market.
 *See: §5.3, §5.4 / Part 6*
 
 ### D2. Isn't "sufficiency" just a polite word for recession and unemployment?
@@ -326,6 +338,7 @@ Use the **Citizen Dividend Simulator** [→](../tools/simulator.md). Enter your 
 Some objections point to problems that remain open. We list them here rather than hide them:
 
 - **Exports.** Protecting exporters without breaking trade rules has no settled answer yet.
+- **Supply-side leakage.** How much extra fossil fuel non-members would burn as club demand falls, and how quickly the club must grow to keep this small, needs modelling.
 - **Speed of club growth.** Whether the club can grow fast enough to stay within the 2°C budget is uncertain.
 - **Legal basis of BEI.** Its form under national and international law, and how far liability attribution can go, needs legal work.
 - **Measurement for the sufficiency-linked dividend.** Exactly which data, and what adjustments, need testing in pilots.

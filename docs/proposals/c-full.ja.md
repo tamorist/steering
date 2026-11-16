@@ -198,6 +198,9 @@ Planetary OS は、この2つの壁を越えるための条件を、最初から
 - 化石燃料の採掘と輸入、大規模な排出拠点という**上流**に、供給の上限をかけます。世界で数千規模の拠点を押さえれば、経済全体に影響が届き、個人を監視する必要はありません。
 - 上限と同じ量の排出枠を発行し、**すべて競売**で売り出します。企業が限られた排出枠を競り合うことで、炭素の価格が決まります。仕組みの土台は、EUなどで使われてきたおなじみのキャップ・アンド・トレードです。
 - **他所での削減による帳消し（オフセット）は認めません。** 上限を超えた排出を、他所で買った削減で打ち消すことはできません。
+- **数えるのは、燃料が入ってくる時点で一度だけ。** 燃料は、加盟国の経済に最初に入る時点、つまり国内での採掘か輸入の時点で数えます。その経済から輸出される燃料はそこでは数えないので、加盟国どうしで二重に数えることはありません。
+- **大気に出ない炭素。** 原料として使われ大気に出ない化石燃料の炭素や、回収して地中に永久に貯めたCO₂は、確認できた分だけ排出枠が戻ります。これは、出ていない炭素についての勘定の調整であって、オフセットではありません。
+- **上限が押さえる範囲と、押さえきれない範囲。** 化石燃料由来のCO₂は、世界の温室効果ガスの排出のおよそ3分の2〜7割です。米国では、上流型の設計なら、数千の事業者に課すだけで排出全体の約8割に届くと推計されています（Metcalf & Weisbach 2009）。採掘の現場で漏れるメタンは同じ地点で、セメントの製造工程などからの排出は大規模な排出拠点で押さえます。家畜のメタン、森林の破壊、一酸化二窒素、フロン類は上限の外にあり、ポイント（4.3）やほかの施策で補います。
 
 **上限の下げ方**
 
@@ -205,6 +208,7 @@ Planetary OS は、この2つの壁を越えるための条件を、最初から
 - 上限は、そこから逆算した道筋に沿って、毎年自動で下がります。目安は世界平均で年8％前後で、高所得国はより速く、途上国はより緩やかにします。
 - 新しい技術の普及に合わせて、最初は緩やかに、後半は急に下げる道筋も選べます。ただし、総量は変えません。
 - 出発点は**今の**排出量に置きます。これまでの超過分は、BEIと、CO₂の回収への投資で扱います。
+- 排出枠は、後の年のために**取っておく**ことができます。これで価格の動きがなだらかになります。将来の年の分を前借りすることはできないので、総量が増えることはありません。
 - クラブの段階では、削減率をクラブの規模に応じて上げていきます（5章）。
 
 **自動調整A：価格**
@@ -580,6 +584,8 @@ Planetary OS は、すでに確立した考え方を意図して土台にして�
 | プラネタリー・バウンダリー（Rockström ほか 2009、Steffen ほか 2015） | 物理的な限界を、交渉の余地のない外枠とする | 限界の指標に連動した、自動の政策対応 |
 | 価格と数量（Weitzman 1974） | 累積の総量が決まっている場合は、数量による管理が適している | 一方向の上限と、上限を決して緩めない価格の目安の幅の組み合わせ |
 | キャップ・アンド・ディビデンド、フィー・アンド・ディビデンド（Barnes、Boyce、Hansen、Citizens' Climate Lobby など） | 炭素の収入を市民に直接還す | 縮小に連動する部分、過去の負債（BEI）、撤回を防ぐ仕組み |
+| 上流での把握（Metcalf & Weisbach 2009、燃料の供給事業者に義務を課すEUのETS2など） | 何百万もの排出源ではなく、数千の上流の地点で経済全体に届かせる | クラブ全体に広げ、一方向にしか下がらない上限にする |
+| 供給側の気候政策（Production Gap Report、2026年のサンタマルタ会議など） | 化石燃料を使う量だけでなく、経済に入ってくる量そのものを絞る | 供給を絞ることが市民にとって得になる、市場の仕組み（競売と配当） |
 | 気候クラブ（Nordhaus 2015）と相互の約束（Cramton、MacKay、Ockenfels、Stoft 2017） | クラブの特典と国境措置。「他の国もやるなら、うちもやる」 | クラブの規模に応じて上がる率、期限、計算し直し、発足時に固めるルール |
 | 足るを知る（sufficiency）（IPCC 第6次評価報告書 第3作業部会） | 需要の側の削減を、緩和策の手段とする | 我慢ではなく、報われる合理的な選択にする |
 | 熟議民主主義（OECDの「熟議の波」、各国の気候市民会議など） | くじ引きの市民会議 | 二重の鍵を通じた、ルール変更への拘束力のある関与 |
@@ -587,15 +593,19 @@ Planetary OS は、すでに確立した考え方を意図して土台にして�
 | ブレンデッド・ファイナンスと資金調達コスト（IEA、ODI など） | 保証によって資金調達コストを下げる | 損失を引き受けることを明確な役割とする、大きく独立した財源（BEI） |
 | 世界市民ガバナンス憲章（2026年。本パッケージの一部として作成）[→](../charter/charter.md) | 世界市民の立場から、課題ごとに必ず複数の政策の選択肢をつくる。気候については「世界炭素配当型」の案を例示（3節） | その「世界炭素配当型」を具体的に設計したもの。世界市民会議で、別の案と並べて比べる |
 
+**最近の動きも、同じ方向を向いています。** 建物と道路交通を対象とするEUの第2の排出量取引制度（ETS2）は、排出枠を納める義務を、最終的な利用者ではなく燃料の供給事業者に課します。開始は2027年から2028年に延期されました。Production Gap Report 2025 によると、各国政府の計画どおりなら、2030年の化石燃料の生産量は、1.5℃に沿う水準のおよそ2倍になります。2026年4月には、化石燃料からの移行を正面から扱う初めての国際会議がコロンビアのサンタマルタで開かれ、57か国が、国や地域ごとの工程表づくりに取り組むことで一致しました。Planetary OS は、この方向を、守られ、自ら財源をまかなうルールに変える一つの方法です。
+
 **主な参考文献**：表のほかの項目は、特定の一冊ではなく、研究や実践の積み重ねを指しています。
 
 - Barnes, P. (2001). *Who Owns the Sky? Our Common Assets and the Future of Capitalism*. Island Press.
 - Boyce, J. K. (2019). *The Case for Carbon Dividends*. Polity.
 - Cramton, P., MacKay, D. J. C., Ockenfels, A., & Stoft, S. (Eds.) (2017). *Global Carbon Pricing: The Path to Climate Cooperation*. MIT Press.
+- Metcalf, G. E., & Weisbach, D. (2009). The design of a carbon tax. *Harvard Environmental Law Review*, 33(2), 499–556.
 - IPCC (2022). *Climate Change 2022: Mitigation of Climate Change*. Contribution of Working Group III to the Sixth Assessment Report (Chapter 5: Demand, services and social aspects of mitigation).
 - Ivanova, D., et al. (2016). Environmental impact assessment of household consumption. *Journal of Industrial Ecology*, 20(3), 526–536.
 - Nordhaus, W. (2015). Climate clubs: Overcoming free-riding in international climate policy. *American Economic Review*, 105(4), 1339–1370.
 - OECD (2020). *Innovative Citizen Participation and New Democratic Institutions: Catching the Deliberative Wave*. OECD Publishing.
+- SEI, Climate Analytics & IISD (2025). *The Production Gap Report 2025*.
 - Rockström, J., et al. (2009). A safe operating space for humanity. *Nature*, 461, 472–475.
 - Steffen, W., et al. (2015). Planetary boundaries: Guiding human development on a changing planet. *Science*, 347(6223).
 - Weitzman, M. L. (1974). Prices vs. quantities. *Review of Economic Studies*, 41(4), 477–491.

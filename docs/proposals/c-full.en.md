@@ -198,6 +198,9 @@ The wealth figure is personal net wealth, which includes shares, so it already c
 - A supply cap applies at the **upstream** point: fossil-fuel extraction and import, and large point sources. Controlling a few thousand nodes worldwide reaches the whole economy, with no need to monitor individuals.
 - Allowances equal to the cap are issued and **all sold at auction**. Firms bid for scarce allowances, and that competition sets the carbon price. The underlying mechanism is the familiar cap-and-trade design used in the EU and elsewhere.
 - **Offsetting is not permitted.** Emissions above the cap cannot be cancelled with reductions bought elsewhere.
+- **Counted once, where fuel enters.** Fuel is counted when it first enters a member's economy: at domestic extraction or at import. Fuel exported from that economy is not counted there, so nothing is counted twice between members.
+- **Carbon that never reaches the air.** Fossil carbon used as a feedstock and kept out of the atmosphere, or captured and permanently stored, earns back allowances once verified. This is an accounting correction for carbon that was never emitted, not an offset.
+- **What the cap covers, and what it does not.** Carbon dioxide from fossil fuels is roughly two-thirds to 70% of global greenhouse-gas emissions. In the United States, an upstream design has been estimated to reach about 80% of all emissions through a few thousand taxpayers (Metcalf & Weisbach, 2009). Methane leaking at extraction sites is covered at the same points, and process emissions such as those from cement through large point sources. Livestock methane, deforestation, nitrous oxide, and fluorinated gases lie outside the cap; the points (4.3) and other measures address them.
 
 **How the cap declines**
 
@@ -205,6 +208,7 @@ The wealth figure is personal net wealth, which includes shares, so it already c
 - The cap falls automatically each year on a path derived from that budget: about 8% a year globally on average, faster for high-income countries, and more gradual for developing ones.
 - The path may start more gently and steepen later as new technologies scale up, but the total budget does not change.
 - The cap starts from **current** emissions. Past overshoot is addressed through BEI and investment in carbon removal.
+- Allowances may be **banked** for later years, which smooths prices. They cannot be borrowed from future years, so the total never grows.
 - At the club stage, the reduction rate rises with the club's size (Section 5).
 
 **Automatic adjustment A: price**
@@ -580,6 +584,8 @@ Planetary OS deliberately builds on established ideas. Its contribution is to **
 | Planetary boundaries (Rockström et al., 2009; Steffen et al., 2015) | Physical limits as non-negotiable outer constraints | Automatic policy responses tied to boundary indicators |
 | Prices vs. quantities (Weitzman, 1974) | Under a fixed cumulative budget, quantity control is preferred | A one-way cap combined with a price corridor that never loosens the cap |
 | Cap-and-dividend and fee-and-dividend (e.g., Barnes; Boyce; Hansen; Citizens' Climate Lobby) | Returning carbon revenue directly to citizens | A sufficiency-linked component, historical liability (BEI), and protection against repeal |
+| Upstream coverage (e.g., Metcalf & Weisbach, 2009; the EU's ETS2, which places the obligation on fuel suppliers) | Reaching the whole economy through a few thousand upstream points instead of millions of sources | Applying it across a club, with a cap that only declines |
+| Supply-side climate policy (e.g., the *Production Gap Report*; the 2026 Santa Marta conference on transitioning away from fossil fuels) | Limiting the fossil fuel that enters the economy, not only its use | A market design (auction and dividend) that makes limiting supply pay for citizens |
 | Climate clubs (Nordhaus, 2015) and reciprocal commitments (Cramton, MacKay, Ockenfels & Stoft, 2017) | Club benefits plus border measures; "we will if you will" | Rates that rise with club size, deadlines, recalibration, and rules fixed at launch |
 | Sufficiency (IPCC AR6, Working Group III) | Demand-side reduction as a mitigation lever | Turning sufficiency into a rewarded, rational choice rather than a sacrifice |
 | Deliberative democracy (e.g., OECD's "deliberative wave"; national climate assemblies) | Sortition-based citizens' assemblies | A binding role in rule amendment through the double key |
@@ -587,15 +593,19 @@ Planetary OS deliberately builds on established ideas. Its contribution is to **
 | Blended finance and the cost of capital (e.g., IEA; ODI) | Guarantees to lower the cost of capital | A large, independent funding base (BEI) with an explicit mandate to take losses |
 | Global Democratic Governance Charter (世界市民ガバナンス憲章, 2026; written as part of this package) [→](../charter/charter.md) | Policy options designed from the standpoint of world citizens, always several per issue, including a "global carbon dividend" option for climate (Section 3) | A detailed design of that "global carbon dividend" option, to be compared with the alternatives in the World Citizens' Assembly |
 
+**Recent developments point the same way.** The EU's second emissions trading system (ETS2), for buildings and road transport, places the obligation to surrender allowances on fuel suppliers rather than end users; its start was postponed from 2027 to 2028. The *Production Gap Report 2025* found that governments still plan to produce roughly twice as much fossil fuel in 2030 as a 1.5°C pathway allows. In April 2026, 57 countries met in Santa Marta, Colombia, at the first conference on transitioning away from fossil fuels, and agreed to work on national and regional roadmaps. Planetary OS offers one way to turn that direction into binding, self-financing rules.
+
 **Selected references.** Other entries in the table refer to bodies of work rather than single publications.
 
 - Barnes, P. (2001). *Who Owns the Sky? Our Common Assets and the Future of Capitalism*. Island Press.
 - Boyce, J. K. (2019). *The Case for Carbon Dividends*. Polity.
 - Cramton, P., MacKay, D. J. C., Ockenfels, A., & Stoft, S. (Eds.) (2017). *Global Carbon Pricing: The Path to Climate Cooperation*. MIT Press.
+- Metcalf, G. E., & Weisbach, D. (2009). The design of a carbon tax. *Harvard Environmental Law Review*, 33(2), 499–556.
 - IPCC (2022). *Climate Change 2022: Mitigation of Climate Change*. Contribution of Working Group III to the Sixth Assessment Report (Chapter 5: Demand, services and social aspects of mitigation).
 - Ivanova, D., et al. (2016). Environmental impact assessment of household consumption. *Journal of Industrial Ecology*, 20(3), 526–536.
 - Nordhaus, W. (2015). Climate clubs: Overcoming free-riding in international climate policy. *American Economic Review*, 105(4), 1339–1370.
 - OECD (2020). *Innovative Citizen Participation and New Democratic Institutions: Catching the Deliberative Wave*. OECD Publishing.
+- SEI, Climate Analytics & IISD (2025). *The Production Gap Report 2025*.
 - Rockström, J., et al. (2009). A safe operating space for humanity. *Nature*, 461, 472–475.
 - Steffen, W., et al. (2015). Planetary boundaries: Guiding human development on a changing planet. *Science*, 347(6223).
 - Weitzman, M. L. (1974). Prices vs. quantities. *Review of Economic Studies*, 41(4), 477–491.
