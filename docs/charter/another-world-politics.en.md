@@ -146,6 +146,7 @@ The *Global Democratic Governance Charter* [→](charter.md) turns it into a con
 
 - Global Democratic Governance Charter [→](charter.md)
 - Essay: *Why Can't Humanity Stop the Slide Toward Catastrophe?* [→](../essays/missing-institution.md)
+- Essay: *"Realistically Impossible" — For Whom?* [→](../essays/impossible-for-whom.md)
 - Proposal A: Youth GCC [→](../proposals/a-youth-gcc.md)
 - Essay: *Why Now?* [→](../why-now.md)
 

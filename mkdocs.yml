@@ -92,6 +92,7 @@ plugins:
             "8. The first step": "8. 最初の一歩"
             Background: 背景
             "Why can't humanity stop the slide?": "なぜ人類は、破局を止められないのか"
+            "Impossible for whom?": "「現実には無理」は、誰にとっての現実か"
             "Why technology does not make life easier": "なぜ技術が進んでも楽にならないのか"
             "The next layers of Planetary OS": "Planetary OS の次の層"
             "Global Democratic Governance Charter": "世界市民ガバナンス憲章"
@@ -128,6 +129,7 @@ nav:
       - "8. The first step": series/part-8.md
   - Background:
       - "Why can't humanity stop the slide?": essays/missing-institution.md
+      - "Impossible for whom?": essays/impossible-for-whom.md
       - "Why technology does not make life easier": essays/why-technology.md
       - "The next layers of Planetary OS": essays/next-layers.md
       - "Global Democratic Governance Charter": charter/charter.md

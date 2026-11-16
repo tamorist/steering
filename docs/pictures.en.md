@@ -71,3 +71,8 @@ There is no world government. It starts with a club of willing countries and cit
 - Take part as a Co-Initiator [→](join.md)
 
 **Contact:** Tatsuya Mori · [Substack](https://ttmori.substack.com) · [note](https://note.com/ttmori) · [X](https://x.com/ttmori) · [Contact form](https://docs.google.com/forms/d/e/1FAIpQLSexBpD4BcRWIV--FuhMC9BxbP4I9fXl6pi9nxQPmX2bjivjqw/viewform)
+
+
+---
+
+This document is also published on: [note (Japanese)](https://note.com/ttmori/n/nb4f039ca5c0f)

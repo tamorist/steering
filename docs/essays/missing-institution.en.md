@@ -238,6 +238,7 @@ The Youth GCC is a first attempt, starting small and starting now. When such an 
 
 - Global Democratic Governance Charter [→](../charter/charter.md)
 - Building Another World Politics [→](../charter/another-world-politics.md)
+- Essay: *"Realistically Impossible" — For Whom?* [→](impossible-for-whom.md) (why citizens have to draft the rules)
 - Proposal A: Youth GCC [→](../proposals/a-youth-gcc.md)
 - Series Part 4: Giving future generations a voice [→](../series/part-4.md)
 - Package proposal: *Steering Within Limits* [→](../package.md)

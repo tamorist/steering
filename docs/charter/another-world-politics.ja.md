@@ -146,6 +146,7 @@ AIは、もっと大きなことも示しています。国境を越える技術
 
 - 世界市民ガバナンス憲章[→](charter.md)
 - 論考「なぜ人類は、破局を止められないのか」[→](../essays/missing-institution.md)
+- 論考「「現実には無理」は、誰にとっての現実か」[→](../essays/impossible-for-whom.md)
 - 提案A：Youth GCC[→](../proposals/a-youth-gcc.md)
 - 「なぜ今か」[→](../why-now.md)
 

@@ -35,6 +35,7 @@ PAGES = {
     "essays/why-technology": (f"{ESS}/Essay1_Why_Technology_Does_Not_Make_Life_Easier_EN.md", f"{ESS}/論考1_なぜ技術が進んでも暮らしは楽にならないのか_JP.md"),
     "essays/next-layers": (f"{ESS}/Essay2_The_Next_Layers_of_Planetary_OS_EN.md", f"{ESS}/論考2_PlanetaryOSの次の層_JP.md"),
     "essays/missing-institution": ("既存ルート破綻/Essay3_The_Missing_Institution_EN.md", "既存ルート破綻/論考3_足りないのは決めるための器_JP.md"),
+    "essays/impossible-for-whom": ("利益相反/Essay4_Impossible_for_Whom_EN.md", "利益相反/論考4_誰にとっての現実か_JP.md"),
     "charter/charter": (f"{GOV}/Charter_EN.md", f"{GOV}/憲章_JP.md"),
     "charter/another-world-politics": (f"{GOV}/Another_World_Politics_EN.md", f"{GOV}/もう一つの世界政治_JP.md"),
     "join": (f"{GCW}/Co-Initiator_Page_EN.md", f"{GCW}/共同発起人の募集ページ_JP.md"),
@@ -236,11 +237,21 @@ def also_published(slug, lang):
     return ""
 
 
-def resolve_export(text, lang):
+# Documents posted before the articles they list (the note top article): a link to an article that is still a
+# draft goes to its note/Substack URL anyway, followed by a "being written" mark that is removed once it is published.
+DRAFT_MARK_DOCS = {"記事一覧_JP.md", "Article_Index_EN.md"}
+DRAFT_MARK = {"ja": "（📝執筆中です）", "en": "(📝 being written)"}
+
+
+def resolve_export(text, lang, mark_drafts=False):
     def sub(m):
         lid, forced = (m.group(1), m.group(2)) if m.group(1) else (m.group(3), m.group(4))
         e = entry(lid)
         tl = forced or lang
+        draft = e.get("note_draft" if tl == "ja" else "substack_draft")
+        if mark_drafts and draft:
+            prev = m.string[m.start() - 1] if m.start() else " "
+            return ("" if prev in " 　：:（(\n" else " ") + draft + " " + DRAFT_MARK[lang]
         order = ["note", "substack", "url"] if tl == "ja" else ["substack", "note", "url"]
         url = next((e.get(k) for k in order if e.get(k)), "") or site_url_abs(e, tl)
         if not url:
@@ -264,7 +275,13 @@ def export(rel, lang):
     lines = [l for i, l in enumerate(lines) if l.strip() or i == 0 or lines[i - 1].strip()]   # no double blank lines
     out_dir = os.path.join(EXPORTS, "note" if lang == "ja" else "substack")
     os.makedirs(out_dir, exist_ok=True)
-    open(os.path.join(out_dir, os.path.basename(rel)), "w", encoding="utf-8").write(resolve_vars(resolve_export("\n".join(lines), lang), lang, "export").strip() + "\n")
+    name = os.path.basename(rel)
+    body = resolve_export("\n".join(lines), lang, mark_drafts=name in DRAFT_MARK_DOCS)
+    # <!-- if-drafts --> … <!-- /if-drafts -->: kept only while the copy still has a "being written" mark
+    keep = DRAFT_MARK[lang] in re.sub(r"<!-- if-drafts -->.*?<!-- /if-drafts -->", "", body, flags=re.S)
+    body = re.sub(r"<!-- if-drafts -->\n(.*?)<!-- /if-drafts -->\n?", (lambda m: m.group(1)) if keep else "", body, flags=re.S)
+    body = re.sub(r"\n{3,}", "\n\n", body)
+    open(os.path.join(out_dir, name), "w", encoding="utf-8").write(resolve_vars(body, lang, "export").strip() + "\n")
 
 
 # ---------------- info register (contact details and other fill-in values) ----------------

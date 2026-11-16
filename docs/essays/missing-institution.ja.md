@@ -238,6 +238,7 @@ Youth GCC は、その最初の試みです。小さく始め、今始めます�
 
 - 世界市民ガバナンス憲章[→](../charter/charter.md)
 - もう一つの世界政治をつくる[→](../charter/another-world-politics.md)
+- 論考「「現実には無理」は、誰にとっての現実か」[→](impossible-for-whom.md)（なぜ市民がルールを起草するのか）
 - 提案A：Youth GCC[→](../proposals/a-youth-gcc.md)
 - 連載 第4回「将来世代の声を意思決定に組み込む」[→](../series/part-4.md)
 - パッケージ提案書「限界の内側で、舵を取る」[→](../package.md)
