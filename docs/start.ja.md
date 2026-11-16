@@ -16,7 +16,7 @@
 - 答えは、さらなる我慢でも、世界的な合意を待つことでもありません。**減らすほど得をするように動作ルールを書き換え**、そのルールを簡単には覆せない場所に置くことです。
 - そのルールの具体的な設計が **Planetary OS** です。それを担う主体が **Youth GCC**、市民の支持を実際の決定につなぐ回路が **Global Citizen Will Platform** です。
 
-この解説では、「限界の内側で、舵を取る」（https://note.com/ttmori/n/nc80deb2a6308）のパッケージ全体を一続きの議論として説明します。経済学や気候科学の予備知識は前提にしていません。名前・割合・数値は、すべて**一例**です。方向性を示すもので、本当の値は、専門家の検証と市民の熟議で決めていきます。
+この解説では、「限界の内側で、舵を取る」[↗](https://note.com/ttmori/n/nc80deb2a6308)のパッケージ全体を一続きの議論として説明します。経済学や気候科学の予備知識は前提にしていません。名前・割合・数値は、すべて**一例**です。方向性を示すもので、本当の値は、専門家の検証と市民の熟議で決めていきます。
 
 ---
 
@@ -281,3 +281,8 @@ Youth GCC には、強制する力はありません。その代わりに、政�
 - 連載「地球のOSを書き換える」[→](series/part-0.md)
 
 **連絡先**：森　達哉 · [Substack](https://ttmori.substack.com) · [note](https://note.com/ttmori) · [X](https://x.com/ttmori) · [お問い合わせフォーム](https://docs.google.com/forms/d/e/1FAIpQLSexBpD4BcRWIV--FuhMC9BxbP4I9fXl6pi9nxQPmX2bjivjqw/viewform)
+
+
+---
+
+この文書は、次の場所でも公開しています： [note（日本語）](https://note.com/ttmori/n/n3fb7e83e75a6)
