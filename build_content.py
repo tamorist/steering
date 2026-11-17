@@ -261,9 +261,9 @@ def resolve_export(text, lang, mark_drafts=False):
             return "（📝執筆中）" if lang == "ja" else "(📝 in progress)"
         prev = m.string[m.start() - 1] if m.start() else " "
         nxt = m.string[m.end()] if m.end() < len(m.string) else "\n"
-        # in the index: an article already out on the other platform but not yet on this one links to the site page
-        # for now, marked "planned"; registering its note/Substack URL in links.toml swaps the link and drops the mark
-        planned = mark_drafts and not e.get(own) and e.get(other) and url == site_url_abs(e, tl)
+        # in the index: an article planned for this platform (substack_planned / note_planned) but not yet posted
+        # links to the site page for now, marked "planned"; registering its note/Substack URL in links.toml swaps the link and drops the mark
+        planned = mark_drafts and not e.get(own) and e.get(f"{own}_planned") and url == site_url_abs(e, tl)
         tail = (" " + PLANNED_MARK[lang]) if planned else ""
         # keep a space on both sides, so that note/Substack do not pull the next word into the link
         return ("" if prev in " 　：:（(\n" else " ") + url + tail + ("" if nxt in " 　\n）)" else " ")
@@ -272,6 +272,30 @@ def resolve_export(text, lang, mark_drafts=False):
 
 EXPORT_DROP = [r"^> This English version is the master text.*", r"^> Master text\..*", r"^> 本書は、英語版.*",
                r"^> 英語版（.*を正本とする.*", r"^> 管理用の注記.*"]
+
+
+# A short note at the top of each posted article (an entry with a note URL, drafts included), so that a reader who
+# arrives at one article knows it belongs to the package and where to find the rest. Exports only: the site has its menu.
+INTRO = {
+    "ja": "> この記事は、文明の転換に向けた3つの提案「限界の内側で、舵を取る」の記事の一つです。提案の全体と、ほかの記事は、{where}からご覧いただけます。",
+    "en": "> This article is part of *Steering Within Limits*, three proposals for a civilizational transition. For the whole proposal and the other articles, see {where}.",
+}
+INTRO_WHERE = {"ja": ("記事一覧［リンク:index］", "ウェブサイト［リンク:home］"),
+               "en": ("the article index [link:index]", "the website [link:home]")}
+
+
+def add_intro(lines, rel, lang):
+    posted = any(e.get("note") and e.get("site") and rel in PAGES.get(e["site"], ())
+                 for k, e in LINKS.items() if k != "site")
+    if not posted:
+        return lines
+    own = "note" if lang == "ja" else "substack"
+    where = INTRO_WHERE[lang][0 if entry("index").get(own) else 1]   # no index article on this platform yet: the website
+    # after the title block (headings, bold lines such as the header image or the series label), before the text
+    i = 0
+    while i < len(lines) and (not lines[i].strip() or lines[i].startswith("#") or (lines[i].startswith("**") and len(lines[i]) < 100)):
+        i += 1
+    return lines[:i] + [INTRO[lang].format(where=where), ""] + lines[i:]
 
 
 def export(rel, lang):
@@ -283,6 +307,7 @@ def export(rel, lang):
     out_dir = os.path.join(EXPORTS, "note" if lang == "ja" else "substack")
     os.makedirs(out_dir, exist_ok=True)
     name = os.path.basename(rel)
+    lines = add_intro(lines, rel, lang)
     body = resolve_export("\n".join(lines), lang, mark_drafts=name in DRAFT_MARK_DOCS)
     # <!-- if-drafts --> … <!-- /if-drafts -->: kept only while the copy still has a "being written" mark
     keep = DRAFT_MARK[lang] in re.sub(r"<!-- if-drafts -->.*?<!-- /if-drafts -->", "", body, flags=re.S)

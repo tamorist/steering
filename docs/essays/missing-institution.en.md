@@ -44,7 +44,7 @@ Imagine a neighbor who plays loud music late at night. You would both prefer a q
 
 Game theorists call this structure a prisoner's dilemma, and its logic can be stated precisely. Each country can either cooperate, cutting back at its own cost, or defect, putting itself first. If the others cooperate, a country that defects enjoys the benefit of their efforts without paying: its best outcome. If the others defect, a country that cooperates alone pays the cost and still cannot prevent the damage: its worst outcome. So whatever the others do, defecting pays more. When every country reasons this way, all defect, and all end up worse off than if all had cooperated. No one can escape this outcome alone.
 
-This is the simplest form of the problem. In reality countries deal with each other again and again, which is why changing the payoffs, through clubs and through rewards for cutting back, can change the outcome. That is the aim of Planetary OS. But without such changes, the logic holds.
+This is the simplest form of the problem. In reality countries deal with each other again and again, which is why changing the payoffs, through clubs of countries that act together and through rewards for cutting back, can change the outcome. That is the aim of Planetary OS, the climate design in this package: a cap on the total amount of fossil fuel, with most of the revenue returned to citizens. But without such changes, the logic holds.
 
 National leaders are in this dilemma every day. Their role is to serve their own country's voters, and they are judged on the near-term results they deliver. That is not a flaw of character; it is what the role asks of them. So the more faithfully a leader serves their own country, the harder it is to escape the trap.
 
@@ -153,7 +153,7 @@ These conditions are not only about climate. The race to the bottom in taxes and
 
 ### One design that meets them
 
-The package proposal sets out one design intended to meet these conditions. Other designs are possible, and in keeping with the Charter's principle of comparing options, they should be compared.
+The package proposal sets out one design intended to meet these conditions. Other designs are possible, and in keeping with the principle of comparing options set out in the Global Democratic Governance Charter, they should be compared.
 
 | Condition | One way to meet it |
 |---|---|
