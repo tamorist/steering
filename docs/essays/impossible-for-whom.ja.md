@@ -220,3 +220,8 @@ CBAMの課題は、公平さではなく、範囲の狭さです。対象は一�
 - セルビア議会選挙（Euronews、2026年10月25日） https://www.euronews.com/2026/10/25/vucic-concedes-defeat-in-pivotal-serbian-elections-says-student-movement-has-won
 - セルビア議会選挙の確定結果（Wikipedia） https://en.wikipedia.org/wiki/2026_Serbian_parliamentary_election
 - 学生リストの候補者（Euronews、2026年9月15日） https://www.euronews.com/2026/09/15/university-students-launch-student-list-to-shake-up-serbias-elections
+
+
+---
+
+この文書は、次の場所でも公開しています： [note（日本語）](https://note.com/ttmori/n/n6077844d5f84)

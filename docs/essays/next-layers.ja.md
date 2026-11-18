@@ -133,4 +133,4 @@ Planetary OS は、その最初の一歩です。これらの層は、その道�
 - 背景論考1「なぜ技術が進んでも、暮らしは楽にならないのか」[→](why-technology.md)
 - パッケージ提案書「限界の内側で、舵を取る」7章[→](../package.md)
 - 提案C：Planetary OS[→](../proposals/c-summary.md)
-- BEIの政策白書[↗](https://ttmori.substack.com/p/policy-white-paper-proposal-a-new?r=5dzcae)
+- BEIの政策白書[↗](https://note.com/ttmori/n/nbc21a89865a8)

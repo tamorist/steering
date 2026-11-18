@@ -216,7 +216,10 @@ def resolve_site(text, lang, slug):
                 href = os.path.relpath(there, here) + "/"
             label = (e["title_ja"] if tl == "ja" else e["title_en"]) + " →" if whole_line else "→"
             return f"[{label}]({href})"
-        ext = e.get("substack") or e.get("note") or e.get("url")
+        # no site page: the platform in the page's language first (a Japanese page should not send readers to Substack)
+        tl = forced or lang
+        own, other = ("note", "substack") if tl == "ja" else ("substack", "note")
+        ext = e.get(own) or e.get("url") or e.get(other)
         return f"[↗]({ext})" if ext else ""
     return TOKEN.sub(sub, text)
 

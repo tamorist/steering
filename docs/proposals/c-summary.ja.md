@@ -137,8 +137,8 @@ Planetary OS は、この2つの壁を越えるための条件を、最初から
 - 連載「地球のOSを書き換える」（全8回）[→](../series/part-0.md)
 - 提案A：Youth GCC（将来世代のための、若者主導の地球市民会議）[→](a-youth-gcc.md)
 - 提案B：Global Citizen Will Platform[→](b-platform.md)
-- Green Gain Economy（GGE）[↗](https://ttmori.substack.com/p/green-gain-economy-gge-policy-proposal)
-- BEI 政策白書[↗](https://ttmori.substack.com/p/policy-white-paper-proposal-a-new?r=5dzcae)
+- Green Gain Economy（GGE）[↗](https://note.com/ttmori/n/ncf0628b22188)
+- BEI 政策白書[↗](https://note.com/ttmori/n/nbc21a89865a8)
 - 共同発起人の募集ページ[→](../join.md)
 
 **連絡先**：森　達哉 · [Substack](https://ttmori.substack.com) · [note](https://note.com/ttmori) · [X](https://x.com/ttmori) · [お問い合わせフォーム](https://docs.google.com/forms/d/e/1FAIpQLSexBpD4BcRWIV--FuhMC9BxbP4I9fXl6pi9nxQPmX2bjivjqw/viewform)

@@ -220,3 +220,8 @@ The next time you hear "it's realistically impossible," try asking back, just on
 - Serbian parliamentary election (Euronews, 25 October 2026) https://www.euronews.com/2026/10/25/vucic-concedes-defeat-in-pivotal-serbian-elections-says-student-movement-has-won
 - Final results of the Serbian parliamentary election (Wikipedia) https://en.wikipedia.org/wiki/2026_Serbian_parliamentary_election
 - Candidates on the Student List (Euronews, 15 September 2026) https://www.euronews.com/2026/09/15/university-students-launch-student-list-to-shake-up-serbias-elections
+
+
+---
+
+This document is also published on: [note (Japanese)](https://note.com/ttmori/n/n6077844d5f84)

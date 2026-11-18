@@ -23,6 +23,8 @@ Look closely at our time, and three things don't add up.
 
 **Third, we know more than ever, yet the curves don't bend.** Scientists have warned about the climate for decades. Millions have marched. Enormous sums have been spent. Emissions remain high, and carbon pricing has been rolled back again and again.
 
+Why the first two happen is explored in more depth in Background essay 1, *Why Doesn't Technology Make Life Easier?* [→](essays/why-technology.md).
+
 ---
 
 ## Everyone on tiptoe
@@ -137,6 +139,12 @@ The question we want to put to politics is not "please do something." It is: **"
 
 **Read more**
 
+- Background essay 1: *Why Doesn't Technology Make Life Easier?* [→](essays/why-technology.md)
 - Package Proposal: *Steering Within Limits* [→](package.md)
 - Series: *Rewriting the Planet's OS* (8 parts) [→](series/part-0.md)
 - Citizen Dividend Simulator [→](tools/simulator.md)
+
+
+---
+
+This document is also published on: [note (Japanese)](https://note.com/ttmori/n/n093d06d64e79)

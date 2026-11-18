@@ -59,7 +59,7 @@ Planetary OS では、役割の違う3つの組織がこの広がりを担いま
 
 この「参加すると得をするクラブ」の構想は、筆者が別に提案している「**Green Gain Economy（GGE）**」をもとにしています。
 
-（参考：Green Gain Economy (GGE) Policy Proposal [↗](https://ttmori.substack.com/p/green-gain-economy-gge-policy-proposal) ）
+（参考：Green Gain Economy (GGE) Policy Proposal [↗](https://note.com/ttmori/n/ncf0628b22188) ）
 
 クラブが広がるためには、2つの力が必要です。**参加すると得をする力**と、**参加しないと損をする力**です。順に見ていきます。
 

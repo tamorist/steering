@@ -254,6 +254,6 @@ Planetary OS は、憲章が気候の制度案の例として挙げる**「世�
 - 提案C：Planetary OS（要約版、本編、FAQ）[→](c-summary.md)
 - 世界市民ガバナンス憲章[→](../charter/charter.md)
 - もう一つの世界政治をつくる[→](../charter/another-world-politics.md)
-- 以前の提案：「Global Citizens' Congress」の提案[↗](https://ttmori.substack.com/p/proposal-global-citizens-congress)、「Global Citizens' Assembly」のシリーズ[↗](https://ttmori.substack.com/p/a-proposal-for-a-global-citizens?r=5dzcae)
+- 以前の提案：「Global Citizens' Congress」の提案[↗](https://note.com/ttmori/n/n0353658ac645)、「Global Citizens' Assembly」のシリーズ[↗](https://note.com/ttmori/n/n0353658ac645)
 
 **連絡先**：森　達哉 · [Substack](https://ttmori.substack.com) · [note](https://note.com/ttmori) · [X](https://x.com/ttmori) · [お問い合わせフォーム](https://docs.google.com/forms/d/e/1FAIpQLSexBpD4BcRWIV--FuhMC9BxbP4I9fXl6pi9nxQPmX2bjivjqw/viewform)

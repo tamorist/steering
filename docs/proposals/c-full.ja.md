@@ -658,8 +658,8 @@ Planetary OS は、すでに確立した考え方を意図して土台にして�
 - 世界市民ガバナンス憲章[→](../charter/charter.md)
 - もう一つの世界政治をつくる[→](../charter/another-world-politics.md)
 - 提案B：Global Citizen Will Platform[→](b-platform.md)
-- Green Gain Economy（GGE）[↗](https://ttmori.substack.com/p/green-gain-economy-gge-policy-proposal)
-- BEI 政策白書[↗](https://ttmori.substack.com/p/policy-white-paper-proposal-a-new?r=5dzcae)
-- 関連する構想：Designed Model Economy[↗](https://ttmori.substack.com/p/proposal-for-introducing-a-designed)／Global Shrinkage Evaluation System（S.I.R.）[↗](https://ttmori.substack.com/p/proposal-for-the-establishment-of)／Dual Value Economy[↗](https://ttmori.substack.com/p/dual-value-economy-concept-book)
+- Green Gain Economy（GGE）[↗](https://note.com/ttmori/n/ncf0628b22188)
+- BEI 政策白書[↗](https://note.com/ttmori/n/nbc21a89865a8)
+- 関連する構想：Designed Model Economy[↗](https://note.com/ttmori/n/n744064c8c883)／Global Shrinkage Evaluation System（S.I.R.）[↗](https://note.com/ttmori/n/n73a195f8fbe7)／Dual Value Economy[↗](https://note.com/ttmori/n/n143a6ca966bb)
 
 **連絡先**：森　達哉 · [Substack](https://ttmori.substack.com) · [note](https://note.com/ttmori) · [X](https://x.com/ttmori) · [お問い合わせフォーム](https://docs.google.com/forms/d/e/1FAIpQLSexBpD4BcRWIV--FuhMC9BxbP4I9fXl6pi9nxQPmX2bjivjqw/viewform)

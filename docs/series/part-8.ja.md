@@ -41,7 +41,7 @@
 
 Planetary OS を社会に広める中心的な担い手として、私は**若者が主導する国際的な集まり**を構想しています。名前は「**Youth-Led Global Citizens' Congress for Future Generations（将来世代のための、若者主導の地球市民会議）**」、略して Youth GCC です。
 
-（参考：Proposal: Global Citizens Congress [↗](https://ttmori.substack.com/p/proposal-global-citizens-congress) ）
+（参考：Proposal: Global Citizens Congress [↗](https://note.com/ttmori/n/n0353658ac645) ）
 
 ### なぜ若者なのか
 
@@ -204,11 +204,11 @@ Youth GCC の立ち上げと同時に、彼らの名前で世界に呼びかけ�
 より長い時間をかけて、経済のOSのさらに深い部分を書き換えていく構想も、別に提案しています。
 
 - **経済を「設計できるもの」として捉え直す**：経済は自然の法則ではなく、人間が設計したルールの集まりです。成長を駆り立てる力の強さを、民主的に調整し直すことを提案しています。
-  （参考：Proposal for Introducing a Designed Model Economy [↗](https://ttmori.substack.com/p/proposal-for-introducing-a-designed) ）
+  （参考：Proposal for Introducing a Designed Model Economy [↗](https://note.com/ttmori/n/n744064c8c883) ）
 - **縮小を評価する国際的な仕組み**：排出や資源の使用を減らしたことを、国際的に評価し、価値として認める仕組みです。
-  （参考：Proposal for the Establishment of a Global Shrinkage Evaluation System [↗](https://ttmori.substack.com/p/proposal-for-the-establishment-of) ）
+  （参考：Proposal for the Establishment of a Global Shrinkage Evaluation System [↗](https://note.com/ttmori/n/n73a195f8fbe7) ）
 - **人の豊かさと地球の豊かさ、二つの価値で測る経済**：今のお金という一つの物差しだけでなく、地球への貢献を測るもう一つの物差しを持つ経済の構想です。
-  （参考：Dual Value Economy Concept Book [↗](https://ttmori.substack.com/p/dual-value-economy-concept-book) ）
+  （参考：Dual Value Economy Concept Book [↗](https://note.com/ttmori/n/n143a6ca966bb) ）
 
 これらは、Planetary OS が動き始めた後の「次の段階」として、改めて別の機会に紹介したいと考えています。
 
