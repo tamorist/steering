@@ -280,7 +280,7 @@ Planetary OS は、**減らすほど得をする社会**のための動作ルー
 
 ## 7. 最初の課題の先へ：OSのより深い層
 
-Planetary OS が扱うのは、最も急を要する層です。炭素予算の内側に経済を収めながら、減らすことを得にすることです。けれども、より深い問題は、経済が拡大し続けなければならないというルールそのものにあります。政策のサイクルが動き出したあと、Youth GCC は、さらに深い層に取り組むことができます。以下は、のちの熟議のための方向性であり、最初の課題には含めません（背景論考2で詳しく述べています）。
+Planetary OS が扱うのは、最も急を要する層です。炭素予算の内側に経済を収めながら、減らすことを得にすることです。けれども、より深い問題は、経済が拡大し続けなければならないというルールそのものにあります。政策のサイクルが動き出したあと、Youth GCC は、さらに深い層に取り組むことができます。以下は、のちの熟議のための方向性であり、最初の課題には含めません（論考「Planetary OS の次の層」で詳しく述べています）。
 
 - **生産性の向上を、時間として還す**：AIや自動化による成果を、より多くの生産と過剰な競争にではなく、標準の労働時間の短縮に向ける。
 - **生態系への負債を、会計に載せる**：累積した環境への損害を、企業や金融資産の会計上の負債として認める。BEIとPTEは、その方向への最初の、実際的な一歩です。
@@ -357,6 +357,6 @@ Planetary OS が扱うのは、最も急を要する層です。炭素予算の�
 | A：Youth GCC | **提案A（要約）**[→](proposals/a-youth-gcc.md)、世界市民ガバナンス憲章[→](charter/charter.md)、記事「もう一つの世界政治をつくる」[→](charter/another-world-politics.md)。以前の資料：Global Citizens' Congress の提案[↗](https://note.com/ttmori/n/n0353658ac645)、Global Citizens' Assembly のシリーズ[↗](https://note.com/ttmori/n/n0353658ac645)、Youth GCC の請願文[↗](https://c.org/4jScSgpYhq) |
 | B：Global Citizen Will Platform | 提案B（要約）[→](proposals/b-platform.md)、共同発起人の募集ページ[→](join.md) |
 | C：Planetary OS | 要約版[→](proposals/c-summary.md)、本編[→](proposals/c-full.md)、FAQ[→](proposals/c-faq.md)、連載「地球のOSを書き換える」（全8回）[→](series/part-0.md)、還元シミュレーター[→](tools/simulator.md) |
-| 背景 | 記事「なぜ今なのか」[→](why-now.md)、背景論考1「なぜ技術が進んでも、暮らしは楽にならないのか」[→](essays/why-technology.md)、背景論考2「Planetary OS の次の層」[→](essays/next-layers.md)、BEIの政策白書[↗](https://note.com/ttmori/n/nbc21a89865a8) |
+| 背景 | 記事「なぜ今なのか」[→](why-now.md)、論考「なぜ技術が進んでも、暮らしは楽にならないのか」[→](essays/why-technology.md)、論考「Planetary OS の次の層」[→](essays/next-layers.md)、BEIの政策白書[↗](https://note.com/ttmori/n/nbc21a89865a8) |
 
 **連絡先**：森　達哉 · [Substack](https://ttmori.substack.com) · [note](https://note.com/ttmori) · [X](https://x.com/ttmori) · [お問い合わせフォーム](https://docs.google.com/forms/d/e/1FAIpQLSexBpD4BcRWIV--FuhMC9BxbP4I9fXl6pi9nxQPmX2bjivjqw/viewform)

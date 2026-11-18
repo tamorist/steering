@@ -1,7 +1,7 @@
 # The Next Layers of Planetary OS
 ### Accounting, a financial safety net, and time
 
-**Background essay 2** — First edition (working draft)
+**Background essay** — First edition (working draft)
 
 
 ---
@@ -130,7 +130,7 @@ Planetary OS is the first step. These layers show where the path could lead.
 
 **Read more**
 
-- Background essay 1: *Why Doesn't Technology Make Life Easier?* [→](why-technology.md)
+- Essay: *Why Doesn't Technology Make Life Easier?* [→](why-technology.md)
 - Package Proposal: *Steering Within Limits*, chapter 7 [→](../package.md)
 - Proposal C: Planetary OS [→](../proposals/c-summary.md)
 - BEI policy white paper [↗](https://ttmori.substack.com/p/policy-white-paper-proposal-a-new?r=5dzcae)

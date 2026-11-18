@@ -277,7 +277,7 @@ Together, they form a complete loop: a concrete design, people who carry it, and
 
 ## 7. Beyond the first agenda: the deeper layers of the OS
 
-Planetary OS addresses the most urgent layer: keeping the economy within the carbon budget while making reduction pay. But the deeper problem is the rule that the economy must keep expanding. Once the policy cycle is working, Youth GCC can take up further layers. These are directions for later deliberation, not part of the first agenda (Background essay 2 develops them further):
+Planetary OS addresses the most urgent layer: keeping the economy within the carbon budget while making reduction pay. But the deeper problem is the rule that the economy must keep expanding. Once the policy cycle is working, Youth GCC can take up further layers. These are directions for later deliberation, not part of the first agenda (the essay *The Next Layers of Planetary OS* develops them further):
 
 - **Returning productivity as time.** Turning gains from AI and automation into shorter standard working hours, rather than into ever more output and overcompetition.
 - **Accounting for ecological liability.** Recognizing cumulative environmental damage as a liability in the accounts of firms and financial assets. BEI and the PTE are a first, practical step in this direction.
@@ -354,6 +354,6 @@ All three proposals follow the same principles:
 | A — Youth GCC | **Proposal A (summary)** [→](proposals/a-youth-gcc.md); Global Democratic Governance Charter [→](charter/charter.md); essay *Building Another World Politics* [→](charter/another-world-politics.md); earlier documents: Global Citizens' Congress proposal [↗](https://ttmori.substack.com/p/proposal-global-citizens-congress), Global Citizens' Assembly series [↗](https://ttmori.substack.com/p/a-proposal-for-a-global-citizens?r=5dzcae), Youth GCC petition [↗](https://c.org/4jScSgpYhq) |
 | B — Global Citizen Will Platform | Proposal B (summary) [→](proposals/b-platform.md); Co-Initiator page [→](join.md) |
 | C — Planetary OS | Executive Summary [→](proposals/c-summary.md); Full Proposal [→](proposals/c-full.md); FAQ [→](proposals/c-faq.md); series *Rewriting the Planet's OS* (8 parts) [→](series/part-0.md); Citizen Dividend Simulator [→](tools/simulator.md) |
-| Background | Essay: *Why Now?* [→](why-now.md); Background essay 1: *Why Doesn't Technology Make Life Easier?* [→](essays/why-technology.md); Background essay 2: *The Next Layers of Planetary OS* [→](essays/next-layers.md); BEI policy white paper [↗](https://ttmori.substack.com/p/policy-white-paper-proposal-a-new?r=5dzcae) |
+| Background | Essay: *Why Now?* [→](why-now.md); Essay: *Why Doesn't Technology Make Life Easier?* [→](essays/why-technology.md); Essay: *The Next Layers of Planetary OS* [→](essays/next-layers.md); BEI policy white paper [↗](https://ttmori.substack.com/p/policy-white-paper-proposal-a-new?r=5dzcae) |
 
 **Contact:** Tatsuya Mori · [Substack](https://ttmori.substack.com) · [note](https://note.com/ttmori) · [X](https://x.com/ttmori) · [Contact form](https://docs.google.com/forms/d/e/1FAIpQLSexBpD4BcRWIV--FuhMC9BxbP4I9fXl6pi9nxQPmX2bjivjqw/viewform)

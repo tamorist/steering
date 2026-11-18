@@ -1,7 +1,7 @@
 # Why Doesn't Technology Make Life Easier?
 ### Where efficiency gains disappear, and how we could get them back
 
-**Background essay 1** — First edition (working draft)
+**Background essay** — First edition (working draft)
 
 
 ---
@@ -73,7 +73,7 @@ The problem is not scarcity. It is a set of rules under which **everyone acting 
 
 Two changes in how we think about the economy open the way to a solution.
 
-**First: wealth built on unpaid costs carries responsibility.** Much of today's accumulated wealth was built while the cost of using up the atmosphere and ecosystems was treated as zero. That does not make anyone a villain. But it does mean that part of that wealth rests on costs pushed onto others and onto the future. Asking it to contribute to a safe transition is not confiscation. It is settling an account that was never closed. (Background essay 2 develops this idea.)
+**First: wealth built on unpaid costs carries responsibility.** Much of today's accumulated wealth was built while the cost of using up the atmosphere and ecosystems was treated as zero. That does not make anyone a villain. But it does mean that part of that wealth rests on costs pushed onto others and onto the future. Asking it to contribute to a safe transition is not confiscation. It is settling an account that was never closed. (The essay *The Next Layers of Planetary OS* develops this idea.)
 
 **Second: the economy is a set of rules we can redesign.** Money, accounting, taxes, and working hours are human agreements. We can set them to serve the goals we choose, such as security, free time, and a livable planet, instead of treating ever-faster growth as a law of nature.
 
@@ -104,6 +104,6 @@ The first step is to see the rules clearly. The second is to rewrite them, start
 **Read more**
 
 - Essay: *Why Now?* [→](../why-now.md)
-- Background essay 2: *The Next Layers of Planetary OS* [→](next-layers.md)
+- Essay: *The Next Layers of Planetary OS* [→](next-layers.md)
 - Package Proposal: *Steering Within Limits* [→](../package.md)
 - Proposal C: Planetary OS [→](../proposals/c-summary.md)

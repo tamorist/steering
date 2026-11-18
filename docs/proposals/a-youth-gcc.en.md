@@ -163,7 +163,7 @@ The Charter proposes a **Global AI Citizens' Assembly** as an early experiment: 
 
 ### Later agendas
 
-Other issues that meet the priority principles can follow, such as climate liability, an economy that does not depend on growth (see Background essay 2), pandemics, and global citizenship education.
+Other issues that meet the priority principles can follow, such as climate liability, an economy that does not depend on growth (see the essay *The Next Layers of Planetary OS*), pandemics, and global citizenship education.
 
 ---
 

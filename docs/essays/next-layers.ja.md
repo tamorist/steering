@@ -1,7 +1,7 @@
 # Planetary OS の次の層
 ### 会計、金融の安全網、そして時間
 
-**背景論考2**　第1版（草案）
+**背景論考**　第1版（草案）
 
 
 ---
@@ -130,7 +130,7 @@ Planetary OS は、その最初の一歩です。これらの層は、その道�
 
 **あわせて読みたい**
 
-- 背景論考1「なぜ技術が進んでも、暮らしは楽にならないのか」[→](why-technology.md)
+- 論考「なぜ技術が進んでも、暮らしは楽にならないのか」[→](why-technology.md)
 - パッケージ提案書「限界の内側で、舵を取る」7章[→](../package.md)
 - 提案C：Planetary OS[→](../proposals/c-summary.md)
 - BEIの政策白書[↗](https://note.com/ttmori/n/nbc21a89865a8)
