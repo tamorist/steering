@@ -120,6 +120,14 @@ Related concepts developed separately, such as a Designed Model Economy, a Globa
 
 ---
 
+## 6. What about population?
+
+Population matters. Together with consumption per person, it shapes the pressure on climate, food, land, and ecosystems. But it changes over generations, while emissions must fall within years, and responsibility is very unequal. Planetary OS therefore starts by limiting total fossil fuel use, whatever the size of the population.
+
+It sets no targets for population or births. What can rightly be pursued are conditions that let people choose freely: education, especially for girls, access to voluntary family planning, child survival, and security in old age. The UN projects that world population will peak in the mid-2080s, and in many countries it already has. An economy that no longer depends on expansion is also what would allow societies to age and shrink without crisis. How to support this transition is a question for later deliberation, with the regions most concerned at the center.
+
+---
+
 ## Closing: a soft landing, not a crash
 
 The fear of slowing down is real, because today's rules make it dangerous. The answer is not to keep running, and not to stop suddenly. It is to **redesign the rules so that a soft landing is possible**: recognize the costs that were never paid, build a safety net for the transition, and share the gains of technology as time.
