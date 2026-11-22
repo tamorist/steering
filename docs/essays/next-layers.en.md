@@ -124,7 +124,9 @@ Related concepts developed separately, such as a Designed Model Economy, a Globa
 
 Population matters. Together with consumption per person, it shapes the pressure on climate, food, land, and ecosystems. But it changes over generations, while emissions must fall within years, and responsibility is very unequal. Planetary OS therefore starts by limiting total fossil fuel use, whatever the size of the population.
 
-It sets no targets for population or births. What can rightly be pursued are conditions that let people choose freely: education, especially for girls, access to voluntary family planning, child survival, and security in old age. The UN projects that world population will peak in the mid-2080s, and in many countries it already has. An economy that no longer depends on expansion is also what would allow societies to age and shrink without crisis. How to support this transition is a question for later deliberation, with the regions most concerned at the center.
+Planetary OS itself sets no targets for population or births. What can be pursued already are conditions that let people choose freely: education, especially for girls, access to voluntary family planning, child survival, and security in old age. The UN projects that world population will peak in the mid-2080s, and in many countries it already has. An economy that no longer depends on expansion is also what would allow societies to age and shrink without crisis.
+
+The longer-term question should remain open. Estimates of how many people Earth can sustain vary widely and depend on how, and how equally, we live. Some are far below today's population. A wide range of possibilities, including a substantially smaller population over time, deserves open, evidence-based discussion, within one firm boundary: human rights. That means no coercion, and no penalties or loss of support for the number of children people have. These are questions for later deliberation, with the regions most concerned at the center.
 
 ---
 
