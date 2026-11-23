@@ -153,4 +153,4 @@ AIは、もっと大きなことも示しています。国境を越える技術
 
 ---
 
-この文書は、次の場所でも公開しています： [note（日本語）](https://note.com/ttmori/n/ndd3b106dbf1c)
+この文書は、次の場所でも公開しています： [note（日本語）](https://note.com/ttmori/n/ndd3b106dbf1c) · [Substack（英語）](https://ttmori.substack.com/p/building-another-world-politics)

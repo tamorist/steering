@@ -306,3 +306,8 @@ Part 3 turns to the most easily misunderstood component: **SAS, the Scientific A
 "Even the EU Emissions Trading System couldn't keep a strict cap. Why would this work?"
 
 We'll answer those questions, and look at what it really means for a policy to run "automatically," and what makes a strict cap possible at all.
+
+
+---
+
+This document is also published on: [note (Japanese)](https://note.com/ttmori/n/n5e9395aa8df7)

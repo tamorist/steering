@@ -147,4 +147,4 @@ The question we want to put to politics is not "please do something." It is: **"
 
 ---
 
-This document is also published on: [note (Japanese)](https://note.com/ttmori/n/n093d06d64e79)
+This document is also published on: [note (Japanese)](https://note.com/ttmori/n/n093d06d64e79) · [Substack (English)](https://ttmori.substack.com/p/why-now-civilization-has-reached)

@@ -96,4 +96,4 @@ Planetary OS は、この2つの壁を越える条件を、最初から組み込
 
 ---
 
-この文書は、次の場所でも公開しています： [Substack（英語）](https://ttmori.substack.com/p/rewriting-the-planets-os-series-guide)
+この文書は、次の場所でも公開しています： [note（日本語）](https://note.com/ttmori/n/n00c49a800c31) · [Substack（英語）](https://ttmori.substack.com/p/rewriting-the-planets-os-series-guide)

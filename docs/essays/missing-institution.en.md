@@ -248,4 +248,4 @@ The Youth GCC is a first attempt, starting small and starting now. When such an 
 
 ---
 
-This document is also published on: [note (Japanese)](https://note.com/ttmori/n/n2dd8b9dc3fbc)
+This document is also published on: [note (Japanese)](https://note.com/ttmori/n/n2dd8b9dc3fbc) · [Substack (English)](https://ttmori.substack.com/p/why-cant-humanity-stop-the-slide)

@@ -7,6 +7,8 @@
 
 **The problem.** Decades of effort on climate and other global risks have not bent the curves. The cause is not a lack of effort, goodwill, or technology. Our civilization's operating system, an economy built to expand and a politics built around nation-states, has reached limits it was never designed for. Efficiency gains are swallowed by overcompetition, benefits flow upward, and planetary boundaries are being crossed. Everyone acting rationally produces a collective failure.
 
+**The approach.** Today's leaders are not so much unwilling as structurally bound: each answers to one country and to the next election. So the change has to start with citizens: draft a plan that citizens can support, make that support visible, and ask those in power to connect to it. This changes who writes the first draft; it does not replace states.
+
 **Why now.** A civilization that grew without steering must learn to **steer within limits**: strict planetary guardrails, freedom within them, continual data-driven correction, and goals set democratically. This is neither central planning nor market fundamentalism. The tools to do it now exist: planetary data, digital payments, AI translation, and citizens' assemblies. Crises will come, and the speed of the response will depend on whether a working alternative is ready.
 
 **Three gaps, three proposals.**

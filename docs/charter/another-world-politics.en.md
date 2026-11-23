@@ -153,4 +153,4 @@ The *Global Democratic Governance Charter* [→](charter.md) turns it into a con
 
 ---
 
-This document is also published on: [note (Japanese)](https://note.com/ttmori/n/ndd3b106dbf1c)
+This document is also published on: [note (Japanese)](https://note.com/ttmori/n/ndd3b106dbf1c) · [Substack (English)](https://ttmori.substack.com/p/building-another-world-politics)

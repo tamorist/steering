@@ -11,6 +11,16 @@ hide:
 
 <p class="lead">文明の転換に向けた3つの提案：<strong>Youth GCC</strong>、<strong>Global Citizen Will Platform</strong>、<strong>Planetary OS</strong></p>
 
+<div class="approach" markdown>
+**この提案の進め方**　今の指導者は、やる気がないというより、構造に縛られています。一人ひとりが、一つの国と次の選挙に責任を負っているからです。だから、変化は市民から始めるしかありません。市民が支持できる案をつくり、その支持を目に見える形にし、権限を持つ人々に「この仕組みにつながりますか」と問いかけます。国家を倒す革命ではありません。変えるのは、最初の案を誰が書くか、です。
+
+<ol class="steps">
+<li><strong>案をつくる</strong> <span>（Planetary OS）</span></li>
+<li><strong>支持を見える形にする</strong> <span>（Youth GCC とプラットフォーム）</span></li>
+<li><strong>決定につなぐ</strong> <span>（政府が採り入れる）</span></li>
+</ol>
+</div>
+
 [6枚の絵で見る（約6分）](pictures.md){ .md-button .md-button--primary }
 [全体をひと続きで読む](start.md){ .md-button }
 [還元シミュレーターを試す](tools/simulator.md){ .md-button }

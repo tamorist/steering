@@ -11,6 +11,16 @@ hide:
 
 <p class="lead">Three proposals for a civilizational transition: <strong>Youth GCC</strong>, the <strong>Global Citizen Will Platform</strong>, and <strong>Planetary OS</strong>.</p>
 
+<div class="approach" markdown>
+**The approach.** Today's leaders are not so much unwilling as structurally bound: each answers to one country and to the next election. So the change has to start with citizens. We draft a plan that citizens can support, make that support visible, and ask those in power to connect to it. This is not a revolution against states. It changes who writes the first draft.
+
+<ol class="steps">
+<li><strong>Draft</strong> a plan citizens can support <span>(Planetary OS)</span></li>
+<li><strong>Make support visible</strong> <span>(Youth GCC and the Platform)</span></li>
+<li><strong>Connect</strong> it to decisions <span>(governments adopt it)</span></li>
+</ol>
+</div>
+
 [See it in six pictures (about 6 minutes)](pictures.md){ .md-button .md-button--primary }
 [Read the whole idea in one go](start.md){ .md-button }
 [Try the dividend simulator](tools/simulator.md){ .md-button }

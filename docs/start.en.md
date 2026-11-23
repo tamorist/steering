@@ -15,6 +15,7 @@
 - The climate crisis has not been solved by effort, goodwill, or technology, because **the rules of the economy and of politics make reducing a losing move** for individuals, firms, and countries alike.
 - The answer is neither more sacrifice nor waiting for a global agreement. It is to **rewrite the operating rules so that reducing pays**, and to put those rules where they are hard to undo.
 - **Planetary OS** is a concrete design for such rules. **Youth GCC** is the actor that carries it, and the **Global Citizen Will Platform** is the channel that connects citizens' support to real decisions.
+- Because today's leaders are bound by the same rules, **the change has to start with citizens**: a plan that citizens can support, support made visible, and one question to those in power: "Will you connect to it?"
 
 This guide explains the whole package in one continuous argument. It assumes no background in economics or climate science. All names, ratios, and figures are **illustrative**: they show a direction, and the real values are meant to be set through expert review and public deliberation.
 
@@ -285,4 +286,4 @@ A civilization that grew without steering now has to learn to **steer within lim
 
 ---
 
-This document is also published on: [note (Japanese)](https://note.com/ttmori/n/n3fb7e83e75a6)
+This document is also published on: [note (Japanese)](https://note.com/ttmori/n/n3fb7e83e75a6) · [Substack (English)](https://ttmori.substack.com/p/the-whole-idea-in-one-read)

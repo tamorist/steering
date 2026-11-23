@@ -340,3 +340,8 @@ Don't rely on effort. Change the rules. Penalties draw the line that must not be
 But SAS protects a plan that *today's* people agreed on. Who protects the interests of children who can't vote yet, and of generations not yet born?
 
 Part 4 looks at **how to give future generations a voice in our decisions.**
+
+
+---
+
+This document is also published on: [note (Japanese)](https://note.com/ttmori/n/ncdf3f11504d1)

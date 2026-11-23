@@ -178,3 +178,8 @@ To sum up:
 If the problem were the limits of humanity, despair would be the only response. But if the problem is **a wiring mistake**, that changes everything. Wiring can be fixed.
 
 In Part 2, I'll lay out that new wiring diagram: **Planetary OS**. It has three main pieces: a mechanism to share responsibility for past emissions, a cap on future emissions that only ever moves down, and a way to return the money it raises directly to everyone. We'll look at how they fit together into one operating system.
+
+
+---
+
+This document is also published on: [note (Japanese)](https://note.com/ttmori/n/nf4d1edd6c44a)

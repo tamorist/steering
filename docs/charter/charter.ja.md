@@ -188,4 +188,4 @@
 
 ---
 
-この文書は、次の場所でも公開しています： [note（日本語）](https://note.com/ttmori/n/n2d81af907543)
+この文書は、次の場所でも公開しています： [note（日本語）](https://note.com/ttmori/n/n2d81af907543) · [Substack（英語）](https://ttmori.substack.com/p/global-democratic-governance-charter)

@@ -188,4 +188,4 @@ Today's world has states, companies, universities, and international organizatio
 
 ---
 
-This document is also published on: [note (Japanese)](https://note.com/ttmori/n/n2d81af907543)
+This document is also published on: [note (Japanese)](https://note.com/ttmori/n/n2d81af907543) · [Substack (English)](https://ttmori.substack.com/p/global-democratic-governance-charter)

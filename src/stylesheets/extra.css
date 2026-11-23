@@ -4,6 +4,11 @@
 .md-typeset .hero .kicker { text-transform: uppercase; letter-spacing: .08em; font-weight: 700; color: var(--sw-orange); margin: 0; }
 .md-typeset .hero .lead { font-size: 1.15rem; max-width: 46rem; }
 .md-typeset .hero .md-button, .md-typeset .cta .md-button { margin: .3rem .4rem .3rem 0; }
+.md-typeset .approach { max-width: 46rem; border-left: 4px solid var(--sw-orange); padding: .1rem 0 .1rem 1rem; margin: 1.2rem 0 1.4rem; }
+.md-typeset .approach ol.steps { list-style: none; display: flex; flex-wrap: wrap; gap: .3rem .6rem; padding: 0; margin: .4rem 0 0; }
+.md-typeset .approach ol.steps li { margin: 0; }
+.md-typeset .approach ol.steps li + li::before { content: "→ "; color: var(--sw-orange); font-weight: 700; }
+.md-typeset .approach ol.steps span { color: var(--md-default-fg-color--light); font-size: .9em; }
 .md-typeset .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr)); gap: 1rem; margin: 1rem 0 1.5rem; }
 .md-typeset .card { border: 1px solid var(--md-default-fg-color--lightest); border-top: 4px solid var(--sw-orange); border-radius: 8px; padding: .4rem 1rem 1rem; }
 .md-typeset .card h3 { margin-top: .2rem; }

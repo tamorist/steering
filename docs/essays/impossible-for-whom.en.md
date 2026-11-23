@@ -224,4 +224,4 @@ The next time you hear "it's realistically impossible," try asking back, just on
 
 ---
 
-This document is also published on: [note (Japanese)](https://note.com/ttmori/n/n6077844d5f84)
+This document is also published on: [note (Japanese)](https://note.com/ttmori/n/n6077844d5f84) · [Substack (English)](https://ttmori.substack.com/p/realistically-impossible-for-whom)

@@ -96,4 +96,4 @@ Comments and objections are very welcome. This blueprint is a working draft, mea
 
 ---
 
-This document is also published on: [Substack (English)](https://ttmori.substack.com/p/rewriting-the-planets-os-series-guide)
+This document is also published on: [note (Japanese)](https://note.com/ttmori/n/n00c49a800c31) · [Substack (English)](https://ttmori.substack.com/p/rewriting-the-planets-os-series-guide)

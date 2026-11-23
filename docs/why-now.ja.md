@@ -147,4 +147,4 @@
 
 ---
 
-この文書は、次の場所でも公開しています： [note（日本語）](https://note.com/ttmori/n/n093d06d64e79)
+この文書は、次の場所でも公開しています： [note（日本語）](https://note.com/ttmori/n/n093d06d64e79) · [Substack（英語）](https://ttmori.substack.com/p/why-now-civilization-has-reached)

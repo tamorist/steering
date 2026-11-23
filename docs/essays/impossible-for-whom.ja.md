@@ -224,4 +224,4 @@ CBAMの課題は、公平さではなく、範囲の狭さです。対象は一�
 
 ---
 
-この文書は、次の場所でも公開しています： [note（日本語）](https://note.com/ttmori/n/n6077844d5f84)
+この文書は、次の場所でも公開しています： [note（日本語）](https://note.com/ttmori/n/n6077844d5f84) · [Substack（英語）](https://ttmori.substack.com/p/realistically-impossible-for-whom)

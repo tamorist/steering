@@ -248,4 +248,4 @@ Youth GCC は、その最初の試みです。小さく始め、今始めます�
 
 ---
 
-この文書は、次の場所でも公開しています： [note（日本語）](https://note.com/ttmori/n/n2dd8b9dc3fbc)
+この文書は、次の場所でも公開しています： [note（日本語）](https://note.com/ttmori/n/n2dd8b9dc3fbc) · [Substack（英語）](https://ttmori.substack.com/p/why-cant-humanity-stop-the-slide)

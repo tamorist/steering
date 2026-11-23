@@ -6,7 +6,7 @@
 !!! info "About this page"
     The core of the proposal in six pictures, for anyone new to it (about 6 minutes). For the reasoning behind each picture, read Start Here [→](start.md) (about 15 minutes). For the essentials in text, read the one-page overview [→](overview.md).
 
-Decades of effort, goodwill, and new technology have not turned global emissions downward. *Steering Within Limits* is a package of three proposals that starts from one diagnosis: the problem is not that people are not trying hard enough, but that the rules of the economy and of politics make reducing a losing move. Its aim is to rewrite those rules so that reducing pays, without waiting for a world government.
+Decades of effort, goodwill, and new technology have not turned global emissions downward. *Steering Within Limits* is a package of three proposals that starts from one diagnosis: the problem is not that people are not trying hard enough, but that the rules of the economy and of politics make reducing a losing move. Its aim is to rewrite those rules so that reducing pays, without waiting for a world government. Because today's leaders are bound by the same rules, the change has to start with citizens: a plan that citizens can support, support made visible, and one question to those in power: "Will you connect to it?"
 
 The six pictures below walk through that idea in order: the game we are in today, the new rules, sharing the burden of the past, protecting the rules, who carries them and how, and how they spread. All names, ratios, and figures are illustrative.
 
@@ -75,4 +75,4 @@ There is no world government. It starts with a club of willing countries and cit
 
 ---
 
-This document is also published on: [note (Japanese)](https://note.com/ttmori/n/nb4f039ca5c0f)
+This document is also published on: [note (Japanese)](https://note.com/ttmori/n/nb4f039ca5c0f) · [Substack (English)](https://ttmori.substack.com/p/the-proposal-in-pictures)
