@@ -166,6 +166,11 @@ Each part of the proposal follows from this:
 - **Firms and regions** that cut their use of fuel and materials are rewarded, and workers and regions that depend on fossil fuels get Just Transition support.
 - **Households** that use more pay more through prices, and the equal dividend returns the same amount to everyone, so those who use little come out ahead. No one has to sort spending into luxuries and necessities. Households just short of break-even receive a top-up under the majority-benefit rule.
 
+<figure markdown="span">
+  ![Who carries what: by position in the system, not by blame](../assets/fig/en/W-11.png)
+  <figcaption>Who carries what: by position in the system, not by blame</figcaption>
+</figure>
+
 *See: §4.1, §4.2, §4.3 / Parts 2, 5, 6*
 
 ### C3. Won't the wealthy just move their money elsewhere?
