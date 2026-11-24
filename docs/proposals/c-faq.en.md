@@ -153,22 +153,37 @@ Direct return lets millions of households adapt in their own way. Investment is 
 BEI does not punish individuals for past acts. It recognizes that large concentrations of wealth and corporate profits were **built on** the fossil economy, and that the cost of that economy was left to the atmosphere and to future generations. The levy is thin (about 0.3–0.5% on the wealth of the top 1% and about 0.3% on corporate profits, as illustrations) and broad, so no single group carries a heavy load. It falls on large wealth and profits, **not on ordinary taxpayers**.
 *See: §4.1 / Parts 2, 6*
 
-### C2. Won't the wealthy just move their money elsewhere?
+### C2. Why not just make the fossil-fuel companies pay?
+
+Because the fossil economy is a web, not a single culprit. Fuel flows from mines and oil fields through steel, chemicals, and transport to the goods and services everyone buys, and demand flows back up the same chain. A heavy charge on one link tends to pass down into prices, and if demand and infrastructure stay the same, so does the dependence. Singling out one group as the villain also hardens resistance and makes it harder to agree on rules that work.
+
+So Planetary OS weighs responsibility by position in the system, not by blame. It asks three questions: How much power does a group have to shape the system, such as what is produced and which options are the default? How much has it gained from the fossil economy? And how much room does it have to change? Those with more power, more gain, and more room carry more. Those with little choice are protected.
+
+Each part of the proposal follows from this:
+
+- **Fuel suppliers** buy allowances where fuel enters the economy, under a cap that tightens every year. The cost reaches prices by design, and the revenue goes back to households.
+- **The gains of the past** spread far beyond fossil-fuel companies, so BEI falls thinly on all large concentrations of wealth and corporate profits, fossil-fuel interests included.
+- **Firms and regions** that cut their use of fuel and materials are rewarded, and workers and regions that depend on fossil fuels get Just Transition support.
+- **Households** that use more pay more through prices, and the equal dividend returns the same amount to everyone, so those who use little come out ahead. No one has to sort spending into luxuries and necessities. Households just short of break-even receive a top-up under the majority-benefit rule.
+
+*See: §4.1, §4.2, §4.3 / Parts 2, 5, 6*
+
+### C3. Won't the wealthy just move their money elsewhere?
 
 Some will try. As with the global minimum corporate tax, club members agree on a **minimum BEI rate**, so moving between member countries gains nothing. The larger the club, the fewer places remain to hide. Capital flight is listed in the risk register (§9) as a real risk, not one we consider solved.
 *See: §4.1, §9 / Part 6*
 
-### C3. Is around USD 1 trillion a year realistic?
+### C4. Is around USD 1 trillion a year realistic?
 
 That figure assumes global adoption. At the club stage, members' share would be several hundred billion dollars a year. Both are orders of magnitude for planning, not forecasts. BEI also starts thin and broad and adds liability attribution and legal recovery only as data and institutions mature.
 *See: §4.1 / Part 6*
 
-### C4. Why spend BEI on guarantees rather than grants to developing countries?
+### C5. Why spend BEI on guarantees rather than grants to developing countries?
 
 One of the largest obstacles to clean energy in developing countries is the high cost of capital. A guarantee that absorbs the first losses or currency risk can bring in several times its value in private investment. Grants still have a role, especially for climate-vulnerable countries, and the PTE funds both.
 *See: §4.1 / Part 6*
 
-### C5. Won't guarantees encourage reckless projects (moral hazard)?
+### C6. Won't guarantees encourage reckless projects (moral hazard)?
 
 The PTE limits that risk in six ways:
 
