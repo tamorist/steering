@@ -297,6 +297,21 @@ The rule is kept to outcomes: most of the revenue goes back to households, at le
 Returning the revenue is necessary but not sufficient. In Canada, most households received rebates, yet in a January 2024 poll only about half of those eligible believed they had received one. That is why this design also makes the return visible and adds the majority-benefit rule.
 *See: §5.7 / Part 5 / Part 6*
 
+### E8. How is the cap shared among member countries? Isn't starting from today's emissions unfair?
+
+Starting simply from today's emissions would be unfair in two ways. Countries that emit a lot today would start with the most allowances, while countries that have already cut their emissions would have to cut further from an already lower level. And low-income countries, whose emissions per person are often a small fraction of those in high-income countries, would be asked to cut before basic needs are met.
+
+Planetary OS does not yet fix how this is resolved, and the overall design does not depend on the answer. Whatever the shares, each member caps fossil fuels where they enter its economy and returns the revenue to its own citizens. The split decides how fast each country reduces, not who receives the money. Fairness between countries in money is handled separately, through BEI and the PTE.
+
+The split should come from scientific review and democratic deliberation, including citizens' assemblies. Options include, as illustrations:
+
+- different rates by income level, with low-income countries keeping their cap level for a period
+- moving emissions per person toward a common level by a set year (often called "contraction and convergence"), which also credits countries that have already cut
+- sharing the remaining budget by an index of historical responsibility and capacity to pay
+- choosing a base year or period that does not reward delay
+
+*See: §4.2, §5.5 / Part 6*
+
 ---
 
 ## F. Governance and democracy
@@ -363,6 +378,7 @@ Some objections point to problems that remain open. We list them here rather tha
 - **Legal basis of BEI.** Its form under national and international law, and how far liability attribution can go, needs legal work.
 - **Measurement for the sufficiency-linked dividend.** Exactly which data, and what adjustments, need testing in pilots.
 - **Legitimacy of citizens' representatives.** How their binding role relates to existing parliaments is unsettled.
+- **How the cap is shared between countries.** Starting from current emissions would favor today's high emitters and penalize countries that have already cut or emit little per person. Which rule to use is open (E8).
 - **The ratios themselves.** Every number in this proposal is an illustration. The real values should come from scientific review and democratic deliberation.
 
 These are the questions Stage 1 is designed to work on. If you have expertise in any of them, we would like to hear from you.

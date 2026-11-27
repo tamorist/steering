@@ -205,7 +205,7 @@ The wealth figure is personal net wealth, which includes shares, so it already c
 **How the cap declines**
 
 - The binding commitment is the **remaining carbon budget** consistent with staying well below 2°C.
-- The cap falls automatically each year on a path derived from that budget: about 8% a year globally on average, faster for high-income countries, and more gradual for developing ones.
+- The cap falls automatically each year on a path derived from that budget: about 8% a year globally on average, faster for high-income countries, and more gradual for developing ones. How the path is shared between countries, including credit for past reductions, is left open for deliberation (FAQ E8, H).
 - The path may start more gently and steepen later as new technologies scale up, but the total budget does not change.
 - The cap starts from **current** emissions. Past overshoot is addressed through BEI and investment in carbon removal.
 - Allowances may be **banked** for later years, which smooths prices. They cannot be borrowed from future years, so the total never grows.
