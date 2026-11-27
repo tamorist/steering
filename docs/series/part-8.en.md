@@ -116,7 +116,7 @@ At the launch of the Youth GCC, the call goes out in their name: to young people
 
 ## 5. From specification to implementation: four stages
 
-Beyond that first step, the path has four broad stages.
+Beyond that first step, the path has four broad stages. What follows is one illustration of how the Youth GCC and its partners might proceed. I offer it as a draft; how and when they move is theirs to decide.
 
 <figure markdown="span">
   ![Stage 1: write the Standard → Stage 2: citizens verify it → Stage 3: pilot at small scale → Stage 4: put the question to politics](../assets/fig/en/8-3.png)
@@ -163,9 +163,9 @@ Here is a rough picture of the early stages (an illustration only; the timing wi
 
 ### A launch, not a protest
 
-The launch should feel less like a protest rally and more like a **product launch: full of intellectual excitement and hope.**
+How to run the launch is for the Youth GCC to decide. One possibility: a launch that feels less like a protest rally and more like a **product launch, full of intellectual excitement and hope.**
 
-At its center would be a live demonstration of the dividend simulator. Picture this: on a big screen, we enter the circumstances of a farmer in Kenya, an office worker in Paris, and a family in a small Japanese city, and show how much each household would receive every month if the system ran. People in the room and online check their own household's numbers on their phones and share them.
+At its center would be a live demonstration of the dividend simulator. Picture this: on a big screen, the presenters enter the circumstances of a farmer in Kenya, an office worker in Paris, and a family in a small Japanese city, and show how much each household would receive every month if the system ran. People in the room and online check their own household's numbers on their phones and share them.
 
 Alongside it:
 
